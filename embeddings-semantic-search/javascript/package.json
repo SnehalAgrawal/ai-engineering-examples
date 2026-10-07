@@ -1,0 +1,10 @@
+{
+  "name": "embeddings-semantic-search-js",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.54.0",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5"
+  }
+}
