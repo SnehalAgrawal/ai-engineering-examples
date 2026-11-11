@@ -1,0 +1,19 @@
+{
+  "name": "vector-search-at-scale-js",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "embed": "node embed_words.js",
+    "scale": "node scale.js",
+    "indexes": "node indexes.js",
+    "filtering": "node filtering.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "hnswlib-node": "3.0.0",
+    "openai": "^4.54.0"
+  }
+}

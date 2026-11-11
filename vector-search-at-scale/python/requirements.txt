@@ -1,0 +1,5 @@
+faiss-cpu==1.16.0
+numpy==2.5.4
+openai==1.54.3
+python-dotenv==1.0.1
+requests==2.32.3

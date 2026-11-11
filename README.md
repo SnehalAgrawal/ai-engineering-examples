@@ -7,6 +7,7 @@ Each directory is self-contained, with its own README, setup instructions, and `
 | Example | What it shows | Article |
 |---|---|---|
 | [`embeddings-semantic-search/`](embeddings-semantic-search/) | Keyword search vs. embedding-based semantic search, cosine similarity, and where similarity misleads (Python and JavaScript) | [Embeddings Explained](https://snehalagrawal.com/articles/embeddings-explained/) |
+| [`vector-search-at-scale/`](vector-search-at-scale/) | Why exact search stops scaling, HNSW and IVF recall vs. latency on real embeddings, and the metadata-filtering trap (Python and JavaScript) | [Vector Databases Explained](https://snehalagrawal.com/articles/vector-databases-explained/) |
 
 ## Conventions
 
