@@ -2,9 +2,14 @@
   "name": "embeddings-semantic-search-js",
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node search.js"
+  },
   "dependencies": {
-    "openai": "^4.54.0",
-    "axios": "^1.7.7",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "openai": "^4.54.0"
   }
 }
