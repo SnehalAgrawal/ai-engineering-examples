@@ -1,0 +1,15 @@
+{
+  "name": "generation-parameters",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Temperature, top-k, top-p, min-p, seeds, max tokens and stop sequences, measured. Companion to Article #6 on snehalagrawal.com.",
+  "scripts": {
+    "next-token": "node next_token.js",
+    "consistency": "node consistency.js",
+    "limits": "node limits.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
