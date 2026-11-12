@@ -1,0 +1,16 @@
+{
+  "name": "llm-inference",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Where the time and memory go in LLM inference: prefill, decode, the KV cache, and prompt caching, measured on local models. Companion to Article #10 on snehalagrawal.com.",
+  "scripts": {
+    "kv-cache": "node kv_cache.js",
+    "latency": "node latency.js",
+    "prompt-cache": "node prompt_cache.js",
+    "decode-speed": "node decode_speed.js --bandwidth-gbs 273"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

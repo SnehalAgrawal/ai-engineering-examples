@@ -1,0 +1,13 @@
+{
+  "_comment": "Paragraphs from the fictional help center used in earlier demos. The scripts repeat them, numbered, to build documents of a chosen length; what the text says doesn't matter for timing.",
+  "paragraphs": [
+    "Customers can request a refund within 30 days of purchase. Approved refunds are returned to the original payment method.",
+    "To cancel your subscription, go to Settings > Billing > Cancel. Your plan stays active until the end of the current billing period.",
+    "If you forgot your password, click 'Forgot Password' on the login page. The reset link expires after 1 hour.",
+    "Our support team is available 24/7 via live chat.",
+    "Billing issues can be resolved by contacting our accounting department at billing@example.com.",
+    "The Basic plan costs $10 per month and includes 3 projects. The Pro plan costs $25 per month and includes unlimited projects.",
+    "You can export your data as CSV from Settings > Data > Export. Exports include all projects and are emailed to the account owner.",
+    "Two-factor authentication can be enabled under Settings > Security. We support authenticator apps. SMS codes are not supported."
+  ]
+}
