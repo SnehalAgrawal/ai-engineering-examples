@@ -1,0 +1,14 @@
+{
+  "name": "structured-outputs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Asking for JSON versus enforcing it with a schema, measured on the support assistant. Companion to Article #7 on snehalagrawal.com.",
+  "scripts": {
+    "modes": "node run_modes.js",
+    "truncation": "node truncation.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

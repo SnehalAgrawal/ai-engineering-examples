@@ -10,6 +10,7 @@ Each directory is self-contained, with its own README, setup instructions, and `
 | [`vector-search-at-scale/`](vector-search-at-scale/) | Why exact search stops scaling, HNSW and IVF recall vs. latency on real embeddings, and the metadata-filtering trap (Python and JavaScript) | [Vector Databases Explained](https://snehalagrawal.com/articles/vector-databases-explained/) |
 | [`prompt-as-interface/`](prompt-as-interface/) | Testing a prompt like an interface: three prompts, 24 test cases (answerable, not in the documents, planted instructions), two local models (Python and JavaScript) | [Prompt Engineering: Beyond Writing Better Prompts](https://snehalagrawal.com/articles/prompt-engineering-beyond-better-prompts/) |
 | [`generation-parameters/`](generation-parameters/) | Temperature, top-k, top-p, min-p, seeds, max tokens and stop sequences, measured: predicted vs observed token choices, and a temperature experiment on the support assistant (Python and JavaScript) | [Temperature, Top-P, and Other LLM Parameters Explained](https://snehalagrawal.com/articles/temperature-top-p-and-other-llm-parameters/) |
+| [`structured-outputs/`](structured-outputs/) | Asking for JSON vs JSON mode vs strict schemas on the support assistant: what a schema guarantees, what it doesn't, and the error and truncation paths (Python and JavaScript; Groq free tier or Ollama) | [Structured Outputs: Making LLMs Produce Reliable Data](https://snehalagrawal.com/articles/structured-outputs-making-llms-produce-reliable-data/) |
 
 ## Conventions
 
