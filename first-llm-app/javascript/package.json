@@ -1,0 +1,14 @@
+{
+  "name": "first-llm-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A model inside an application versus the model as the whole product, on the same inputs. Companion to Article #11 on snehalagrawal.com.",
+  "scripts": {
+    "cases": "node run_cases.js",
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

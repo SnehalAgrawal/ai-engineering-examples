@@ -1,0 +1,3 @@
+results-*.jsonl
+app.log
+node_modules/

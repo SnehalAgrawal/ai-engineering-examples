@@ -13,8 +13,28 @@ Each directory is self-contained, with its own README, setup instructions, and `
 | [`structured-outputs/`](structured-outputs/) | Asking for JSON vs JSON mode vs strict schemas on the support assistant: what a schema guarantees, what it doesn't, and the error and truncation paths (Python and JavaScript; Groq free tier or Ollama) | [Structured Outputs: Making LLMs Produce Reliable Data](https://snehalagrawal.com/articles/structured-outputs-making-llms-produce-reliable-data/) |
 | [`tool-calling/`](tool-calling/) | The support assistant with four tools: how a model requests a call, why the application decides what runs, and what goes wrong (questions turned into actions, invented arguments, claimed actions, planted instructions). Python and JavaScript; Ollama or Groq | [Function Calling and Tool Use in LLMs](https://snehalagrawal.com/articles/function-calling-and-tool-use-in-llms/) |
 | [`llm-inference/`](llm-inference/) | Where the time and memory go in inference, measured on local models: prefill vs decode, time to first token, the KV cache (predicted and checked), prompt caching, and model size vs generation speed (Python and JavaScript; Ollama) | [How LLM Inference Works](https://snehalagrawal.com/articles/how-llm-inference-works/) |
+| [`first-llm-app/`](first-llm-app/) | The model as the whole product versus the same model inside a small application: input validation, context, a guarded call, output checks, application-owned replies, and request logs, on ten real-world inputs (Python and JavaScript; Ollama) | [Building Your First LLM-Powered Application](https://snehalagrawal.com/articles/building-your-first-llm-powered-application/) |
 
 ## Conventions
 
 - Examples support a cloud provider and a local option (Ollama) where practical.
 - Configuration goes through environment variables. Never commit a `.env` file.
+- Every demo passes the repository's linters (below).
+
+## Linting
+
+One configuration at the repository root covers every demo: [Ruff](https://docs.astral.sh/ruff/) for Python (`ruff.toml`) and [ESLint](https://eslint.org/) for JavaScript (`eslint.config.js`).
+
+```bash
+# once, from the repository root
+npm install                          # ESLint (root package.json holds only the lint tools)
+pip install -r requirements-dev.txt  # Ruff (or: brew install ruff, pipx install ruff)
+
+# check everything
+npm run lint          # both
+npm run lint:js       # ESLint only
+npm run lint:py       # Ruff only
+ruff check --fix .    # apply Ruff's safe automatic fixes
+```
+
+Ruff checks pycodestyle errors and warnings, Pyflakes, import order, bugbear, and pyupgrade rules, for Python 3.10. Long lines are allowed, because several demos print aligned tables. ESLint uses its recommended rules for Node.js ES modules.

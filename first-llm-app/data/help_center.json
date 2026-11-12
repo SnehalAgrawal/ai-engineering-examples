@@ -1,0 +1,13 @@
+{
+  "_comment": "The fictional help center from the earlier demos (without the planted tickets). It is small enough to send whole with every question, so this app needs no retrieval yet.",
+  "documents": {
+    "refunds": "Customers can request a refund within 30 days of purchase. Approved refunds are returned to the original payment method.",
+    "cancel": "To cancel your subscription, go to Settings > Billing > Cancel. Your plan stays active until the end of the current billing period.",
+    "password": "If you forgot your password, click 'Forgot Password' on the login page. The reset link expires after 1 hour.",
+    "support-hours": "Our support team is available 24/7 via live chat.",
+    "billing": "Billing issues can be resolved by contacting our accounting department at billing@example.com.",
+    "plans": "The Basic plan costs $10 per month and includes 3 projects. The Pro plan costs $25 per month and includes unlimited projects.",
+    "export": "You can export your data as CSV from Settings > Data > Export. Exports include all projects and are emailed to the account owner.",
+    "two-factor": "Two-factor authentication can be enabled under Settings > Security. We support authenticator apps. SMS codes are not supported."
+  }
+}
