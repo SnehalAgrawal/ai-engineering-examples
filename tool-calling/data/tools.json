@@ -1,0 +1,95 @@
+{
+  "_comment": "Tool definitions sent to the model, in the OpenAI-compatible format that Groq and Ollama both accept. issue_refund and send_email are actions; the other two only read.",
+  "actions": [
+    "issue_refund",
+    "send_email"
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "search_help_center",
+        "description": "Search the help center articles and resolved support tickets. Returns the three most relevant entries.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "What to search for."
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_invoices",
+        "description": "List the signed-in customer's invoices.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "issue_refund",
+        "description": "Refund one invoice to the original payment method.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "invoice_id": {
+              "type": "string",
+              "description": "The invoice to refund, for example INV-1234."
+            },
+            "reason": {
+              "type": "string",
+              "description": "Why the refund is being issued."
+            }
+          },
+          "required": [
+            "invoice_id",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "send_email",
+        "description": "Send an email.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "to": {
+              "type": "string",
+              "description": "Recipient email address."
+            },
+            "subject": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "to",
+            "subject",
+            "body"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

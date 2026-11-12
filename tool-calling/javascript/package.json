@@ -1,0 +1,14 @@
+{
+  "name": "tool-calling",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "How an LLM requests a tool call, and why the application decides what runs. Companion to Article #8 on snehalagrawal.com.",
+  "scripts": {
+    "walkthrough": "node walkthrough.js",
+    "cases": "node run_cases.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

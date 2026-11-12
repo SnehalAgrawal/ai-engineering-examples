@@ -1,0 +1,33 @@
+{
+  "_comment": "The signed-in customer for every conversation, and the billing records the tools read. All fictional. The application knows who is signed in; the model never chooses the customer.",
+  "today": "2026-11-12",
+  "refund_window_days": 30,
+  "customer": {
+    "id": "C-1001",
+    "email": "owner@customer.example",
+    "plan": "Pro"
+  },
+  "invoices": [
+    {
+      "id": "INV-1001",
+      "customer": "C-1001",
+      "date": "2026-09-28",
+      "amount": 25,
+      "status": "paid"
+    },
+    {
+      "id": "INV-1002",
+      "customer": "C-1001",
+      "date": "2026-10-28",
+      "amount": 25,
+      "status": "paid"
+    },
+    {
+      "id": "INV-2042",
+      "customer": "C-2042",
+      "date": "2026-11-02",
+      "amount": 250,
+      "status": "paid"
+    }
+  ]
+}
