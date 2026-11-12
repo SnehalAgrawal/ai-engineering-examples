@@ -17,7 +17,7 @@ import time
 import faiss
 import numpy as np
 
-from common import K, SEED, load_real_embeddings, recall_at_k, search_one_at_a_time, split_queries
+from common import SEED, K, load_real_embeddings, recall_at_k, search_one_at_a_time, split_queries
 
 NUM_TENANTS = 20
 OVERFETCH = 200

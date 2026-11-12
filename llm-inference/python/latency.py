@@ -59,7 +59,7 @@ def m(runs, key):
 
 print("1. Longer prompt, same 32-token answer")
 print(f"{'input tokens':>13}{'processed':>11}{'prefill':>11}{'prefill speed':>16}{'first token':>13}{'decode speed':>15}")
-for n, runs in part1.items():
+for _, runs in part1.items():
     processed = m(runs, "input_tokens") - m(runs, "cached_tokens")
     print(f"{m(runs, 'input_tokens'):>13.0f}{processed:>11.0f}{m(runs, 'prefill_s') * 1000:>8.0f} ms"
           f"{median([(r['input_tokens'] - r['cached_tokens']) / r['prefill_s'] for r in runs]):>10.0f} tok/s"
@@ -68,7 +68,7 @@ for n, runs in part1.items():
 
 print("\n2. Same short prompt, longer answer")
 print(f"{'output tokens':>14}{'first token':>13}{'decode':>11}{'total':>11}{'decode speed':>15}")
-for n, runs in part2.items():
+for _, runs in part2.items():
     print(f"{m(runs, 'output_tokens'):>14.0f}{m(runs, 'ttft_s') * 1000:>10.0f} ms{m(runs, 'decode_s'):>9.2f} s"
           f"{m(runs, 'total_s'):>9.2f} s{median([r['output_tokens'] / r['decode_s'] for r in runs]):>9.1f} tok/s")
 

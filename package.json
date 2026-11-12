@@ -1,0 +1,17 @@
+{
+  "name": "ai-engineering-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Repository-level lint tooling. Each demo keeps its own package.json for running it.",
+  "type": "module",
+  "scripts": {
+    "lint": "npm run lint:js && npm run lint:py",
+    "lint:js": "eslint .",
+    "lint:py": "ruff check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "eslint": "^9.39.0",
+    "globals": "^16.5.0"
+  }
+}

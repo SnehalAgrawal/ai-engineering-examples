@@ -13,7 +13,7 @@ def load_real_embeddings(path="embeddings.npy"):
     try:
         matrix = np.load(path)
     except FileNotFoundError:
-        raise SystemExit("embeddings.npy not found. Run `python embed_words.py` first.")
+        raise SystemExit("embeddings.npy not found. Run `python embed_words.py` first.") from None
     return matrix
 
 

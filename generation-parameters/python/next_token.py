@@ -63,8 +63,9 @@ def main():
         # Asked twice: in testing, the first request after the model loaded gave
         # slightly different probabilities from every later identical request, and
         # the samples below are drawn under the later ("warm") conditions.
+        # Called right away, within this iteration, so it always sees this question's messages.
         def first_token_probabilities():
-            first = chat(messages, {"num_predict": 1, "seed": 0}, top_logprobs=TOP)["logprobs"][0]["top_logprobs"]
+            first = chat(messages, {"num_predict": 1, "seed": 0}, top_logprobs=TOP)["logprobs"][0]["top_logprobs"]  # noqa: B023
             return [(t["token"], math.exp(t["logprob"])) for t in first]
 
         cold = first_token_probabilities()

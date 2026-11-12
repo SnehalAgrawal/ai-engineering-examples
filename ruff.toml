@@ -1,0 +1,15 @@
+# Ruff configuration for every Python demo in this repository.
+# Run from the repository root: ruff check .   (or: npm run lint:py)
+target-version = "py310"
+line-length = 120
+# Each demo's python/ folder holds its own local modules (common.py, llm.py, ...),
+# so import sorting groups them as first-party.
+src = ["*/python"]
+
+[lint]
+# pycodestyle errors and warnings, Pyflakes, import order, bugbear (likely bugs), pyupgrade
+select = ["E", "W", "F", "I", "B", "UP"]
+ignore = [
+  "E501",  # long lines: several demos print aligned tables on one line
+  "B905",  # zip() without strict=: the demos zip lists built to the same length
+]

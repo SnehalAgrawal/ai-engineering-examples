@@ -57,7 +57,7 @@ def _groq(messages, seed, max_tokens, output):
     elif isinstance(output, dict):
         body["response_format"] = {"type": "json_schema", "json_schema": {"name": "support_reply", "strict": True, "schema": output}}
 
-    for attempt in range(8):
+    for _ in range(8):
         response = requests.post(GROQ_URL, json=body, headers={"Authorization": f"Bearer {key}"}, timeout=120)
         if response.status_code == 429:
             # Free-tier rate limit: wait as long as Groq asks, then retry.
