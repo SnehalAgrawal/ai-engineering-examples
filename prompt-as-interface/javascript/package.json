@@ -1,0 +1,14 @@
+{
+  "name": "prompt-as-interface",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Testing a support-assistant prompt like an interface. Companion to the Prompt Engineering article on snehalagrawal.com.",
+  "scripts": {
+    "suite": "node run_suite.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.54.0"
+  }
+}
