@@ -1,0 +1,211 @@
+{
+  "id": "c03",
+  "split": "dev",
+  "customer": "Grace Adeyemi",
+  "turns": [
+    {
+      "user": "Hi, I'm hoping you can help with a refund. When I bought a Corin kettle last week, the checkout page froze, so I placed the order again and then cancelled the extra one. I still haven't had the money back for the cancelled order, so as far as I can tell I was never refunded. The order number is FW-41552.",
+      "assistant": "I'm sorry for the trouble; a refund that hasn't turned up is worrying. Once a refund is issued, it takes three to five working days to appear, so if it has been longer than that, something may have gone wrong. To find the payments, I need to match them to your card. Could you tell me the last four digits of the card you paid with? I'll look up the order at the same time."
+    },
+    {
+      "user": "It's been eight days now. Is it normal for it to take this long? I rang my bank this morning, and they say they can't see anything pending on their side, not even a refund on the way.",
+      "assistant": "Eight days is longer than it should be. A refund that has been issued takes three to five working days to appear. I can't see your bank account, but if your bank can't see anything pending at all, the refund may never have been sent, rather than being slow. So it does look as if you were not refunded. Once I have the card digits, I can check what our payment system actually did with each payment."
+    },
+    {
+      "user": "The card ends in 7731. It's a debit card, if that makes any difference.",
+      "assistant": "Thanks, I've noted the card ending 7731; debit or credit makes no difference to how we handle it. I've also looked up FW-41552, but that order belongs to a different customer, with a different name and address, so I don't think it's yours. Could you check your order confirmation email? The order number is in the subject line, and it's easy to swap two digits."
+    },
+    {
+      "user": "Oh, you're right, sorry. It's FW-41525. The confirmation came through on Tuesday evening, if that helps. I've got the email open in front of me now, so I'm reading it straight off the subject line this time.",
+      "assistant": "Thanks, FW-41525 is the one: a Corin kettle in matte black, delivered to your address on Friday. Here's the odd thing, though. I can only see one order on your account, and no cancelled one. Is it possible the second attempt never became an order? If you can, have a look at your bank statement and tell me what the two payments show, including any reference next to them."
+    },
+    {
+      "user": "That's strange. I'm sure I cancelled something. Could someone call me to go through it? I find this kind of thing much easier to sort out by talking than by typing.",
+      "assistant": "Of course. I've noted on your account that you'd prefer to be contacted by phone, using the mobile number on your account, the one ending 2690. In the meantime, the statement is the quickest way to see what happened, so if you can check it while we're talking here, I can tell you straight away what each payment is."
+    },
+    {
+      "user": "Okay, I've opened my banking app. Both payments have the same reference, FW-41525, a minute apart. So there wasn't a second order at all. I wasn't charged for an order I cancelled; I was charged twice for the same order.",
+      "assistant": "That explains it, and thank you for checking. The checkout froze after taking the first payment, and when you pressed pay again, the same order was charged a second time. So the problem isn't a missing refund: you were double charged for FW-41525. The order itself is fine, and the kettle was only sent once. What we need to do now is return the second payment to you."
+    },
+    {
+      "user": "Ah, that makes more sense. I must have closed the browser tab, not cancelled an order. So there won't be a second kettle turning up at some point? I really don't need two, my kitchen is tiny.",
+      "assistant": "No, there's only one kettle on the order, and it has already been delivered, so nothing else will arrive. The second payment isn't attached to any item; it's simply money we shouldn't have taken. You don't need to send anything back or cancel anything on your side. I'll deal with the payment, and you can keep using the kettle as normal. If a delivery email for a second kettle ever does turn up, let me know, but I can't see any way it would."
+    },
+    {
+      "user": "Good. How much exactly should I expect back? I want to know what to look for on my statement.",
+      "assistant": "The duplicate payment was 64.90 dollars, the full amount of the order, which was just the kettle. That's the amount that will come back to your card, as a single payment. On your statement it will show the Fernwick Goods name and the same order reference as the original charges, so it should be easy to spot. You keep the first payment, which covers the kettle itself."
+    },
+    {
+      "user": "Thanks. How long will it take? Money's a little tight this month, and I'd rather not go into my overdraft. My rent goes out at the start of next week, and the extra payment has eaten into what I'd set aside for it.",
+      "assistant": "I understand. Once the payment is reversed, it takes three to five working days to appear on your card. I can't promise how your bank handles it after that, but I'll ask for yours to be treated as a priority. If going into your overdraft costs you a fee because of our mistake, keep the bank statement, and I'll see what we can do."
+    },
+    {
+      "user": "That would help, thank you. While I'm here, how do I descale the kettle? The water here is quite hard, and there's already a white film at the bottom. I've heard vinegar works, but I don't want to damage anything or end up with tea that tastes odd.",
+      "assistant": "Hard water does that quickly. Fill the Corin to the halfway mark with equal parts water and white vinegar, bring it to the boil, then leave it to stand for an hour. Pour it away and boil fresh water twice to clear any taste. Doing this once a month keeps the element working well. Don't use anything abrasive inside; the stainless steel scratches easily, and scratches collect scale faster."
+    },
+    {
+      "user": "And the little filter in the spout, can that come out? It already looks a bit chalky, and I don't want to snap the plastic tabs by pulling at it.",
+      "assistant": "Yes, it lifts out. Open the lid, grip the filter by its top edge, and slide it straight up. Soak it in the same water and vinegar mix for half an hour, then rinse it under the tap and slide it back in until it clicks. Make sure it's back in place before the next boil; without it, flakes of scale end up in your cup. If a tab ever does break, a replacement filter is sold on its own, so you don't need a new kettle."
+    },
+    {
+      "user": "Got it. If my bank asks me about the extra payment, what should I tell them? They sometimes want details before they'll look into anything, and I'd like to have the right answer ready rather than guess.",
+      "assistant": "Tell them it's a duplicate payment from Fernwick Goods for order FW-41525, taken a minute after the first one, and that we have confirmed it and are sending it back. That's usually all they need. If they want something in writing, I can confirm the duplicate in a message here that you can forward. You don't need to open a dispute; we're returning the money ourselves."
+    },
+    {
+      "user": "Should I raise a chargeback anyway, just to be safe? A friend told me that's the fastest way to get money back.",
+      "assistant": "I'd hold off. A chargeback runs alongside our reversal, and if both go through, the bank usually takes the extra money back later, which is confusing for everyone. It can also slow things down while the bank investigates. If the money hasn't reached you within five working days of us sending it, a chargeback is a reasonable next step, and I'll give you everything you need for it: the dates, the amounts, and our confirmation that the second payment was a duplicate."
+    },
+    {
+      "user": "Fair enough. Can you tell me why this happened? I'd like to know it won't happen again the next time I order something, because I was planning to buy a toaster to match.",
+      "assistant": "The checkout sends your payment to our card processor, then waits for an answer before it shows the confirmation. That evening the answer took too long, so the page froze, and pressing pay again sent a second charge for the same order. That's how you came to be double charged. It's a known fault, and a fix is being tested; I've added your case to the report so our developers can see it's still happening."
+    },
+    {
+      "user": "Thanks. Do I get an invoice for the kettle? I'm claiming it from the office kitchen budget at work, and our finance team is strict about receipts; they won't accept a screenshot of the order page.",
+      "assistant": "Yes. Go to Account, then Orders, open the kettle order, and choose Download invoice. It shows one payment for the kettle, the tax, and our company details. The duplicate won't appear on it, because it was never part of the order. So your finance team will see exactly what the kettle cost, with nothing extra to explain."
+    },
+    {
+      "user": "Lovely. Out of interest, does the Corin come in a cream colour? A colleague saw mine in the office kitchen and wants one for her flat. Hers is white plastic and she's been meaning to replace it for ages.",
+      "assistant": "It does: the Corin comes in matte black, cream, and sage green, all at the same price, and the cream is in stock now. If the checkout seems slow for her, she should wait for the confirmation page rather than pressing pay again; that avoids exactly what happened to you."
+    },
+    {
+      "user": "I'll tell her. So what actually happens next with my money? Is it you who sends it back, or does it go somewhere else first?",
+      "assistant": "I can't send a reversal myself, so I've escalated your case to our payments team, with your statement details and my note that the duplicate is confirmed. They handle every reversal, and I've asked them to treat yours as a priority. Once they've sent it, it takes three to five working days to appear on your card. They'll also be the ones to let you know when it's done."
+    },
+    {
+      "user": "Okay. Actually, about getting in touch: I asked earlier for a call, but I'm on a training course all week and can't take calls. Could they email me instead? I can read messages in the breaks.",
+      "assistant": "Of course. I've changed your preference, so they'll contact you by email instead, at the address on your account. They'll write when the reversal is sent, with the reference your bank will show, and again if they need anything from you. Nobody will ring you about this case unless you ask for a call again, and you can change your mind at any point by replying here."
+    },
+    {
+      "user": "Thanks. And the overdraft fee you mentioned, if it happens, where do I send the statement? I'd rather not post anything, as I never know whether letters arrive.",
+      "assistant": "Reply here with a screenshot of the statement line showing the fee, and quote your order number. I'll check it against the dates of the duplicate, and if it was caused by our mistake, I can offer you a voucher toward it. It's easiest to do this soon, while the details are fresh. A screenshot is enough; you don't need to send a full statement or any other account details."
+    },
+    {
+      "user": "That's really helpful, thank you. I was worried I'd have to argue about it for weeks.",
+      "assistant": "Not at all, Grace. You checked the statement and found the reference, which made this quick to sort out. The reversal is in hand, and you'll hear from us as soon as it's sent. Thank you for being so patient while we worked out what had really happened. Enjoy the kettle, and if anything else comes up, reply here and we'll pick it up from there."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-41525",
+      "accepted": [
+        "FW-41525",
+        "41525"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "FW-41552",
+          "accepted": [
+            "FW-41552",
+            "41552"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "double charged",
+      "accepted": [
+        "double charged",
+        "charged twice",
+        "double charge"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "not refunded",
+          "accepted": [
+            "not refunded",
+            "never refunded"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "escalated",
+      "accepted": [
+        "payments team",
+        "escalated"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "card",
+      "field": "other",
+      "value": "7731",
+      "accepted": [
+        "7731"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "amount",
+      "field": "other",
+      "value": "64.90 dollars",
+      "accepted": [
+        "64.90"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "contact",
+      "field": "other",
+      "value": "email",
+      "accepted": [
+        "by email",
+        "email me",
+        "via email"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "phone",
+          "accepted": [
+            "by phone",
+            "call me"
+          ]
+        }
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "What's the order number for my kettle?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What's the problem with my payment that you're fixing?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where does my case stand right now?"
+    },
+    {
+      "id": "p4",
+      "fact": "card",
+      "question": "Which card did I say I paid with?"
+    },
+    {
+      "id": "p5",
+      "fact": "amount",
+      "question": "How much money should I be getting back?"
+    },
+    {
+      "id": "p6",
+      "fact": "contact",
+      "question": "How did I ask you to get in touch with me about this?"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "c05",
+  "split": "test",
+  "customer": "Marcus Bell",
+  "turns": [
+    {
+      "user": "Hi, I ordered the Tarrow wool rug in charcoal two weeks ago and it still hasn't arrived. The confirmation said it would be here last Friday, and the tracking hasn't changed for days. My order number is FW-60744. I've cleared the living room for it, so I'm keen to know what's going on.",
+      "assistant": "I'm sorry the rug is late; that's frustrating when you've made room for it. I've found FW-60744 under your name. The parcel left our warehouse eight days ago and reached the courier's regional depot the next day, but there's been no scan since. That usually means it's waiting for a van with space for a large item. I'll ask the courier for an update today. Is there anything about delivery I should pass on to them?"
+    },
+    {
+      "user": "Yes, please. I work in the mornings, so nobody's in until the middle of the afternoon. Could the delivery be after 3 pm? The last time a big parcel came, they left a card and I had to drive to the depot to collect it.",
+      "assistant": "Of course. I've added a note to the order asking for delivery after 3 pm on any weekday, and I've put the same request in my message to the courier. A rug this size can't go through a letterbox or be left on a doorstep, so the driver would only take it back to the depot if nobody answered. With the note in place, that shouldn't happen. I'll let you know as soon as they reply."
+    },
+    {
+      "user": "Thanks. While we wait, how should I look after the rug once it arrives? It's going in front of the sofa, and we have a dog who likes to lie on everything.",
+      "assistant": "Wool is a good choice with a dog: it's hard-wearing and naturally resists dirt. Vacuum it once or twice a week with the brush roll turned off, or on its highest setting, so it doesn't pull at the fibres. Blot spills straight away with a clean cloth rather than rubbing them in. For muddy paw prints, let the mud dry first, then vacuum it up. Turning the rug every few months helps it wear evenly, especially if one end gets more sun from a window than the other."
+    },
+    {
+      "user": "Good to know. It's now three working days past the date it was due. At what point does a parcel count as lost? I don't want to wait for weeks and then be told it's gone.",
+      "assistant": "You won't have to. The courier usually answers an enquiry like mine within a couple of days. If they can't tell us where the parcel is, we ask them to search for it properly, and if that doesn't find it, we send you a new rug or a full refund, whichever you prefer. You don't have to wait for the courier to pay us before that happens. I've set myself a reminder to check on Wednesday."
+    },
+    {
+      "user": "Okay. Another question: do I need a rug pad underneath? The floor is oak boards, and I've read that rugs can slide around on wood.",
+      "assistant": "I'd recommend one. On boards, a pad stops the rug sliding, which is safer, and it adds cushioning, so the rug wears more slowly. We sell the Tarrow felt pad in the same sizes as the rug, at 32 dollars for yours. It's made of felt with a natural rubber backing that won't mark oiled or lacquered wood. Trim it slightly smaller than the rug, so the edges of the rug lie flat."
+    },
+    {
+      "user": "If I order the pad now, could it travel with the rug, or would it come separately? I'd rather not have two deliveries to wait in for, especially with the time I've already spent waiting for this one.",
+      "assistant": "It would come separately, I'm afraid. The rug has already left the warehouse, so nothing can be added to that parcel. The pad rolls up small and light, though, so it goes as a standard parcel that can be left in a safe place, and you wouldn't need to be in for it. If you order it, it usually arrives in two to three working days."
+    },
+    {
+      "user": "It's Wednesday, and the tracking still says exactly the same thing. Have you heard anything back from the courier?",
+      "assistant": "Not yet, and they've had a couple of days now. I'm sorry; I know you've been patient. The tracking hasn't moved since the depot scan, so I can't tell you where the rug is right now. Rather than send them another polite reminder, I'd like to raise it formally. Is that all right with you? It gives them a firm deadline to find the parcel, and it means a named person at the depot is responsible for looking, rather than an automated system."
+    },
+    {
+      "user": "Yes, please do. I'd rather someone actually went and looked for it than keep waiting for the tracking to change.",
+      "assistant": "Done. I've opened a formal investigation with the courier. They'll search the depot and check the van records for the days after it arrived, and then either find the parcel or confirm it's lost. I'll chase them if they're slow. If the rug isn't found, we'll send a new one or refund you in full, your choice, without waiting for the courier to settle with us."
+    },
+    {
+      "user": "Which courier is it, by the way? I'd like to ring them myself; sometimes a phone call gets things moving faster than an email does.",
+      "assistant": "It's Northway Freight; we use them for most deliveries in your area, including large items such as rugs and furniture. You're welcome to call them, but they only discuss a search like this with the sender, which is us, so they may not be able to tell you much. If you'd like, I can ask them to post a note on the tracking page whenever there's news, so you can see it without calling."
+    },
+    {
+      "user": "That would be helpful, thanks. Different question: I've heard new wool rugs shed a lot. Is that true, and does it ever stop?",
+      "assistant": "It's true, and it's normal. New wool rugs release loose fibres left over from making them, especially in the first few weeks. It doesn't mean the rug is wearing out. Vacuum it regularly with the brush roll off, and the shedding will slow down within a couple of months. Don't pull any longer tufts that stick up; trim them level with the pile using scissors instead. A rug pad underneath also helps, because it reduces the friction that loosens fibres."
+    },
+    {
+      "user": "If they can't find it, would a new rug come from the same warehouse? I'm worried it would just get stuck at the same depot again, and we'd be back where we started.",
+      "assistant": "It would come from the same warehouse, but I'd ask for it to go on a dedicated large-item van instead of the shared route, so it wouldn't sit at the depot waiting for space. The Tarrow rug in charcoal is in stock in your size, so there'd be no wait for a new one to be made. I'll only arrange that once the courier has finished looking, though."
+    },
+    {
+      "user": "Okay. While I'm here, is there a sale coming up? My sister wants the same rug in a smaller size, and she'd rather wait if there's a discount soon.",
+      "assistant": "We don't announce sales in advance, I'm afraid. If your sister signs up to our newsletter on the website, she'll hear about any offers as soon as they start, so she won't miss one. Smaller Tarrow rugs are in stock in charcoal and oatmeal, if she's still deciding on a colour. The oatmeal is a little lighter in person than it looks in the photos on our website."
+    },
+    {
+      "user": "Any news from the courier? It's been three days since you raised it with them, and I haven't seen a note on the tracking page.",
+      "assistant": "Yes, some. The courier says a parcel on this order has been found at the depot: it had been put on the wrong shelf after the first scan. They scanned it again this morning, and the tracking page now shows the parcel's contents and weight. They plan to deliver it tomorrow. Could you have a look at the tracking page and let me know if everything looks right?"
+    },
+    {
+      "user": "I've looked, and it says the parcel is a table runner weighing 0.8 kg. That's not my rug! Wait, I did order a table runner the same week. Let me check my emails. Yes, I gave you the wrong number. The rug is FW-60474, not FW-60744. I swapped two digits, sorry.",
+      "assistant": "No need to apologise; I should have checked the item on the order. You're right: FW-60474 is the Tarrow wool rug, and it's delayed too. It went to the same depot. I've moved the investigation to the rug's order, and I've copied your delivery note across. The table runner should reach you tomorrow, so at least one parcel is sorted."
+    },
+    {
+      "user": "So where is the rug actually? Has anyone at the depot seen it, or is it still missing?",
+      "assistant": "The courier has now checked FW-60474, and the rug is at the depot as well. It was held back because it's too long for the vans on the normal route, and their system hadn't flagged it for a large-item van. They've booked it onto one for Friday. I've asked them to call you if anything changes, and I'll check the tracking myself on Friday morning. I'm sorry this has taken so long to untangle."
+    },
+    {
+      "user": "Good. The table runner arrived this morning, by the way. Will the rug still come at the time I asked for, or does the large-item van have its own schedule? I can't really take more time off work for this.",
+      "assistant": "I'm glad the runner is with you. The delivery note with your preferred time was copied to the rug's order, and the large-item van works to the same time slots, so the driver should keep to it. On Friday morning you'll get a text with a one-hour window. If the window doesn't suit you, the link in the text lets you choose another day."
+    },
+    {
+      "user": "Thanks. If I don't like the rug once it's down, can I still return it? It's a lot of money, and I've only ever seen it on a screen.",
+      "assistant": "Yes. You have 30 days from delivery to return it, for any reason, and the return is free. I'd email you a return label with a QR code, and a courier would collect the rug from your home; you don't need a printer, as they print the label themselves. Rolling it up as it came makes the collection easier. Any refund goes back to the card you paid with."
+    },
+    {
+      "user": "The text came this morning: the window is 4 to 5 pm. Is it definitely on the van this time? I've moved a meeting so I can be home for it.",
+      "assistant": "Yes. The tracking shows the rug was loaded onto the large-item van at 7 this morning, and it's out for delivery today. It's a two-person crew, so they can carry it in and put it down where you want it. You'll get another text when you're the next stop. I'll keep an eye on the tracking this afternoon as well."
+    },
+    {
+      "user": "It's here! Two men carried it in, and it looks brilliant in front of the sofa. The dog has already claimed it.",
+      "assistant": "That's great news, and I'm glad the dog approves. I've marked your case as resolved, and the courier's search for the rug is closed. Because the rug arrived over a week late and you had to chase us for it, I've added a goodwill voucher of 20 dollars to your account. It's valid for a year on anything in the shop, the felt pad included."
+    },
+    {
+      "user": "That's kind, thank you. I might put it towards the pad. Thanks for sticking with this; I half expected to be told it was gone for good.",
+      "assistant": "You're welcome, and thank you for your patience. If you order the pad, the voucher is applied at checkout automatically. Give the rug a few weeks to settle: a little shedding is normal at first, and any curl at the edges from being rolled up will flatten out on its own. If anything else comes up, just reply here."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-60474",
+      "accepted": [
+        "FW-60474",
+        "60474"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "FW-60744",
+          "accepted": [
+            "FW-60744",
+            "60744"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "late delivery",
+      "accepted": [
+        "late",
+        "delayed",
+        "overdue"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "resolved",
+      "accepted": [
+        "resolved",
+        "closed"
+      ],
+      "change": "update",
+      "stale": [
+        {
+          "value": "escalated",
+          "accepted": [
+            "investigation",
+            "escalated"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window",
+      "field": "other",
+      "value": "after 3 pm",
+      "accepted": [
+        "after 3 pm",
+        "after 3pm",
+        "3 pm",
+        "3pm",
+        "after 3",
+        "15:00"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "courier",
+      "field": "other",
+      "value": "Northway Freight",
+      "accepted": [
+        "Northway Freight",
+        "Northway"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "voucher",
+      "field": "other",
+      "value": "20 dollars",
+      "accepted": [
+        "20 dollars",
+        "20 dollar",
+        "twenty dollars",
+        "20 USD",
+        "20"
+      ],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "Which order number is the rug on?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What was the problem I first got in touch about?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where does my case stand now?"
+    },
+    {
+      "id": "p4",
+      "fact": "window",
+      "question": "What time of day did I ask for the delivery to come?"
+    },
+    {
+      "id": "p5",
+      "fact": "courier",
+      "question": "Which delivery company was carrying my parcel?"
+    },
+    {
+      "id": "p6",
+      "fact": "voucher",
+      "question": "How much is the goodwill voucher you gave me worth?"
+    }
+  ]
+}

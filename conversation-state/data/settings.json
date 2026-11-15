@@ -1,0 +1,113 @@
+{
+  "_comment": "Every setting and measurement definition of the conversation-state experiments, written before any code or run. Rules that produce a number from the data (the window size N) are frozen here; the number is computed from the dev conversations by the rule. Prompts are developed on the dev conversations only and frozen, versioned, before the final run.",
+
+  "inputs": {
+    "conversations": "data/conversations/c01.json to c12.json: scripted support chats between a customer and the support assistant of Fernwick Goods, a fictional online homeware shop. Every message, the assistant's included, is written in advance, so every strategy builds its context from the same transcript and only the strategy differs. Text is ASCII only (the tokenizer refuses anything else).",
+    "turn": "one user message followed by one assistant message. Each conversation has 20 turns, then the probes.",
+    "size": "each transcript, rendered with the model's chat template and the frozen system prompt, is between 2,500 and 3,400 Llama 3.2 tokens, so the full history exceeds a 2,048-token window and fits an 8,192-token one. check_data verifies this.",
+    "split": "by whole conversation: c01 to c04 dev, c05 to c12 test. No turn, fact, or probe of a test conversation is used to develop a prompt or choose a setting. Results are reported for test; dev results are reported separately.",
+    "facts": "each conversation lists its facts: an id, the value, and whether it belongs to a structured-state field (order_id, issue, status) or not ('other': a postcode, date, colour, amount, and so on). A fact can change: a correction (the customer gives a wrong value, then the right one) or an update (the case moves on, so the status changes). Every earlier value of a changed fact is listed as stale.",
+    "matching": "one rule for every search for a value, in positions, context checks, maintenance traces, and answers: lowercase both texts, collapse runs of whitespace to one space, and look for each accepted form as a whole word or phrase, meaning not directly preceded or followed by a letter or digit. A value 'appears' when any of its accepted forms does.",
+    "position": "computed by check_data, not declared by hand: the last turn whose text (user or assistant) contains an accepted form of the fact's current value, under the matching rule. The turns of each stale value are found the same way, from its own accepted forms. Classes: early (turns 1 to 5), middle (6 to 15), late (16 to 20). The turn number is reported too.",
+    "probes": "6 per conversation, asked after turn 20 as the customer's next message: one each for order_id, issue, and status, and three for 'other' facts. Each probe targets one fact, asks for its current value in the customer's words, and lists accepted forms of the expected value and of each stale value. Probes are not added to the history; each is asked on its own."
+  },
+
+  "state_schema": {
+    "fields": {
+      "order_id": "the order number the conversation is about, such as FW-20417; an empty string until the customer gives one",
+      "issue": "what is wrong, from a fixed list; 'unknown' until it is clear",
+      "status": "where the case stands, from a fixed list; 'new' at the start"
+    },
+    "rule": "each field holds the current value only. A state whose order_id holds the old and the new order number has not recorded the correction.",
+    "json_schema": {
+      "type": "object",
+      "properties": {
+        "order_id": {"type": "string"},
+        "issue": {"type": "string", "enum": ["unknown", "damaged", "wrong item", "missing item", "wrong size", "late delivery", "not refunded", "double charged"]},
+        "status": {"type": "string", "enum": ["new", "waiting for customer", "return label sent", "replacement sent", "refund issued", "escalated", "resolved"]}
+      },
+      "required": ["order_id", "issue", "status"]
+    },
+    "json_schema_note": "passed unchanged as Ollama's 'format' on every extraction call. Empty string and 'unknown' are used instead of null, so the schema needs no nullable types.",
+    "initial": {"order_id": "", "issue": "unknown", "status": "new"}
+  },
+
+  "model": {
+    "name": "llama3.2:3b",
+    "endpoint": "Ollama /api/chat, stream false",
+    "options": {"temperature": 0, "seed": 1},
+    "answer": {"num_predict": 128},
+    "summary": {"num_predict": 300},
+    "extraction": {"num_predict": 120, "format": "state_schema.json_schema"},
+    "growth": {"num_predict": 1},
+    "prompts": "data/prompts.json: the assistant's system prompt, the summary prompt, and the extraction prompt, developed on dev conversations and frozen with a version before the final run",
+    "warm_up": "before each block: unload the chat model, then one unmeasured request ('Reply with the word ready.', at most 5 tokens) with the block's num_ctx"
+  },
+
+  "token_counting": {
+    "how": "the app renders each request exactly as the model's chat template does (llama3.2:3b's template from Ollama 0.40.16, including its fixed system header) and counts Llama 3.2 tokens with the tokenizer from Article #15 (data/tokenizer.json)",
+    "check": "step 0 compares the app's count with Ollama's prompt_eval_count on requests that fit and aren't in Ollama's prompt cache. They must be equal; if not, the counting code is fixed before any experiment."
+  },
+
+  "context": {
+    "small_window": {"num_ctx": 2048, "prompt_limit": 1920, "why": "1920 = 2048 - 128 (answer.num_predict), so the longest answer still fits. prompt_limit counts the whole rendered request: the template's fixed system header, the system prompt, any summary or state, the kept turns, the probe, and the closing assistant header. token_budget, summary_recent, and state_recent always send at most prompt_limit tokens. last_n is the one exception (see strategies.last_n)."},
+    "large_window": {"num_ctx": 8192, "why": "the full history of every conversation fits, so nothing is dropped by the model server"}
+  },
+
+  "strategies": {
+    "full": "system prompt, all 20 turns, the probe",
+    "last_n": "system prompt, the last N turns, the probe. N is fixed for all conversations, as a deployed rule would be: the largest N whose request fits prompt_limit for every probe of every dev conversation (c01 to c04). N depends on the length of the system prompt and on the token counts, so it is computed once by check_data after prompts.json is frozen and step 0 has confirmed the counts, from the dev conversations only, and committed in data/derived.json before any experiment runs. It is then used unchanged for every conversation; test conversations play no part in choosing it. Because N is fixed in advance, a test request can exceed prompt_limit. Such a request is still sent to Ollama unchanged, as a deployed fixed-N rule would send it; its rendered token count and an over_limit flag are recorded, and the report gives its outcomes separately from requests that fit, with what the server did with it (under 2,048 tokens it fits the window but leaves less room for the answer; over 2,048, it is handled as experiment 2 establishes).",
+    "token_budget": "system prompt, then the most recent whole messages that fit prompt_limit with the probe, added from newest to oldest until the next one doesn't fit. A message is never cut in half; the oldest kept message may be an assistant message.",
+    "summary_recent": "system prompt plus a running summary of older turns, the last 4 turns, the probe. The summary is maintained in blocks of 4 turns: after turn 8 it covers turns 1 to 4, after turn 12 turns 1 to 8, after turn 16 turns 1 to 12, after turn 20 turns 1 to 16. Each update is one call: the previous summary plus the 4 turns leaving the recent window, rewritten into one summary (4 calls per conversation). The summary is capped by num_predict; the request must still fit prompt_limit.",
+    "state_recent": "system prompt plus the structured state as JSON, the last 4 turns, the probe. The state is updated after every turn: one call with the previous state and that turn's two messages, returning the new state (20 calls per conversation; the first starts from state_schema.initial).",
+    "same_recent_window": "summary_recent and state_recent both keep the last 4 turns (17 to 20), so they differ only in how they represent turns 1 to 16"
+  },
+
+  "grading": {
+    "answer": "mechanical first, under the matching rule. correct: an accepted form of the current value appears and no stale value does. stale: a stale value appears and the current one doesn't. both: both appear. other: neither appears (an answer that says it doesn't know is 'other' too, and is labelled as such by hand).",
+    "status_rubric": "a status answer is correct only if it gives the latest status as the current one. Mentioning an earlier status as history ('we sent a return label, and the replacement has now shipped') is allowed; presenting an earlier status as current, or giving no status, is not. Status answers are graded by hand with this rubric; the mechanical match is recorded beside it.",
+    "by_hand": "every answer not graded correct, every 'status' answer (an answer can mention an earlier status as history, which a string match can't tell from treating it as current), and a random sample of 10 correct answers per strategy (seed 20) are read by hand. Hand labels are stored with the SHA-256 of the answer, and the report gives mechanical and hand labels where they differ.",
+    "in_context": "for every probe and strategy, whether the context sent contains an accepted form of the current value, and of a stale value, in the kept turns, the summary, or the state, under the matching rule. This separates a fact the model never saw from one it saw and didn't use.",
+    "maintenance_trace": "for summary_recent and state_recent, the same check on every maintenance call's input and output, so a lost fact is located: never in the input; in the input of a summary or extraction call but missing from its output (dropped in maintenance); or in the final summary or state but not used in the answer.",
+    "state": "the final state of each conversation (after turn 20) is graded field by field: issue and status by exact equality with the fact's value (check_data verifies that every issue and status value, current or stale, is in the schema's list); order_id under the matching rule. Each field is correct, stale (holds an earlier value), or other; an order_id containing both the current and a stale order number is 'both'.",
+    "summary": "the final summary is checked for each fact's current and stale values, by the same matching, so a lost or stale fact can be traced to the summary rather than to the answer"
+  },
+
+  "experiments": {
+    "1_the_model_is_stateless": {
+      "a_no_history": "each probe with the system prompt and the probe only (num_ctx 8192)",
+      "b_full_history": "the 'full' strategy at num_ctx 8192: the reference for experiment 3",
+      "c_growth": "tokens: for all 12 conversations, the size of the full-history request at every turn (up to that turn's user message), counted by the app's tokenizer; no model call is needed once step 0 has shown the count equals Ollama's. Time: for the 8 test conversations only, a request at every turn in turn order (num_ctx 8192, num_predict 1; 160 calls), recording prompt_eval_count and prompt_eval_duration. Every turn is sent because that is what a chat application does, and the prompt cache's effect depends on the previous request. The requests reuse a growing prefix, so Ollama's prompt cache can make later turns cheaper to compute than their size suggests; what prompt_eval_count counts in that case is established in step 0 and the report follows it.",
+      "report": "probe outcomes for a and b; per turn, tokens sent, and the total sent over all 20 turns compared with the final transcript's size"
+    },
+    "2_past_the_window": {
+      "what": "the 'full' strategy at num_ctx 2048: a request larger than the window",
+      "recorded": "the HTTP status and any error; prompt_eval_count beside the app's count of what it sent; the Ollama server log lines appended during the request (~/.ollama/logs/server.log); the probe outcome",
+      "report": "what the model server did with an oversized request, as step 0 established it, and probe outcomes by fact position, compared with 1b. The wording ('truncated', 'rejected', or other) follows step 0, not the expectation."
+    },
+    "3_strategies": {
+      "strategies": ["last_n", "token_budget", "summary_recent", "state_recent"],
+      "num_ctx": 2048,
+      "reference": "full at num_ctx 8192 (experiment 1b)",
+      "report": "per strategy: probe outcomes by fact position, by whether the current value was in the context sent, by in-schema versus other, and for changed facts (corrections and updates) separately; prompt tokens per probe; for summary_recent and state_recent, the maintenance cost: calls, input tokens, output tokens, and time (Ollama's total_duration), per conversation; final state and summary grades"
+    }
+  },
+
+  "run_plan": {
+    "step_0": "once, before the experiments, Python only, on dev conversations: (1) four requests that fit, not cached (the model unloaded before each): the app's token count must equal prompt_eval_count. (2) the same request twice in a row: record what prompt_eval_count and prompt_eval_duration report when the prefix is cached. (3) one request clearly below 2048 and one clearly above it, at num_ctx 2048: record the response, any error, prompt_eval_count, and the log lines, and establish whether Ollama rejects the oversized request, truncates it (and from where), or does something else. (4) whether the experiment can tell what the model saw from what the app sent: if Ollama truncates, a probe for a fact in a dropped turn, and for one in a kept turn. Step 0 is a gate: if (1) fails, the counting is fixed first; experiment 2 is described by what (3) finds.",
+    "order": "experiment 1 (a, b, c), 2, then 3 strategy by strategy (state_recent's extraction calls and summary_recent's summary calls run first, in their own blocks, and are saved; the answer blocks then read them)",
+    "calls_per_language": "answers: 72 probes (12 conversations x 6) under 7 conditions (no history, full at 8192, full at 2048, and the four strategies) = 504; summary maintenance 12 x 4 = 48; state maintenance 12 x 20 = 240; growth timing 160. Total 952, plus one warm-up per block.",
+    "blocks": "each strategy or condition is one block over all 12 conversations (experiment 1c's timing: the 8 test conversations), in id order; the model is unloaded and warmed up before each block",
+    "quiet": "before the first call, wait until no other program has been connected to Ollama for 60 seconds; before each later block, wait again only if one has connected since. Overlap is recorded per request.",
+    "languages": "Python, then JavaScript, with identical counts, outcomes, and texts expected; timings are not compared",
+    "after_runs": "unload the chat model"
+  },
+
+  "outputs": {
+    "requests": "runs/<language>/<out>/requests.jsonl: one line per model call with experiment, strategy, conversation, probe or turn, the app's token count, Ollama's statistics, and the SHA-256 of the output",
+    "texts": "runs/<language>/<out>/texts/<sha256>.txt: each distinct output once",
+    "state_and_summaries": "runs/<language>/<out>/state/<conversation>.jsonl and summaries/<conversation>.jsonl: every intermediate state and summary",
+    "hand_labels": "data/hand_labels.json, written after the final run: answer SHA-256, label, note",
+    "report": "report.py / report.js: counts and outcomes first (identical across languages), then timings (vary)"
+  }
+}

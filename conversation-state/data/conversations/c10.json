@@ -1,0 +1,179 @@
+{
+  "id": "c10",
+  "split": "test",
+  "customer": "Leah Fischer",
+  "turns": [
+    {
+      "user": "Hi, I'm chasing my order FW-32987, the Brenna coffee table in oak. It was due on Monday, and there's still no sign of it. I took Monday morning off work to wait in for it, and nothing came. Is it running late? Nobody has emailed me about a new date.",
+      "assistant": "I'm sorry you took time off and the table didn't come. I've found FW-32987: one Brenna coffee table in oak, booked for delivery on Monday with our courier. The tracking on our side hasn't been updated since the parcel left the depot on Monday morning, which sometimes happens when a van runs behind schedule. I've asked the courier for an update. While I wait, could you confirm the zip code the table is going to?"
+    },
+    {
+      "user": "It's 97214. And while you're looking, can you check whether the felt pads for the legs were meant to come with it? A friend bought the same table and hers came with them, but I can't see them listed anywhere on my order.",
+      "assistant": "Thanks, 97214 matches the address on FW-32987, so the parcel is going to the right place. The felt pads are included with every Brenna table: they're in a small bag taped inside the box, together with the bolts and the Allen key, which is why they don't appear as a separate item on the order. I'll let you know as soon as the courier gets back to me about the delivery."
+    },
+    {
+      "user": "Good. Does the table need much putting together? I'm not great with tools, and my partner is away for a few weeks, so I'll be doing it on my own whenever it does arrive.",
+      "assistant": "Very little. The top comes in one piece, and you only attach the four legs: each one has a bolt that goes through a metal plate under the top, and you tighten it with the Allen key in the box. It takes about fifteen minutes, and one person can do it. I'd suggest assembling it upside down on a blanket or the flattened box, so the top doesn't get scratched while you work."
+    },
+    {
+      "user": "That sounds doable. If it turns up while I'm at work, can the driver leave it behind the blue bin by the side gate? That's where big parcels usually go at our house. It's out of sight from the street, and the gate is never locked.",
+      "assistant": "Yes. I've added a delivery note asking the driver to leave the parcel behind the blue bin by the side gate if nobody answers the door, and to take a photo of where they put it. The Brenna box is fairly large, about 110 cm long, but it's flat, so it should fit there without any trouble. The note stays on the order, so it applies to every delivery attempt."
+    },
+    {
+      "user": "Thanks. How should I look after the oak once I have it? The table I had before was a glossy veneer, so I'm used to just wiping it down with a spray, but I've heard real oak is different.",
+      "assistant": "It is a bit different. The Brenna has an oiled finish, so wipe it with a soft, dry or slightly damp cloth, and avoid sprays with silicone or alcohol, which can leave a film and dry the oil out. Use coasters for hot mugs and wipe spills straight away. About once a year, or when the top starts to look dry, rub in a thin coat of furniture oil, leave it for fifteen minutes, and buff off the excess."
+    },
+    {
+      "user": "Okay, coasters it is. Is the top solid oak all the way through, or is it a veneer on something else? I'm asking because my nephew has a habit of drawing on tables, and I'd like to know if I can sand marks out.",
+      "assistant": "The top is solid oak, 30 mm thick, and the legs are solid oak too, so light marks can be sanded out. Use a fine sandpaper, around 240 grit, sand only along the grain, and re-oil the patch afterwards so it matches the rest of the top. Felt-tip usually comes off with a little furniture oil on a cloth before you need to sand, so try that first."
+    },
+    {
+      "user": "I've just looked at the tracking link from the order email, and it now says the table was delivered on Monday at 2:40 pm! There's nothing here. I've checked the side gate, the porch, and the garden, and asked both neighbours. Nobody has it.",
+      "assistant": "Thank you for checking so thoroughly. I can see the same update: the courier marked the parcel as delivered on Monday at 2:40 pm, after you'd gone back to work. So this isn't a delay; the table is missing. That changes what we do, and it's on us to sort out, not you. The courier should have a delivery photo and the GPS location of the scan, so let me pull those up before we decide anything."
+    },
+    {
+      "user": "Please do. I'd really like to see where they think they left it, because I've been round the whole house twice now, and I don't see how anyone could miss a box that size.",
+      "assistant": "The delivery photo shows a large box on a front step next to a green door with a brass number 12. Your door, from the photo on your account, is grey, and your house number is 21, so it looks as though the driver swapped the digits and left the table at the wrong house. The GPS scan is also about two streets away from your address, which supports that."
+    },
+    {
+      "user": "That explains it. There is a number 12 two streets over, on the other side of the park. So what happens now? Do I go and knock on their door, or do you deal with it?",
+      "assistant": "Please leave it to us; we don't ask customers to recover parcels from other addresses. I've opened an investigation with the courier, and your claim reference is CLM-3390. The courier will send the driver back to number 12 to try to retrieve the parcel, and they usually report back within two to five working days. If you'd like to quote the claim reference in any email to us, it'll take you straight to the right case."
+    },
+    {
+      "user": "Okay. I walked past number 12 on my way home last night out of curiosity, and there was no box on the step. I suppose someone took it in, or took it, full stop.",
+      "assistant": "Thanks for telling me; I've added that to the case notes for the courier. It doesn't change much for you: either the people at number 12 have it and the courier gets it back, or it's gone, in which case the courier pays out on the claim. Either way, you won't be left without a table, and you won't have to deal with the other house yourself."
+    },
+    {
+      "user": "Do I have to wait the full five days to find out? I've moved the old table out already, and we're having people round soon. I'd rather not use the floor as a coffee table for another week.",
+      "assistant": "You don't have to wait. Because the courier has confirmed the delivery photo shows a different address, I can treat the table as lost now rather than waiting for the courier's answer. That means you can choose between a full refund and a replacement Brenna table sent straight away. If the original turns up later, that's between us and the courier, and it doesn't affect you."
+    },
+    {
+      "user": "A replacement, please. I spent ages choosing this table, and I don't want to start again. Is the oak one still in stock? I noticed the website only shows a few left.",
+      "assistant": "Good choice, and yes: there are four left in oak at our main warehouse, and I've reserved one for you, so it can't sell out in the meantime. I've set up the replacement order at no charge, and it will go to the same address unless you tell me otherwise. The warehouse team will pack it as soon as they can, and you'll get an email with the new tracking link once it leaves."
+    },
+    {
+      "user": "Will I be charged again for the new one? I paid for the first table on my credit card, and I'd hate to see a second payment come through by accident.",
+      "assistant": "No, you won't be charged. A replacement for a lost parcel is created as a no-charge order, so it doesn't touch your card at all. Your original payment covers it. If you check your account, you'll see a second order with a total of zero dollars linked to the first one. If anything ever did show up on your card, let me know and I'll look into it straight away."
+    },
+    {
+      "user": "And what if the people at number 12 hand the first table back to the courier, or just bring it round to me? Do I then need to return one of them?",
+      "assistant": "If the courier gets it back, it goes to our warehouse, not to you, so nothing changes on your side. If someone brings it round to your door, please let us know rather than keeping both, and we'll book a free collection for the spare one at a time that suits you. You wouldn't need the original box, because the courier brings the packaging for the collection."
+    },
+    {
+      "user": "Fair enough. While I wait, I'll need an invoice for the table. My partner and I split big purchases, and she wants a copy of the receipt so she can pay me back her half.",
+      "assistant": "You can download it yourself: sign in, go to Orders, open the original table order, and choose Download invoice. It shows the price, the delivery charge, and the tax, which should make splitting it easy. The replacement order won't have its own invoice, because it's free, so the original invoice is the only one you'll need. You can also forward the order email to her if that's simpler."
+    },
+    {
+      "user": "Thanks. Do you happen to have a matching side table? With the new coffee table, I think the corner next to the sofa would look better with something in the same oak.",
+      "assistant": "We do: the Brenna side table is made from the same solid oak with the same oiled finish, so the two will match closely. It's 45 cm square and 55 cm high, which sits nicely next to most sofas, and it costs 149 dollars. I can't add it to the replacement order, because that's a no-charge order, but if you order it separately, it may arrive in a separate parcel."
+    },
+    {
+      "user": "I'll think about the side table. Is there any news on the replacement coffee table yet? It's been a couple of days, and I haven't had an email.",
+      "assistant": "Yes, good news: the replacement shipped this morning from our main warehouse. The new tracking number is TRK-55104, and the email with the tracking link should reach you within the hour. Replacements usually arrive in two to three working days. The driver has been told to check the house number and to take a photo at the door, so the mix-up with number 12 shouldn't happen again."
+    },
+    {
+      "user": "Honestly, after what happened, I'm nervous about it being left outside again. I'm at work every day this week. Is there a safer option than leaving it at the house?",
+      "assistant": "That's understandable. Instead of a doorstep delivery, the courier can hold the parcel at a local post office for you to collect at a time that suits you. They hold it for a few days, and you'll get a text with a collection code when it's ready. The box weighs about 18 kg, so it's worth checking you can get it home. Is there a post office close to your work or your home?"
+    },
+    {
+      "user": "Yes, the Ridley Street post office is two minutes from my office, and I can drive there at lunchtime. Can you have it sent there instead?",
+      "assistant": "Done: I've changed the delivery so the parcel goes to the Ridley Street post office instead of your house, and I've removed the doorstep note for this delivery. When it arrives, you'll get a text with a collection code. Bring that code and some photo ID, and they'll bring the box out to you. If you're driving, park close by: it's a big, flat box, and easier to carry with two hands."
+    },
+    {
+      "user": "That's a relief. Thanks for sorting this out so quickly. I was expecting weeks of arguing with the courier.",
+      "assistant": "You're welcome, and I'm sorry the first delivery went so wrong. The courier claim carries on in the background, but that's for us to settle, so you don't need to do anything more. Your new table is booked for collection near your office, and you'll get the text with the code when it's ready. Enjoy putting it together, and if anything's wrong when you open the box, just reply here."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-32987",
+      "accepted": ["FW-32987", "32987"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "missing item",
+      "accepted": ["missing", "lost", "never arrived", "never came"],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "late delivery",
+          "accepted": ["late delivery", "running late", "delayed"]
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "replacement sent",
+      "accepted": ["shipped", "on its way", "dispatched"],
+      "change": "update",
+      "stale": [
+        {
+          "value": "escalated",
+          "accepted": ["investigation", "escalated"]
+        }
+      ]
+    },
+    {
+      "id": "safe_place",
+      "field": "other",
+      "value": "behind the blue bin",
+      "accepted": ["blue bin"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "claim",
+      "field": "other",
+      "value": "CLM-3390",
+      "accepted": ["CLM-3390", "3390"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "post_office",
+      "field": "other",
+      "value": "Ridley Street",
+      "accepted": ["Ridley Street", "Ridley"],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "Which order number is this case about?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What's the problem with my coffee table order?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "What's happening with my case right now?"
+    },
+    {
+      "id": "p4",
+      "fact": "safe_place",
+      "question": "Where did I say big parcels usually get left at my house?"
+    },
+    {
+      "id": "p5",
+      "fact": "claim",
+      "question": "What's the reference for the claim you opened with the courier?"
+    },
+    {
+      "id": "p6",
+      "fact": "post_office",
+      "question": "Which post office is the new table being sent to?"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "id": "c04",
+  "split": "dev",
+  "customer": "Ines Moreau",
+  "turns": [
+    {
+      "user": "Hello, I ordered the Sola tumblers, the set of four in ribbed amber glass, and the box arrived yesterday with only three inside. There's a fourth slot in the cardboard insert, but it was empty, and there was nothing loose in the box. My order number is FW-50213. Could you look into it?",
+      "assistant": "I'm sorry; a set of four that arrives as three is frustrating, especially when the insert shows exactly where the fourth should be. I've found FW-50213: the Sola tumblers in amber, set of four, delivered yesterday. Before I go further, can you check one thing for me? Is there any sign that the box was opened or retaped on the way? That tells me whether to look at the packing or at the courier."
+    },
+    {
+      "user": "No, the tape looked untouched, just the courier's sticker on top. The three glasses that did come are perfect, no chips or scratches at all. I just want the fourth one sorted out.",
+      "assistant": "Thanks, that's helpful. If the tape was untouched and the slot in the insert was empty, the glass most likely never made it into the box, rather than going astray in transit. I've noted on FW-50213 that one tumbler is missing and that the other three arrived in good condition, so you don't need to send anything back. Let me check a couple of details before I pass it on."
+    },
+    {
+      "user": "Sure. Is there anything you need from me? I've still got the box and the insert, if a photo would help. I kept them because I half expected the glass to be stuck under a flap somewhere, but it wasn't.",
+      "assistant": "A photo of the open box with the insert would be useful, ideally with the three glasses in their slots, so the empty one is clear. It isn't required, but it helps the people who check the packing. While you take it: is there anything about deliveries I should know? If we end up sending anything out to you, I want to make sure it reaches you."
+    },
+    {
+      "user": "Photo attached. And yes, good that you ask: I'm moving to a new flat on 1 December, so please don't send anything to the old address after that. I'll add the new address to my account once I have the keys.",
+      "assistant": "Thanks, the photo shows the empty slot clearly, and I've added it to the case. I've also put a note on your account that you're moving on 1 December, so nothing goes to the old address from that day. Until you add the new address, anything we need to send after that date will be held, rather than sent somewhere you no longer live. Is the new flat nearby, so delivery times will be similar?"
+    },
+    {
+      "user": "Yes, only across town, about ten minutes away. Do you know how long it will take to find out what happened to the glass? I'm trying to plan the next couple of weeks around packing.",
+      "assistant": "It shouldn't take long. Every order is packed at a station with a scale and a camera, so there's a record of what went into the box and what it weighed. Comparing that with what you received normally settles it quickly. While that's being checked, nothing is needed from you, and the case stays open on our side the whole time."
+    },
+    {
+      "user": "Okay. Can you start that check now? I'd like it settled before the move if possible, so I'm not chasing it from a flat full of boxes.",
+      "assistant": "Yes, I've escalated it to the warehouse team just now, with your photo and the order details. They'll pull the packing record for your box: the camera footage and the weight. If the weight shows three glasses, it was a packing error and we'll put it right straight away. If it shows four, we open a claim with the courier instead. Either way, you'll hear from me as soon as they report back, and you won't need to chase anyone yourself, before or after the move."
+    },
+    {
+      "user": "Thank you. While I wait, can the Sola glasses go in the dishwasher? The listing said something about hand washing, and I'd really rather not wash everything by hand, especially in the middle of a move when the sink is full of packing.",
+      "assistant": "They can go in the dishwasher, on the top rack, on a normal or eco cycle. The listing recommends hand washing because the amber tint is a coating, and very hot cycles can dull it over the years. If you use the dishwasher, avoid the intensive setting, and don't let the glasses touch each other, since the ribs can chip where they knock together during the cycle."
+    },
+    {
+      "user": "Good to know. And are they okay for hot drinks? I was thinking of using one for tea in the mornings; I like seeing the colour of it.",
+      "assistant": "They're fine for warm drinks, but not for boiling water poured straight in. The Sola is soda-lime glass, and a sudden jump in temperature can crack it. If you want tea in one, let the water cool for a minute or two first, or put a little cold milk in before the tea. They aren't suitable for the microwave either, because of the coating. Cold drinks and ice are no problem at all, and the ribs make them easy to hold when they're wet."
+    },
+    {
+      "user": "Any news on the glass? It's been a day, and I'm starting to pack the kitchen, so I'd like to know whether to leave a space in the box for a fourth glass.",
+      "assistant": "Yes, the check is done. The packing record shows your box weighed one glass less than a full set, and the footage shows the packer taking out a chipped tumbler and not putting a new one back in its place. So it was our packing error, not the courier. I'm sorry. Now we can decide how to put it right: a replacement glass, or money back for the one you didn't get."
+    },
+    {
+      "user": "Thanks for finding out so quickly. I'd prefer a replacement, so the set is complete, but with the move coming up, how soon could one get here? I don't want it arriving at the old flat after I've gone.",
+      "assistant": "The amber tumbler is out of stock until the new year, I'm afraid, so a replacement couldn't reach you before the move, and probably not until mid January. The alternative is a refund for the glass now. You'd then have a set of three, but you could order a single tumbler later, once the amber is back in stock, and have it sent to the new flat."
+    },
+    {
+      "user": "Hmm. Then a refund is probably best; I don't want an order hanging over the move. How much would that be?",
+      "assistant": "The set of four was 64 dollars, so the refund for one glass would be 14 dollars. It goes back to the card you paid with, and you keep the three glasses you have. If you're happy with that, I'll request it now. It's a partial refund, so the rest of the order stays exactly as it is, and you don't need to return anything."
+    },
+    {
+      "user": "Wait, 64 divided by four isn't 14, is it? I think it should be a bit more than that. I'm not trying to be difficult; I just did it in my head while you were typing.",
+      "assistant": "You're right, and I'm sorry: I got the sum wrong. 64 dollars divided by four is 16 dollars a glass, so the refund is 16 dollars, not 14 dollars. Thank you for catching it. I've put the corrected amount on the case, and that's what the refund will be for. It goes back to your card, and you keep the three glasses."
+    },
+    {
+      "user": "No problem, it happens. Will the refund show up on my statement as Fernwick Goods? I sometimes miss small amounts when I check it.",
+      "assistant": "Yes, it shows as Fernwick Goods, with your order reference next to it, so it's easy to match. Once a refund is issued, it takes three to five working days to appear. I can't see your bank account or promise how your bank displays it, but if you don't see it within a week of the refund going through, let me know and I'll check it from our side."
+    },
+    {
+      "user": "Okay. Do I need to send the three glasses back, or do anything else, for the refund to go through? I've already wrapped them in newspaper for the move, so I'd rather not unpack them.",
+      "assistant": "No, you keep all three, and there's nothing to send back. The refund only covers the glass that never reached you, so there's nothing for us to collect. Your photo and the packing record are all the evidence we need, so the glasses can stay wrapped in their newspaper. I'll request the refund now; it takes a few minutes to go through our system."
+    },
+    {
+      "user": "Thanks. Has it gone through? I'd like to tick it off my list before the movers come.",
+      "assistant": "Yes, I've just refunded the glass to the card you paid with. You'll get a confirmation email with the details. As I said, it takes three to five working days to show on your statement. I've also sent a note back to the warehouse, so they can look at how the missing glass slipped through their checks."
+    },
+    {
+      "user": "Lovely, thank you. Unrelated, but when I order something next, will the courier tell me when they're coming? With the move, I'll be in and out a lot over the next few weeks.",
+      "assistant": "Yes. On the morning of delivery, the courier texts a one-hour window to the mobile number on your account, the one ending 5308. The text has a link where you can choose a safe place or another day, if the window doesn't suit you. If you get a new number with the move, update it under Account settings, so the text reaches you."
+    },
+    {
+      "user": "Perfect. Does the Sola come in any other colours? Amber is lovely, but I'm not sure I want all of them the same, and the new kitchen has quite a lot of grey in it.",
+      "assistant": "The Sola also comes in clear and in smoke grey, both in the same ribbed glass. The clear and the grey are both in stock now; only the amber is waiting for new stock. They're the same shape and size, so a mixed set looks deliberate rather than odd. Plenty of people do exactly that, with a different colour for each person in the house, so nobody mixes up their glass."
+    },
+    {
+      "user": "Then I'll order a spare in smoke grey, to stand in for the missing one. A different colour would actually be fun. Can it go to my new address?",
+      "assistant": "Of course. A single Sola tumbler in smoke grey is on the product page under Singles, at the same price per glass as in the set. Because of your move, the simplest way is to add the new address to your account first and then place the order, so it goes straight there. The note on your account means nothing goes to the old address after the move anyway."
+    },
+    {
+      "user": "Will do as soon as I have the keys. Can I save two addresses on my account, or do I have to delete the old one first? I still get the odd parcel for the previous tenant, so I'd like to keep things tidy.",
+      "assistant": "You can save several. Under Account settings, choose Addresses, then Add address, and mark the new one as your default. The old one can stay as a saved address, or you can delete it once you've moved; it makes no difference to past orders or to your refund. Just check which address is the default before you place your next order. And as a thank you for your patience, I've added a 10% discount code to your account, SOLA10, which you can use on the spare glass."
+    },
+    {
+      "user": "Great, thank you for sorting this out so quickly, and for being honest about the sum. And thanks for the code; that's a nice surprise.",
+      "assistant": "You're welcome, Ines, and thank you for spotting my mistake. The money is on its way back to your card, the three glasses are yours to keep, and your account is set up for the move. The discount code is on your account whenever you're ready to order. Good luck with the new flat, and if anything else comes up, reply here and we'll pick it up from there."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-50213",
+      "accepted": [
+        "FW-50213",
+        "50213"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "missing item",
+      "accepted": [
+        "missing",
+        "only three"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "refund issued",
+      "accepted": [
+        "refunded",
+        "refund issued"
+      ],
+      "change": "update",
+      "stale": [
+        {
+          "value": "escalated",
+          "accepted": [
+            "escalated",
+            "warehouse team"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "move",
+      "field": "other",
+      "value": "1 December",
+      "accepted": [
+        "1 december",
+        "december 1",
+        "1st december",
+        "december 1st",
+        "dec 1"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "refund",
+      "field": "other",
+      "value": "16 dollars",
+      "accepted": [
+        "16 dollars",
+        "16"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "14 dollars",
+          "accepted": [
+            "14 dollars",
+            "14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colour",
+      "field": "other",
+      "value": "smoke grey",
+      "accepted": [
+        "smoke grey",
+        "smoke gray"
+      ],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "What was my order number again?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What did I say was wrong with my delivery?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where do things stand with my case now?"
+    },
+    {
+      "id": "p4",
+      "fact": "move",
+      "question": "On what date did I say I'm moving?"
+    },
+    {
+      "id": "p5",
+      "fact": "refund",
+      "question": "How much money am I getting back?"
+    },
+    {
+      "id": "p6",
+      "fact": "colour",
+      "question": "What colour did I choose for the extra glass?"
+    }
+  ]
+}

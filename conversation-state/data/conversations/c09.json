@@ -1,0 +1,201 @@
+{
+  "id": "c09",
+  "split": "test",
+  "customer": "Daniel Okoro",
+  "turns": [
+    {
+      "user": "Hello, my Wren linen curtains arrived yesterday and they're far too short. I ordered the 228 cm drop for the living room, but the sewn-in tag on both panels says 183 cm, and they stop well above the windowsill. The order number is FW-21650. Can I swap them for the length I actually ordered?",
+      "assistant": "I'm sorry they arrived in the wrong size; a difference of 45 cm is hard to miss. I've found FW-21650: one pair of Wren linen curtains in cream, ordered with the 228 cm drop, and the packing record shows the 183 cm pair went out instead, so it looks like a picking mistake at the warehouse. We can exchange them for the correct drop at no cost to you. Before I set that up, could you measure the width of the window, so I can check the panels are right for it too?"
+    },
+    {
+      "user": "Sure, I just need to find the tape measure. While I look, do I have to send the short ones back before you send the new pair? We've got nothing up at the moment, and the street light shines straight into the room all evening.",
+      "assistant": "For an exchange, the new pair normally goes out once the courier has collected the old one and it has been scanned at the depot. That said, you're welcome to hang the short pair in the meantime so the room isn't bare. Please just keep the sewn-in tags on and avoid washing or steaming them before they go back, so they're in the same state as when they arrived. Let me know the width when you've found the tape measure."
+    },
+    {
+      "user": "Found it. The window is 140 cm wide, and the rail runs about 20 cm past the frame on each side, so it's a fairly big rail. Does that change anything?",
+      "assistant": "Thanks, that helps. The Wren curtains come as a pair of panels, each 135 cm wide, so with your rail extending past the frame they'll cover the window comfortably and still have a soft gather when they're closed. The width you ordered is right, then; only the drop was wrong. The extra rail length is also good news, because the panels can stack back beside the window when they're open instead of blocking the light."
+    },
+    {
+      "user": "Good to know. Another question, since I'll be hanging these for a while: how do I clean linen curtains? The last ones I had shrank in the wash, and I don't want to make the same mistake with the new pair.",
+      "assistant": "Linen does shrink a little, so it's worth being careful. Wash them on a gentle cycle at 30 degrees with a mild liquid detergent, and don't use bleach or fabric softener. Hang them to dry rather than using a tumble dryer, and rehang them while they're still slightly damp; the weight of the fabric pulls out most of the creases. Expect up to 3 percent shrinkage on the first wash, which is why the drop includes a small allowance."
+    },
+    {
+      "user": "That's useful. What kind of heading do they have? My rail has rings with little clips, and the old curtains had eyelets, so I'm hoping the new pair will hang the same way without me buying new hooks.",
+      "assistant": "The Wren curtains have a pencil pleat heading with a tape that takes standard curtain hooks, and a set of hooks comes in the packet. They work well with a ring rail: you put a hook through the tape, then hang it from the small eyelet at the bottom of each ring. If your rings have clips, you can also clip the top edge directly, though hooks give a neater pleat. The exchange pair will have exactly the same heading."
+    },
+    {
+      "user": "Perfect, I'll use the hooks then. Can you check that the right length is actually in stock? I'd hate to send these back and then wait weeks for the long ones to come in.",
+      "assistant": "I've checked, and the 228 cm drop is in stock at the warehouse that sent your order, with plenty of pairs available, so there shouldn't be any wait. I've also put a hold on one pair for you, so it can't be sold to someone else while the exchange is going through. I've also added a note for the warehouse team to check the tag on the new pair before packing it this time."
+    },
+    {
+      "user": "Thanks. Do I need the original packaging for the return? I still have the plastic bag they came in, but I threw away the cardboard box with the recycling yesterday.",
+      "assistant": "The box isn't needed: the courier brings a padded bag for the collection. Just fold the curtains neatly and put them back in their plastic bag if you can, so they stay clean in the van. Please include the hooks if you've opened the packet; if you haven't, just leave it sealed in the bag with the curtains. The courier will put everything into the padded bag at the door."
+    },
+    {
+      "user": "I'll use the plastic bag and keep the hooks with them. Part of the order was paid with a gift card I got for my birthday. Will that cause any trouble with the exchange?",
+      "assistant": "Not at all. An exchange for the same product at the same price doesn't involve any money, so nothing goes back to your gift card or your bank card. The payment stays exactly as it was, split between the gift card and the card. Only if you returned the curtains for a refund would we need to split the refund in the same way, and even then it happens automatically."
+    },
+    {
+      "user": "Good, that's simple. And will I get a new invoice for the replacement? I keep all the receipts for the flat in one folder, and I'd like the paperwork to match what's actually hanging on the windows.",
+      "assistant": "The exchange doesn't create a new invoice, because nothing is charged; the original invoice still covers the order. What I can do is add a note to the order saying the 183 cm pair was sent in the wrong size and exchanged for the 228 cm drop. You can download the invoice under Account, then Orders: open the curtain order and choose Download invoice. The note shows on the same order page, so you can print both for your folder."
+    },
+    {
+      "user": "That works for me. Okay, let's go ahead with the exchange. What do I need to do to send the short ones back? I don't have a printer at home, if that matters.",
+      "assistant": "No printer needed. I've set up the exchange and emailed you a return label: it's a QR code, which the courier scans from your phone and then prints the label themselves. The collection is free, because the mistake was ours. Once the courier scans the parcel, the warehouse releases the long pair, with a note to double-check the drop before it leaves. You'll get an email with tracking at that point."
+    },
+    {
+      "user": "Got the email with the QR code, thanks. When can the courier come for the old pair? Thursday would suit me best; I'm working from home that day and I'll be in all day.",
+      "assistant": "I've booked the collection for Thursday under order FW-21650. The collection is free, and you'll get a text on the morning of the collection with a one-hour window, sent to the mobile number on your account. The text also has a link you can use to choose another day, if the window doesn't suit you after all."
+    },
+    {
+      "user": "Great. Does it have to be me who hands them over? My flatmate is usually in during the day too, and she's happy to do it if I end up on a call when they arrive.",
+      "assistant": "Anyone at the address can hand the parcel over, so your flatmate is fine. She'll just need to show the QR code to the courier, so it's easiest if you forward her the email, or she can tell them the order number and they'll find it on their app. There's nothing for her to sign or print, and she doesn't need to pack anything beyond what you've prepared."
+    },
+    {
+      "user": "Sorry, I've just checked my calendar properly, and I'm actually in the office on Thursday for a training day, and so is my flatmate. Can we move the collection to Friday instead? I'm definitely home all day then.",
+      "assistant": "No problem at all; I've moved the collection to Friday and cancelled the earlier booking, so nobody will turn up on the wrong day. Everything else stays the same, and the text with the one-hour window will come that morning. The QR code in the email still works for the new day, so you don't need to wait for a new one."
+    },
+    {
+      "user": "Thanks. Unrelated question: the street light I mentioned is really bright. Do you sell a lining I could add to the new curtains, something that blocks more light?",
+      "assistant": "Yes. The Wren curtains are unlined, which gives that soft, light look, but we sell a detachable blackout lining that hooks onto the same heading tape, so you don't need any sewing. It comes in drops to match, including 228 cm, and costs 38 dollars per panel. It also helps keep the room warmer in winter. I can't add it to the exchange, because that's a no-charge order, but you can buy it separately."
+    },
+    {
+      "user": "I'll think about the lining. Just to double-check, the new pair will be the same colour as these ones, right? I liked them in the photos online.",
+      "assistant": "Yes, the exchange is set up in cream, exactly the same as your original order, with the 228 cm drop and the pencil pleat heading. The only thing that changes is the length. Cream linen photographs well, though it tends to look a little warmer in real life than on a screen, especially in rooms with yellowish evening light. If you'd like a different colour, there's still time to change it before the new pair leaves the warehouse."
+    },
+    {
+      "user": "How long will the new pair take to arrive once the courier has the old ones? I want to know roughly when I can take the short ones down for good.",
+      "assistant": "Usually two to three working days. The warehouse releases the new pair when the courier scans the collected curtains, and you'll get an email with the tracking number as soon as it leaves. On the morning of delivery, the courier texts a one-hour window to the mobile number on your account, with a link to choose a safe place or another day. Weekends don't count as working days, so allow a little extra if the collection is late in the week."
+    },
+    {
+      "user": "I've had the short ones up against the wall for a few days, and the cream looks a bit yellow next to our white paint. Could I change the replacement to linen white instead? Is that possible at this stage?",
+      "assistant": "Yes, it's still possible, because the new pair hasn't left the warehouse yet. The Wren curtains in linen white are the same price, and the 228 cm drop is in stock in that colour too, so I've changed the exchange to linen white and moved the hold to a pair in that colour. There's nothing extra to pay. The pair you have now still goes back with the courier as planned."
+    },
+    {
+      "user": "Thank you! When the new ones arrive, they'll be creased from the packaging. Is it okay to iron them, or is steaming better for linen?",
+      "assistant": "Both work. Steaming is gentler and quicker once the curtains are hanging: a handheld steamer from top to bottom takes out most creases in a few minutes. If you prefer to iron, do it while the fabric is still slightly damp, on the reverse side, with the iron on the linen setting. Don't press the pleat tape too hard, or the heading can lose its shape."
+    },
+    {
+      "user": "Is there any kind of discount for the hassle? I know it was a simple mistake, but it means a week or so of short curtains and an extra day at home for the courier.",
+      "assistant": "That's fair, and I'm sorry for the trouble. I've added a 10 percent discount code to your account: WREN10. It works on your next order, including the blackout lining if you decide to get it, and it doesn't expire. It applies to everything except gift cards. You'll find it under Account, in the Discounts section, and it's applied automatically at checkout once you sign in."
+    },
+    {
+      "user": "That's kind, thanks. I think that's everything for now. I'll keep the QR code handy and look out for the text.",
+      "assistant": "You're welcome, and thanks for your patience. The collection is booked, the new pair is on hold at the warehouse with your colour change, and the discount code is on your account. Once the courier scans the old pair, the new one will be released and you'll get the tracking email. If anything looks wrong when the new curtains arrive, just reply here and we'll pick it up from there."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-21650",
+      "accepted": [
+        "FW-21650",
+        "21650"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "wrong size",
+      "accepted": [
+        "wrong size",
+        "too short",
+        "wrong length"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "return label sent",
+      "accepted": [
+        "return label"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "width",
+      "field": "other",
+      "value": "140 cm",
+      "accepted": [
+        "140 cm",
+        "140cm",
+        "140 centimetres",
+        "140 centimeters"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "collection",
+      "field": "other",
+      "value": "Friday",
+      "accepted": [
+        "friday"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "Thursday",
+          "accepted": [
+            "thursday"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colour",
+      "field": "other",
+      "value": "linen white",
+      "accepted": [
+        "linen white"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "cream",
+          "accepted": [
+            "cream"
+          ]
+        }
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "Can you remind me of my order number?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "My flatmate asked what went wrong with the curtains. What did I tell you the problem was?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where does my case stand at the moment?"
+    },
+    {
+      "id": "p4",
+      "fact": "width",
+      "question": "How wide did I say my window is?"
+    },
+    {
+      "id": "p5",
+      "fact": "collection",
+      "question": "Which day is the courier coming to pick up the old curtains?"
+    },
+    {
+      "id": "p6",
+      "fact": "colour",
+      "question": "What colour are the curtains you're sending me in the exchange?"
+    }
+  ]
+}

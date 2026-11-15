@@ -1,0 +1,204 @@
+{
+  "id": "c06",
+  "split": "test",
+  "customer": "Hannah Brooks",
+  "turns": [
+    {
+      "user": "Hello. My Elm round mirror arrived this afternoon and the glass is shattered. It's the 60 cm one with the black frame. The box looked fine on the outside, but when I lifted the mirror out, pieces of glass fell all over the hall floor. Nobody's hurt, but I'm quite shaken.",
+      "assistant": "I'm so sorry, that sounds alarming, and I'm glad nobody was hurt. Please don't handle the broken glass with bare hands; wear thick gloves if you need to move it. Leave the mirror in its box for now if you can. Could you give me your order number? It's in your confirmation email and starts with FW-. Once I have it, I'll get this sorted for you, and you won't need to go anywhere or pay for anything."
+    },
+    {
+      "user": "It's FW-70391. I've put the mirror back in the box and swept up the bits on the floor, with gloves on, and I've vacuumed the hall twice to be sure.",
+      "assistant": "Thank you, I've found the order: one Elm round mirror, delivered today. Well done on the clean-up; a second vacuum is a good idea with glass. For a damaged item you can choose a refund or a replacement, and either way our courier collects the broken mirror from you, free of charge, and it's recycled. Have you had time to think about which you'd prefer?"
+    },
+    {
+      "user": "I think I'd like a refund for now. I need to measure the wall again before I decide on anything else, and I don't want another one turning up before I'm sure. It's quite a big piece for a narrow hallway.",
+      "assistant": "A refund makes sense. Before I set it up, I need two photos: one of the mirror showing the broken glass, and one of the box and the packing inside. They're for our claim with the courier, and they show us how the mirror was packed. Your case is on hold until they arrive, but there's no rush; a phone camera is fine. Just reply here with the photos attached."
+    },
+    {
+      "user": "Okay. What should I do with the broken mirror until it's collected? I don't want the courier to cut themselves on it.",
+      "assistant": "Good thinking. Once you've taken the photos, leave the mirror face down in its box, then tape the box shut so no glass can slip out. Write 'broken glass' on the top in large letters. You don't need any special packaging: the courier brings a padded bag for the collection and puts the whole box in it. Keep it somewhere out of the way until then, especially if you have children or pets."
+    },
+    {
+      "user": "I'll do that. Does the frame come off? It might be worth keeping it if the glass is the only problem; I liked the frame more than anything else about it.",
+      "assistant": "The frame is bonded to the glass at the back, so it can't be taken off at home without risking more breakage, and I wouldn't try. The whole mirror also needs to come back to us for the courier claim, so please keep it together in the box. Once it's back with us, it will be recycled, glass and frame separately."
+    },
+    {
+      "user": "Fair enough. Another question: the mirror was going above a radiator in the hall. Is that a bad idea? Someone told me heat can damage mirrors.",
+      "assistant": "It's a reasonable spot. Mirrors cope with the warmth from a radiator, but constant heat can, over years, loosen the silvering at the edges, so leave a gap of at least 30 centimetres above the radiator if you can. The main thing is to fix the mirror securely: a mirror this size is heavy, so use wall plugs and screws suited to your wall rather than a single nail. Hanging it on a wall that gets condensation, such as one shared with a bathroom, is a bigger risk than a radiator."
+    },
+    {
+      "user": "I've sent the photos now: two of the mirror and one of the box. You can see that there was only one thin layer of bubble wrap around it, and nothing at all at the corners of the box.",
+      "assistant": "Thank you, the photos are very clear. I can see the thin bubble wrap, and the box has no corner protectors, which a mirror this size should have. I've filed the claim with the courier and passed your case to our refunds team, who approve the refund. I've also told the quality team about the packing, so they can check how mirrors are being packed at the warehouse."
+    },
+    {
+      "user": "Thanks. Will I still be able to get an invoice for the mirror after all this? I keep records of everything for the house insurance, and they always ask for proof of purchase.",
+      "assistant": "Yes, the invoice stays on your account. To download it, sign in, go to Orders, open the mirror order, and choose Download invoice. It shows the price, the tax, and our company details. The confirmation email we send for the refund will give you a record of the money coming back, so you'll have both for your files."
+    },
+    {
+      "user": "Good. How long does the money take to reach my card once it's approved? And how do I get the broken mirror back to you?",
+      "assistant": "Once a refund is issued, it usually takes 3 to 5 working days to appear, though the exact timing is up to your bank. For the mirror, I've just emailed you a return label with a QR code. You don't need a printer: show the code to the courier when they come, and they'll print the label themselves. Collection is free, and anyone at your address can hand it over. The courier will let you know when they're on their way to you."
+    },
+    {
+      "user": "Okay. Silly question, but how do you clean a mirror without leaving streaks? Mine always end up smeary, whatever I use.",
+      "assistant": "Not silly at all. Use a microfibre cloth and a little glass cleaner, or water with a splash of white vinegar. Spray the cloth rather than the mirror, so liquid doesn't run behind the frame and damage the silvering. Wipe in a zigzag from top to bottom, then buff with a second, dry cloth. Avoid paper towels, which leave lint behind, and don't clean it in direct sunlight, because the cleaner dries before you can buff it and leaves streaks."
+    },
+    {
+      "user": "The courier collected the mirror yesterday, in that padded bag you mentioned. It's been two days since I sent everything. Has the refunds team looked at it yet?",
+      "assistant": "They have: they approved it this morning, and I can see the courier's collection scan from yesterday, thank you. The team agreed the mirror wasn't packed well enough, and the claim with the courier is under way, so you don't need to do anything more for it. They're sending the payment now, and I'll confirm as soon as it's through. I'm sorry it's taken longer than it should have."
+    },
+    {
+      "user": "Thanks. Can you let me know when it's done, and which card it's going to? I've got a couple of cards on the account, and I can never remember which one I used for what.",
+      "assistant": "It's just gone through, so your case is now marked refund issued. You've been refunded the full 95 dollars to the card ending 2209, the one you paid with, since refunds always go back to the original payment method. It usually takes 3 to 5 working days to appear, and the confirmation email is in your inbox now. That settles the claim for the broken mirror."
+    },
+    {
+      "user": "Great, thank you. I've measured the wall again, and it does fit, so I think I'll order the mirror again after all. Can I do that through you?",
+      "assistant": "Of course. I can set up a new order for the same mirror, in the same size, and you'd pay for it as a normal order. The Elm round mirror comes with a frame in black, brass, or natural oak, all at the same price. I'll also ask the warehouse to use corner protectors and a double layer of bubble wrap this time. Which frame would you like? If you're not sure, the product page has pictures of each one on a wall, which give a better idea of the colours than the close-ups."
+    },
+    {
+      "user": "The black one again, please. It matches the picture frames along the hall, and the light switches are the same colour too.",
+      "assistant": "The black frame it is. I've set up the order and added the packing note. You'll get a link by email to check the details and pay. Nothing goes to the warehouse until you've paid, so there's still time to change anything. Once it leaves, you'll get an email with tracking, and on the morning of delivery the courier will text you a one-hour window."
+    },
+    {
+      "user": "Thanks. Will it come with the same courier? I'd rather it didn't, after last time.",
+      "assistant": "I understand. The warehouse uses one courier for mirrors and glass, so I can't change that, but I can mark the parcel as fragile, with 'this way up' labels, on top of the extra packing. The claim we made also means the courier has a record of what happened last time. Drivers do handle parcels marked fragile differently: they're loaded last and kept upright. If it arrived damaged again, you'd have the same choices as before."
+    },
+    {
+      "user": "Okay. What size screws should I get to hang it? I'd like to have everything ready this time, so I can put it up the day it arrives.",
+      "assistant": "The mirror has a fixed metal bar on the back, so you need two screws, set level, to hang it on. For plasterboard, use two heavy-duty cavity fixings rated for at least 10 kilograms each. For brick, 50 millimetre screws with brown wall plugs work well. The fixing instructions are in the box, along with a paper template for marking the holes. Check for pipes and cables with a detector before you drill, especially above a radiator."
+    },
+    {
+      "user": "Actually, can I change the frame before I pay? My partner thinks brass would warm up the hall, and having seen it next to our new paint colour tonight, I agree. Brass instead, please.",
+      "assistant": "Easily done, as you haven't paid yet. I've changed the frame to brass, at the same price, and kept the packing note and the fragile labels. You'll get an updated link by email to check the details and pay. The order goes to the warehouse once you've paid, and you'll get an email with tracking as soon as it leaves. I think your partner is right; it will look warm against a pale wall."
+    },
+    {
+      "user": "Paid, thank you. Does that kind of frame ever tarnish? I've had metal things go dull on me before, especially in the bathroom.",
+      "assistant": "That frame has a lacquered finish, so it won't tarnish the way bare metal does. Dust it with a dry, soft cloth, and keep glass cleaner off the frame itself, as it can wear the lacquer over time. When you clean the glass, spray the cloth, as before, so nothing drips onto the frame. Kept dry, the finish should last for years. Avoid metal polish too: it strips the lacquer and the frame would then start to dull."
+    },
+    {
+      "user": "Good. Is there anything I should check when it arrives, so I don't end up in the same situation again?",
+      "assistant": "Yes. Before the courier leaves, check the box for damage, and if a corner is crushed, ask them to note it. Open the box flat on the floor rather than lifting the mirror out by the top, so any loose glass stays in the box. If anything's wrong, take pictures before you move anything, and reply here. We'd sort it out the same way as this time, and you wouldn't have to start the explanation from scratch."
+    },
+    {
+      "user": "Will do. Thanks for being so helpful about all of this; I was dreading a long argument, and it's been much easier than I expected.",
+      "assistant": "You're welcome, and thank you for being so patient. Your new mirror is ordered with the extra packing, and the fixing details are above for when you hang it. I hope it looks lovely in the hall. If anything else comes up, just reply here and we'll pick it up from there."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-70391",
+      "accepted": [
+        "FW-70391",
+        "70391"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "damaged",
+      "accepted": [
+        "damaged",
+        "shattered",
+        "broken",
+        "smashed",
+        "cracked"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "refund issued",
+      "accepted": [
+        "refund issued",
+        "refunded"
+      ],
+      "change": "update",
+      "stale": [
+        {
+          "value": "waiting for customer",
+          "accepted": [
+            "photos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "size",
+      "field": "other",
+      "value": "60 cm",
+      "accepted": [
+        "60 cm",
+        "60cm",
+        "60 centimetres",
+        "60 centimeters"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "card",
+      "field": "other",
+      "value": "2209",
+      "accepted": [
+        "2209"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "frame",
+      "field": "other",
+      "value": "brass",
+      "accepted": [
+        "brass"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "black",
+          "accepted": [
+            "black"
+          ]
+        }
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "What's the order number for the mirror that came in pieces?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What was wrong with the mirror when it was delivered?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where do things stand with my claim for the first mirror?"
+    },
+    {
+      "id": "p4",
+      "fact": "size",
+      "question": "How big across was the mirror I ordered?"
+    },
+    {
+      "id": "p5",
+      "fact": "card",
+      "question": "Which of my cards is the money going back to?"
+    },
+    {
+      "id": "p6",
+      "fact": "frame",
+      "question": "Which frame did I choose for my new mirror?"
+    }
+  ]
+}

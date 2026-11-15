@@ -1,0 +1,184 @@
+{
+  "id": "c12",
+  "split": "test",
+  "customer": "Chloe Tan",
+  "turns": [
+    {
+      "user": "Hi, my set of four Fenna oak chairs in the walnut finish arrived on Tuesday, and one of them has a split running up the back leg. I only noticed when I sat on it and it creaked. I think the order number is FW-54702, but I'm going from memory, so it might be slightly off.",
+      "assistant": "I'm sorry one of your new chairs has a split leg, and please don't sit on it again until we've sorted this out, in case the leg gives way. I've looked up FW-54702, but it's a candle order on a different account, so the number does seem to be slightly off. Could you check your order confirmation email when you get a moment? Meanwhile, could you describe the split: how long is it, and does it go right through the leg?"
+    },
+    {
+      "user": "It's about 10 cm long, starting just above the foot and running up along the grain. You can't see light through it, but it opens a little when I press on the seat. Can I just glue it? My dad has wood glue and clamps in his garage.",
+      "assistant": "Thanks, that's a clear description. Please don't glue it: a split in a load-bearing leg can open again under weight, and a repair would make it harder for us to see what went wrong. A damaged chair like this is something we put right, not you. Could you send two photos: one of the split, close up, and one of the packaging the chairs came in? We need both for the claim with the courier."
+    },
+    {
+      "user": "Photos attached: one of the leg, and one of the boxes. The chairs came in two boxes of two, and the box with the damaged chair doesn't have a mark on it. Should I check the other three chairs as well, just to be sure?",
+      "assistant": "Thanks, the photos are clear and I've added them to the case. Yes, please check the other three: turn each one over and look along all four legs, especially near the feet and where the legs meet the seat. Press gently on the seat while you look. An undamaged box is useful to know, because a split with no mark on the packaging is less likely to have happened in transit."
+    },
+    {
+      "user": "I've checked them all, and the other three look perfect, no marks at all. While I have you, how should I look after the finish? We eat at the table every day, and I don't want to ruin the chairs in the first month.",
+      "assistant": "Good news about the other three. The Fenna chairs have a lacquered finish over the oak, so they're easy to look after: wipe them with a soft, slightly damp cloth and dry them straight away. Avoid sprays with silicone or alcohol, and anything abrasive, which can dull the lacquer. Felt pads under the feet protect both the chairs and the floor. Don't stand them right next to a radiator, as wood moves with heat."
+    },
+    {
+      "user": "I'd much rather have the one chair replaced than return the whole set, if that's possible. We love the other three, and the set matches our table perfectly. Can you replace just one chair?",
+      "assistant": "Yes, for a damaged item you can choose a refund or a replacement, and we can replace a single chair from the set rather than the whole order. The damaged chair would be collected by the courier, free of charge, and recycled, and the replacement is released from the warehouse once the courier has scanned the collected chair. To set any of that up, though, I'll need the correct order number."
+    },
+    {
+      "user": "I'm still digging through my inbox; I get far too many emails. While I look, how is the replacement delivered? I'm at work during the day and there's no one at home.",
+      "assistant": "No rush. On the morning of delivery, the courier texts a one-hour window to the mobile number on your account, and the text has a link you can use to choose a safe place or another day if the window doesn't suit you. A single chair comes in its own box, so it isn't too heavy for a safe place like a porch or a side gate, as long as it's covered."
+    },
+    {
+      "user": "Found it! The confirmation email says FW-54720, not the number I gave you; I swapped the last two digits. Sorry about that, I was sure I had it right.",
+      "assistant": "No need to apologise; that's an easy mix-up. FW-54720 is the right one: four Fenna oak chairs, delivered on Tuesday to your address, in two boxes, which matches what you described. I've linked your photos and the description of the split to this order. Next I'll look at what's needed before a replacement can go out, since a split in solid wood sometimes needs a closer look."
+    },
+    {
+      "user": "Is the damaged chair safe to keep in the dining room until it's collected? We have a cat who likes to jump on chairs, and I'm worried about the leg giving way under her.",
+      "assistant": "A cat is light enough not to put much strain on the leg, but to be safe, I'd move the chair out of the way, somewhere it won't be sat on by mistake, such as a spare room or against a wall with something on the seat. Keep it as it is now: no glue, no tape, and no tightening of the leg bolts, so it reaches us in the same state as in your photos."
+    },
+    {
+      "user": "Okay, it's in the spare room now with a laundry basket on the seat. So what happens next? Can you just send a replacement chair straight away?",
+      "assistant": "Usually, yes, but splits along the grain in solid oak are a bit different from damage in transit, especially when the box has no mark. They can point to a problem with the wood itself, and if that's the case, other chairs from the same production run might be affected too. So before I book the collection and the replacement, I'd like the people who check our furniture to look at your photos."
+    },
+    {
+      "user": "That makes sense, I suppose. I'd rather know if there's a problem with the wood. Who checks it, and how long does that take?",
+      "assistant": "I've escalated the case to our quality team, with your photos, the description of the split, and a note that the box was undamaged. They look at every report of a split or crack in solid wood, so they can spot a pattern across orders. They normally come back within a few working days. Once they've confirmed what happened, I can book the collection of the damaged chair and release the replacement."
+    },
+    {
+      "user": "Fine. Could someone from the quality team call me about it, rather than emailing? It's easier to explain on the phone. I'm at work during the day, so any time after 5 pm works.",
+      "assistant": "Of course. I've added a note asking the quality team to call you rather than email, at any time after 5 pm, on the mobile number on your account. If they need anything in writing, such as more photos, they'll still send it by email so you have it to hand, but the first contact will be a call."
+    },
+    {
+      "user": "Sorry, can you change that to after 6 pm? I forgot that I collect my son from football practice on weekdays, and I won't be able to talk properly before then.",
+      "assistant": "No problem: I've changed the note so the call comes after 6 pm on weekdays, and removed the earlier time. I've also marked it as a firm preference, so nobody calls you on the drive home. If the time ever stops suiting you, just reply here and I'll update the note on the case."
+    },
+    {
+      "user": "Thanks. Could the split be my fault, though? The dining room gets quite warm because the radiator is near the table, and I read that heat can crack wood.",
+      "assistant": "It's very unlikely after only a few days. Heat and dry air can make wood shrink and occasionally crack, but that usually takes weeks or months, and it tends to show as fine cracks in the seat or the top, not as a single split up one leg. A split like yours is more typical of a weakness in that particular piece of wood. It's still worth keeping the chairs a little away from the radiator."
+    },
+    {
+      "user": "That's reassuring. Will I need to pay anything for the replacement chair, or for the collection? I'd like to know before I tell my partner, who already thinks the chairs were too expensive.",
+      "assistant": "You won't pay anything. The collection of the damaged chair is free, and the replacement goes out at no charge, so there's no second invoice either; your original invoice covers the whole set. If you ever need that invoice, it's under Account, then Orders: open the chair order and choose Download invoice. You can reassure your partner that this one is on us."
+    },
+    {
+      "user": "Good. Also, do you sell seat cushions for the Fenna chairs? The seats are a bit hard for long dinners, and my parents aren't as young as they used to be.",
+      "assistant": "We do: the Fenna seat pads are made to fit the seat exactly, with ties at the back so they don't slide, and a cover that zips off for washing. They come in oatmeal, sage, and charcoal, and cost 22 dollars each. They'd be a separate order from the replacement, since that one goes out at no charge, but the pads can arrive before the review is finished."
+    },
+    {
+      "user": "The thing is, I'm hosting a dinner on Saturday the 13th for my parents' anniversary, and I really need all four chairs by then. Will the replacement be here in time?",
+      "assistant": "I've noted the 13th on the case, so everyone working on it can see the deadline. Once the review is done, the courier collects the damaged chair, and the replacement is released when they scan it, then arrives in two to three working days. If the review comes back soon, that should fit, but I can't promise until I hear back. I'll keep pushing to keep things moving."
+    },
+    {
+      "user": "Thank you. If it doesn't arrive in time, is there anything you could do? I'd rather not borrow a mismatched chair from the neighbours for an anniversary dinner.",
+      "assistant": "If it starts to look tight, I can ask the warehouse team whether the replacement can go out before the damaged chair is collected, as an exception, so you aren't left with three chairs on the night. I can't promise that, as it depends on the review and on stock, but I've added a note so it's ready to ask the moment the review is complete."
+    },
+    {
+      "user": "That would be great. In the meantime, can I order the seat pads now, or should I wait until the case is finished? I don't want to mix things up.",
+      "assistant": "You can order the seat pads now. They're a separate order, so they won't affect the case or the replacement in any way, and they'll arrive on their own. If you'd like a little help with the cost, I've added a discount code to your account for the trouble: FENNA10, for 10 percent off your next order, which covers the pads. It's applied automatically at checkout once you sign in."
+    },
+    {
+      "user": "Thanks, that's kind. I'll order the oatmeal ones tonight. I also noticed the chairs have a small sticker under each seat. Is that anything important, or can I peel them off?",
+      "assistant": "It's best to leave them on for now, at least on the damaged chair. Those stickers come from the factory and record details of the production run, which can matter in a case like yours. On the three good chairs, you can peel them off if they bother you, though they're out of sight under the seat, so most people just leave them. Enjoy the new pads."
+    },
+    {
+      "user": "Any news from the review? I've got the chair in the spare room, and I'd like to know what's happening before the weekend.",
+      "assistant": "Yes, the reviewers have come back to me. Before they can approve the replacement, they need the batch number of the damaged chair: it's printed on that sticker under the seat, a short code that starts with B. Could you look for it on the split chair and send it to me here? As soon as I have it, I'll pass it on, and then I can book the collection and the replacement."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-54720",
+      "accepted": ["FW-54720", "54720"],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "FW-54702",
+          "accepted": ["FW-54702", "54702"]
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "damaged",
+      "accepted": ["damaged", "split", "cracked", "crack"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "waiting for customer",
+      "accepted": ["batch number"],
+      "change": "update",
+      "stale": [
+        {
+          "value": "escalated",
+          "accepted": ["quality team", "escalated"]
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "field": "other",
+      "value": "walnut",
+      "accepted": ["walnut"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "callback",
+      "field": "other",
+      "value": "after 6 pm",
+      "accepted": ["after 6 pm", "6 pm", "6pm"],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "after 5 pm",
+          "accepted": ["after 5 pm", "5 pm", "5pm"]
+        }
+      ]
+    },
+    {
+      "id": "dinner",
+      "field": "other",
+      "value": "Saturday the 13th",
+      "accepted": ["13th", "saturday the 13th"],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "What's the order number for my chairs?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What did I tell you was wrong with the chair?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where are things with my case right now?"
+    },
+    {
+      "id": "p4",
+      "fact": "finish",
+      "question": "Which finish did I order the chairs in?"
+    },
+    {
+      "id": "p5",
+      "fact": "callback",
+      "question": "From what time can you call me?"
+    },
+    {
+      "id": "p6",
+      "fact": "dinner",
+      "question": "When is the dinner I need all the chairs for?"
+    }
+  ]
+}

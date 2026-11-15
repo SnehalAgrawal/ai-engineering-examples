@@ -1,0 +1,201 @@
+{
+  "id": "c02",
+  "split": "dev",
+  "customer": "Tomas Lindqvist",
+  "turns": [
+    {
+      "user": "Hello, I ordered the Arlo cotton duvet cover set in regular king, and it came this afternoon, but the label on the packet says double. I only noticed after I'd taken it out and laid it on the bed; it stops well short of the sides. My order number is FW-31108. Can you sort out the wrong size for me?",
+      "assistant": "I'm sorry about that; a duvet cover that doesn't reach the sides is no use to anyone. I've found FW-31108: an Arlo duvet cover set in cotton, ordered in regular king and delivered today. Before I arrange anything, could you send me a photo of the size label? It's the small white tag sewn into the inside seam, near the buttons. The packet label is printed separately, so the sewn-in one tells us what was actually packed."
+    },
+    {
+      "user": "Sure, give me a minute to dig it out. While I look: the set came with two pillowcases. Are those the wrong ones too, or are pillowcases the same for every size? They look normal to me.",
+      "assistant": "Good question. The pillowcases are a standard 50 by 75 centimetres in every Arlo set, so they'd fit your pillows whatever the duvet size. Even so, please send them back with the cover, because the set is returned and exchanged as one item. Keep them in the packet if you still have it, but don't worry if not. Take your time with the photo of the size label; a phone picture is fine, as long as the text on the tag is readable."
+    },
+    {
+      "user": "Photo attached. It says double, 200 by 200. Also, for anything you send out: our building has a gate at the front, and the courier will need the code to get in. It's 4482. The last courier left a card saying they couldn't get through.",
+      "assistant": "Thanks, the photo is clear: the tag says double, 200 by 200 centimetres, so the wrong cover was packed. I've added it to the case. I've also saved the gate code 4482 to your delivery notes, so it goes on the courier's instructions for the new delivery and anything after it. I'm sorry about the missed delivery last time; that note should stop it happening again."
+    },
+    {
+      "user": "One worry: I took it out of the packet and put it on the duvet to try it, before I noticed the tag. It hasn't been washed or slept in. Does that stop me from sending it back?",
+      "assistant": "Not at all. Trying a cover on the duvet is exactly how most people find a sizing problem, and that's fine. What we can't take back is bedding that has been washed or used for sleeping, for hygiene reasons, and yours is neither. Just fold it neatly with the pillowcases. You don't need the original packet or a box either: the courier brings a padded bag when they collect it."
+    },
+    {
+      "user": "Good. Out of curiosity, how much bigger is the regular king? I want to be sure it's actually going to cover my duvet properly this time.",
+      "assistant": "The regular king Arlo cover is 230 by 220 centimetres, so 30 centimetres wider and 20 longer than the double you received. Covers are cut to fit the duvet, not the mattress, so the size that matters is the duvet's. If you're not sure of it, it's usually printed on the duvet's own care label, or you can measure it flat. It's worth checking before we send the exchange, so the next one is right first time."
+    },
+    {
+      "user": "I'm fairly sure it's a regular king, but I'll check the duvet when I get a chance; it's buried under everything at the moment. Do I pay anything for the exchange? I'd rather not be out of pocket for your mistake.",
+      "assistant": "No, there's nothing to pay. A wrong size is always free to return, the collection is free, and the exchange goes out at no charge. You won't get a second invoice for it either. So for the exchange, you don't need to do anything with your payment; the money you paid for the set simply covers the new one."
+    },
+    {
+      "user": "Okay. How does sending it back work? I'm out at work most of the day, Monday to Friday, so I can't wait in for a courier, and my neighbours are out at work too.",
+      "assistant": "A courier collects it from your door, free of charge, and they bring the padded bag with them. You don't have to be the one who hands it over; anyone at the address can. When you book, you choose the day, so you can pick one when someone will be in, perhaps a day you work from home. Which day of the week would suit you best?"
+    },
+    {
+      "user": "I work from home on Thursdays, so Thursday is best. And just to confirm, I want the right size sent, not my money back. I love the colour; it's the oat one.",
+      "assistant": "Thursday it is; I've booked the collection for then. I've set the case up as an exchange for the Arlo set in regular king, in oat, rather than a refund. I've also recorded the wrong size on the order, so the warehouse checks the sewn-in tag before they pack your exchange, not just the printed packet. Next I'll send you what the courier needs from you."
+    },
+    {
+      "user": "Great, thanks. Will I need to print anything? I don't have a printer at home, and the one at work is always jammed.",
+      "assistant": "No printer needed. I've just emailed you a return label for order FW-31108. It comes as a QR code: show it to the courier on Thursday, and they print the label themselves. Once they scan the parcel, the warehouse releases your exchange, and you'll get a tracking email as soon as it leaves. Keep the email handy until then, in case the courier asks for it again."
+    },
+    {
+      "user": "Perfect. The timing matters a bit, actually: I'm having a housewarming party on 6 December, and friends are staying over, so I'd really like the cover on the bed before then. Is that realistic?",
+      "assistant": "It should be. The exchange is released as soon as the courier scans the collected cover on Thursday, and it arrives two to three working days after that. So it should be with you well before 6 December. I've added a note about the party to the case too, so if anything holds the exchange up, we'll know to prioritise it."
+    },
+    {
+      "user": "Thanks. While I have you, how should I wash the Arlo cover when it comes? My last cotton set shrank in the wash, and it was never the same afterwards. The corners of the duvet kept slipping out of it, which drove me mad.",
+      "assistant": "Wash it at 40 degrees, inside out and with the buttons done up, on a normal cotton cycle. The Arlo cotton is pre-shrunk, but a wash above 60 degrees can still take a few centimetres off it, so avoid hot cycles. Tumble dry on low, or line dry, and take it out while it's still slightly damp to keep the creases down. A warm iron is fine if you like it crisp, but most people skip it."
+    },
+    {
+      "user": "Good to know. Will the courier for the new delivery have the code for our gate, or do I need to give it to them again?",
+      "assistant": "They'll have it. The code you gave me earlier is saved in your delivery notes, so it's printed on the courier's instructions for this parcel, and you don't need to do anything else. On the morning of delivery, the courier also texts a one-hour window to the mobile number on your account, with a link to choose a safe place or another day if the window doesn't suit you."
+    },
+    {
+      "user": "I've found the email now. Does the courier need anything else from me apart from the QR code, like a form or a note inside the bag?",
+      "assistant": "No, the return label QR code is all they need; your order details are in the code, so no note or form is needed. Have the cover and both pillowcases ready and folded, and the courier will bag them up and scan the parcel at the door. If you'd like some reassurance, ask them to show you the screen after the scan."
+    },
+    {
+      "user": "Is there anything you can do for the trouble? It's been a bit of a hassle, having to find the tag and then wait in for a courier.",
+      "assistant": "I'm sorry for the extra steps; you shouldn't have had to do any of this. I've added a 10% discount code to your account for your next order: ARLO10. You'll see it at checkout when you're signed in, so there's no need to write it down. It works on the whole Arlo range, along with most of the rest of the shop."
+    },
+    {
+      "user": "That's kind, thanks. Do you sell fitted sheets in the same oat colour? It would be nice to have the whole bed match, and my current sheet is a faded white one that's seen better days.",
+      "assistant": "Yes, the Arlo range includes a fitted sheet in oat, made from the same cotton, with deep corners for mattresses up to 35 centimetres thick. It's sold separately, from 39 dollars depending on the size. There's also a flat sheet and an extra pair of pillowcases in the same colour. Your discount code works on all of them, so you could wait until the new cover is on the bed and see how it looks."
+    },
+    {
+      "user": "Can I get an invoice for the order? I'm keeping a record of everything I buy for the new flat, for the insurance.",
+      "assistant": "Of course. Go to Account, then Orders, open the Arlo order, and choose Download invoice. It shows what you paid, the tax, and our company details, which is what an insurer usually asks for. The exchange doesn't create a second invoice, because no money changes hands; the original one covers it. If you do order the fitted sheet, that will have its own invoice."
+    },
+    {
+      "user": "Oh, I finally pulled the duvet out and measured it: it's 260 by 220, not what I thought. So I need the super king, not the regular king. Sorry! Can you change the exchange?",
+      "assistant": "No problem, and thanks for measuring; better to find out now than when it arrives. A 260 by 220 duvet needs the super king cover, so I've changed your exchange to the Arlo set in super king, still in oat, and there's still nothing to pay. The double still goes back with the courier on Thursday, as planned, and everything else on the case stays the same."
+    },
+    {
+      "user": "Thanks for being so flexible. Will the new set come with pillowcases again? I have four pillows, so I could do with a second pair.",
+      "assistant": "Yes, every Arlo set includes two pillowcases in the standard size, so the new set brings you another pair to go with the ones you're sending back. If you'd like four that match, the extra pair of Arlo pillowcases in oat is sold separately, and your discount code works on it. You could add it to an order with the fitted sheet, so it all arrives together."
+    },
+    {
+      "user": "Last question: the cover I'm sending back, will it just be thrown away? It's barely been touched, and it seems a waste.",
+      "assistant": "No, it won't be thrown away. It goes back to the warehouse, where the team checks it over, and bedding that's clean and unused, as yours is, doesn't go to waste. You don't need to do anything special with it beyond folding it with the pillowcases. Once the courier has scanned it on Thursday, it's off your hands, and the scan is also what starts your exchange on its way to you."
+    },
+    {
+      "user": "Brilliant, thanks for all your help. I'll have it ready by the door on Thursday morning.",
+      "assistant": "You're welcome, Tomas. Once the courier scans the parcel on Thursday, the warehouse will release your new cover, and I'll keep an eye on it in case anything holds it up. The discount code is on your account whenever you'd like the matching sheet. Enjoy the new flat, and I hope the party goes well."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-31108",
+      "accepted": [
+        "FW-31108",
+        "31108"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "wrong size",
+      "accepted": [
+        "wrong size"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "return label sent",
+      "accepted": [
+        "return label"
+      ],
+      "change": "update",
+      "stale": [
+        {
+          "value": "waiting for customer",
+          "accepted": [
+            "size label"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gate",
+      "field": "other",
+      "value": "4482",
+      "accepted": [
+        "4482"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "party",
+      "field": "other",
+      "value": "6 December",
+      "accepted": [
+        "6 december",
+        "december 6",
+        "6th december",
+        "december 6th",
+        "dec 6"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "size",
+      "field": "other",
+      "value": "super king",
+      "accepted": [
+        "super king",
+        "superking"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "regular king",
+          "accepted": [
+            "regular king"
+          ]
+        }
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "Can you remind me what my order number is?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What was the problem with the cover I received?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where do things stand with my case right now?"
+    },
+    {
+      "id": "p4",
+      "fact": "gate",
+      "question": "What code did I give you for the gate at my building?"
+    },
+    {
+      "id": "p5",
+      "fact": "party",
+      "question": "When did I say my housewarming party is?"
+    },
+    {
+      "id": "p6",
+      "fact": "size",
+      "question": "Which size of cover are you sending me?"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "c11",
+  "split": "test",
+  "customer": "Ahmed Rahimi",
+  "turns": [
+    {
+      "user": "Hello. I bought a set of the Hollis dining chairs from you recently, and when I looked at my card statement this morning, I saw that I've been charged twice for them: two identical payments, one after the other. The order number is FW-43219. Can you sort this out, please?",
+      "assistant": "I'm sorry about that; a duplicate payment is worrying to find on a statement. I've looked up FW-43219, but that order is for a bath mat, placed in September on another account, so I don't think the number is quite right. Could you check your order confirmation email? The number is in the subject line. In the meantime, could you tell me the date the two payments were taken?"
+    },
+    {
+      "user": "Both payments are dated 5 November, a couple of minutes apart. I remember the payment page froze after I pressed Pay, so I refreshed it and tried again. I'm looking for the confirmation email now.",
+      "assistant": "Thanks, that's very helpful. Two payments on 5 November, a couple of minutes apart, with a page that froze and was refreshed, is the classic pattern for a duplicate: the first payment usually went through, but the page didn't confirm it, so the second attempt was charged as well. That's our checkout's fault, not yours. Once I have the right order number, I can match both payments against it."
+    },
+    {
+      "user": "Found it. Sorry, it's FW-43291, not the one I gave you; I mixed up the last two digits. The email says the chairs are being delivered next week.",
+      "assistant": "No problem: FW-43291 is the right one. It's four Hollis dining chairs in natural ash with grey seat pads, due for delivery next week. On our side, I can see one completed payment recorded against the order and a second payment attempt from the same card, flagged as a possible duplicate by our payment system. So the second charge isn't an extra order; it's the same purchase paid twice."
+    },
+    {
+      "user": "Okay, at least it's not two sets of chairs coming. I don't have room for eight! What happens to the second payment? Does it just disappear by itself, or do you have to do something?",
+      "assistant": "Sometimes it disappears by itself: when a duplicate attempt is caught in time, the money is only held as a pending authorisation, and the hold drops off without anyone doing anything, though how quickly is up to the bank. If the payment has already completed, though, it needs a refund from our side. Could you check on your statement or banking app whether both payments show as pending or as completed?"
+    },
+    {
+      "user": "I'll log in to the banking app in a minute. While I do, a quick question about the chairs: do they come assembled? We're redoing the dining room, and I'd like to know how much time to set aside.",
+      "assistant": "They need light assembly: the backrest and the seat come attached, and you fix the four legs to each chair with the bolts and Allen key supplied. It takes about ten minutes per chair, so around forty minutes for the set. The legs are marked front and back, so check the stickers before tightening. We recommend tightening the bolts again after a couple of weeks of use, once the wood has settled."
+    },
+    {
+      "user": "Right, I've checked the app. Both payments show as completed, not pending, with the same little tick next to each one. And it's been more than a week now, which is partly why I noticed it in the first place; I'd normally expect anything odd to have sorted itself out by now.",
+      "assistant": "Thanks for checking. If both are completed, the second one won't drop off on its own, so it needs a refund from us. Before I raise that, I need the exact amount of each payment as your statement shows it, because the payments system matches refunds to the amount and the date. It's a formality, but it stops the refund going against the wrong transaction."
+    },
+    {
+      "user": "Give me a second; the statement is a long one. By the way, are the grey seat pads removable? We have a toddler, and anything fabric in our house tends to end up with yoghurt on it sooner or later.",
+      "assistant": "Yes, the seat pads are held on with hook-and-loop strips, so they lift straight off. The covers unzip and can be machine washed at 30 degrees on a gentle cycle; let them dry flat and put them back on while slightly damp, so they keep their shape. If you'd like spares for rotation, we sell extra pads in the same grey. Take your time with the statement."
+    },
+    {
+      "user": "Here we go. Both payments are 312 dollars, which is exactly what the order cost with delivery. The descriptions on the statement are the same too, apart from the time.",
+      "assistant": "Thanks. 312 dollars matches the order total exactly: four chairs at 74 dollars each, plus 16 dollars delivery. So the second payment is a true duplicate of the first, and the full amount of it should come back to you. I'm getting the refund request ready with the date, the time of each payment, and the amount, so the payments system can match it against the right transaction."
+    },
+    {
+      "user": "Good. Should I also call my bank and dispute it? A colleague told me that's the quickest way to get money back when a shop charges you twice.",
+      "assistant": "I'd hold off on a dispute for now. If a dispute is opened while we're processing a refund, both can run at once, and the two processes have to be untangled before the money moves. That tends to slow things down rather than speed them up. If the refund hasn't reached you within the time I give you, a dispute is a perfectly good next step, and I'll make sure the case notes say so, in case your bank asks us for evidence."
+    },
+    {
+      "user": "That makes sense. Will the invoice show two payments as well? I need it for the household budget, and it'll get confusing if it looks like the chairs cost twice as much.",
+      "assistant": "No, the invoice only shows the order and the single payment that counts towards it, so it'll show the chairs at their normal price. The duplicate is recorded separately and won't appear on your invoice. You can download the invoice by signing in, going to Orders, and choosing Download invoice on the chairs order. Once the refund goes through, the duplicate will show as refunded in your payment history."
+    },
+    {
+      "user": "Great. Will any of this affect the delivery? We've arranged for my brother to help carry everything in that day, and I don't want the chairs held back at the warehouse just because there's a problem with the payment.",
+      "assistant": "It won't affect the delivery at all. The order was paid in full with the first payment, so the warehouse treats it as a normal order, and the chairs will go out on the date in your confirmation email. The duplicate is handled separately from the order. You'll get a text from the courier on the morning of delivery with a one-hour time window, so your brother will know when to come. If the date stops suiting you, you can move it from the link in that text."
+    },
+    {
+      "user": "Thanks. Since we're redoing the dining room anyway, do you have a table that goes with the Hollis chairs? Ours is an old pine one that wobbles whenever anyone leans on it, and I think it's finally time to replace it.",
+      "assistant": "The Hollis range includes a dining table in the same natural ash, 160 cm by 90 cm, which seats six comfortably. The chair legs and table legs share the same tapered shape, so the set looks like it belongs together. It costs 549 dollars, and it's in stock. The top has the same oiled finish as the chairs, and two people can assemble it in about half an hour. It would be a separate order, of course, and you'd pay for it in the usual way."
+    },
+    {
+      "user": "Tempting, but I'll wait until the refund comes through before I spend anything else! Is there anything I can do to stop the double payment happening again next time I order?",
+      "assistant": "Very sensible. If the payment page freezes, don't refresh or press Pay again; wait a minute, then check your email or the Orders page in your account. If an order confirmation has arrived, the payment went through. If nothing has arrived after a few minutes, it's safe to try again. We've also passed on the frozen page to our web team, because a refresh shouldn't be able to charge a card twice."
+    },
+    {
+      "user": "Good to know. My bank is Westbrook Credit Union, by the way, if that makes any difference. In my experience they're quite slow with anything that involves refunds.",
+      "assistant": "Thanks, I've noted Westbrook Credit Union on the case. It doesn't change how we send the refund: it always goes back to the card you paid with, and once it's issued it usually takes 3 to 5 working days to appear. I can't see your account or speak for your bank's own processing, but if you contact them later, they can trace it using the refund reference we'll email you."
+    },
+    {
+      "user": "Okay. So what's the next step? I'd like to know who is actually dealing with the refund, and whether I need to do anything else at this point.",
+      "assistant": "You don't need to do anything else; I have everything. Duplicate payments can't be refunded from the customer service side, because they have to be matched against the card network's records first. So the next step is for me to pass your case on to the people who handle payment corrections, with the amount, the times, and the bank details you've given me. I'm writing up that request now."
+    },
+    {
+      "user": "Okay. How long does that usually take? I'd like a rough idea so I know when to start worrying, and so I can tell my wife when the money should be back in the account.",
+      "assistant": "I've now escalated the case to our payments team, with a note that both charges are completed and match the order total. They usually confirm the duplicate within two working days, and then they send the refund. You'll get an email with the refund reference when that happens. After that, allow 3 to 5 working days for it to appear on your statement before contacting your bank."
+    },
+    {
+      "user": "Thanks. Back to the chairs: will they be okay on an underfloor-heated floor? The dining room has heating under the tiles, and I've read that it can be bad for wooden furniture.",
+      "assistant": "Ash is quite stable, and chairs are less affected than large tables, so they should be fine. Avoid running the heating very high, keep the room at a steady temperature if you can, and use felt pads under the legs, which also protect the tiles. If the room gets very dry in winter, a bowl of water or a small humidifier helps. Check the leg bolts now and then, since wood can shrink slightly."
+    },
+    {
+      "user": "Useful, thanks. One more thing: my wife has seen the photos and likes the chairs so much that she wants two more for the kitchen, to go with the breakfast bar. If I order two more, can I get a discount for the trouble this has caused?",
+      "assistant": "That's a fair request after the trouble with the payment. I've added a 10 percent discount code to your account, HOLLIS10, which you can use on your next order, including two more chairs. It doesn't expire and applies to everything except gift cards. You'll see it under Account, in the Discounts section, and it's applied automatically at checkout once you're signed in."
+    },
+    {
+      "user": "Thanks, that's kind. Should I wait to place the new order until the refund has arrived, or can I order the extra chairs now? I'd rather not muddle the two payments up and end up confusing everyone, myself included.",
+      "assistant": "You can order now; the new order is completely separate from the refund and won't affect it. If the payment page freezes again, do as I suggested: wait, and check your email and the Orders page before trying again. The extra chairs come from the same batch as your set, so the colour and seat pads will match, and they can arrive on the same day if you order soon."
+    },
+    {
+      "user": "Perfect. Thanks for being so clear about all this. I'll keep an eye on my email for the refund reference.",
+      "assistant": "You're welcome, and I'm sorry about the hassle with the payment. The refund request is with the right people, your discount code is on your account, and your chairs are on schedule for next week. When the refund email arrives, keep the reference safe in case you need to ask your bank about it. If anything else comes up, just reply here and we'll pick it up."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-43291",
+      "accepted": ["FW-43291", "43291"],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "FW-43219",
+          "accepted": ["FW-43219", "43219"]
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "double charged",
+      "accepted": ["double charged", "charged twice", "double charge", "duplicate"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "escalated",
+      "accepted": ["payments team", "escalated"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "date",
+      "field": "other",
+      "value": "5 November",
+      "accepted": ["5 november", "november 5", "nov 5", "5th"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "amount",
+      "field": "other",
+      "value": "312 dollars",
+      "accepted": ["312"],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "bank",
+      "field": "other",
+      "value": "Westbrook Credit Union",
+      "accepted": ["Westbrook"],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "What's the number of the order this is all about?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What was the problem I contacted you about?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where does my case stand now?"
+    },
+    {
+      "id": "p4",
+      "fact": "date",
+      "question": "On what date did I say the payments were taken?"
+    },
+    {
+      "id": "p5",
+      "fact": "amount",
+      "question": "What amount did the payments on my statement show?"
+    },
+    {
+      "id": "p6",
+      "fact": "bank",
+      "question": "Which bank did I say I'm with?"
+    }
+  ]
+}

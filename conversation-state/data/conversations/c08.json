@@ -1,0 +1,214 @@
+{
+  "id": "c08",
+  "split": "test",
+  "customer": "Sofia Petrakis",
+  "turns": [
+    {
+      "user": "Hello. I returned a Vela floor lamp three weeks ago and I still haven't had my refund. The order number is FW-90358. I'm getting a bit worried, because that money was meant for a birthday present for my son next month. I've checked my bank statements twice, and there's nothing from you.",
+      "assistant": "I'm sorry you're still waiting; three weeks is too long. I've looked up FW-90358, but that order belongs to a different customer and has no return on it, so I think there may be a typo in the number. Could you check it in your order confirmation email? It's in the subject line. In the meantime, tell me what you remember about the return, and I'll start looking."
+    },
+    {
+      "user": "I'm at work on my phone and can't get into my personal email here, sorry. The courier collected the lamp from my house on 28 October. They scanned a code on my phone, printed a label, and left me a little paper slip.",
+      "assistant": "That helps, thank you. If the courier collected it on 28 October, the lamp should have reached our warehouse within a few days, and your refund should have been with you well before now. So it's right to chase it. The slip the courier left should have a return tracking number on it, starting with RTN. With that, I can find the parcel even without the order number. If you can send it tonight, I'll pick this up as soon as it comes in."
+    },
+    {
+      "user": "The slip is at home, so I'll look tonight. I didn't pay anything to send it back. Is that right, or will the postage come off the refund? A friend said some shops charge for returns now.",
+      "assistant": "That's right: returns within 30 days of delivery are free, for any reason, and so is the courier collection from your home. Nothing comes off for postage. You sent the lamp back well within that time, so the refund should be the full amount you paid for it. Once I've found the order, I'll confirm exactly what that is, so you know what to look for on your statement."
+    },
+    {
+      "user": "Okay, good. I sent it back because it was too tall for the corner. Do you have something similar but shorter? I still need a reading light by the armchair.",
+      "assistant": "We do. The Vela also comes as a table lamp, with the same linen shade and stem, at 48 centimetres tall. If you'd like something that stands on the floor, the Orrin floor lamp is 130 centimetres, about 30 shorter than the Vela, and it has an adjustable arm that suits reading. Both take a standard bulb, and both are in stock at the moment. The Orrin's arm also swivels, so you can point the light at the page without moving the chair."
+    },
+    {
+      "user": "The Orrin sounds right. If I buy it now, can you take the cost off what you owe me, so I don't pay out twice? Money's a bit tight this month.",
+      "assistant": "I'm afraid we can't link the two: the refund has to go back to the payment method you used, and a new order is paid separately. If you'd rather not be out of pocket in the meantime, you could wait until your refund has arrived and order the Orrin then. I'll do what I can to make sure that isn't a long wait. The Orrin isn't in short supply, so there's no risk of it selling out in the meantime."
+    },
+    {
+      "user": "Fair enough. Which card does the refund go to, by the way? The one I used has since expired, and I've got a new one from the same bank.",
+      "assistant": "Refunds always go back to the original payment method, so it will be sent to the card you paid with. When a card has been replaced, it's your bank that decides how the money reaches you, and I can't see your bank account or promise how they'll handle it. If it doesn't show up in the usual time once it's sent, your bank can trace it with the reference in our confirmation email. Most people with a replaced card don't have to do anything at all."
+    },
+    {
+      "user": "I'm home now and found the slip. The tracking number is RTN-5521. It was in my coat pocket, of all places.",
+      "assistant": "Thanks, that's what I needed. RTN-5521 shows the lamp was scanned by the courier at your house when they collected it, and received at our warehouse three days later, on 31 October. It's linked to an order with a number very close to the one you gave me, so I think two digits got swapped. Could you check the confirmation email now that you're home?"
+    },
+    {
+      "user": "I'm opening my emails now. While I search, will the refund include what I paid for delivery when I first ordered the lamp? I can't remember whether I paid any.",
+      "assistant": "There wasn't a delivery charge on the order the return is linked to, so the refund is simply the price of the lamp, with nothing taken off. Take your time with the email; the confirmation comes from our orders address, and the subject line starts with 'Your Fernwick Goods order', followed by the number. If you have a lot of mail, searching for 'Vela' should find it quickly."
+    },
+    {
+      "user": "Found it. The number is FW-90385, not FW-90358. I swapped the last two digits, sorry about that.",
+      "assistant": "No problem at all; that matches. FW-90385 is your Vela floor lamp, and the return is linked to it. Now I can see the whole order: the lamp came back to our warehouse on 31 October, as I said, and passed its check the next day. But no refund has been sent. Something has stopped it at the last step, so let me look into why. Thank you for finding the email; I couldn't have got this far without it."
+    },
+    {
+      "user": "So it's been sitting there for over two weeks? What happens now? I really don't want to wait another three weeks.",
+      "assistant": "It looks that way, and I'm sorry. The system shows the return as checked, but the refund was never started, which usually means the record didn't pass from the warehouse to the next step. I can't push it through from here, so I've escalated it to our refunds team. They'll check the record by hand, send the refund, and get back to me as soon as they have."
+    },
+    {
+      "user": "Okay. Could I have something in writing about the return, in case I need to show my bank? I'd like to have everything ready if the money doesn't turn up.",
+      "assistant": "Of course. I've emailed you a return confirmation: it shows the order, the courier collection from your home, the date the warehouse received the lamp, and that it passed its check. It also shows the amount you paid for the lamp. You probably won't need it once the money arrives, but it's good to have in your files in the meantime. If your bank asks for anything else, let me know and I'll see what I can provide."
+    },
+    {
+      "user": "Thanks. Unrelated, but do you recycle old lamps? I've got a broken one in the garage that I'd like to get rid of responsibly.",
+      "assistant": "We don't take in old lamps that weren't bought from us, but electrical items shouldn't go in household waste. Most local recycling centres have a bin for small electricals, and lamps go there. Take the bulb out first: LED and energy-saving bulbs go in a separate collection, because they contain electronics and, in older ones, a small amount of mercury. Your council's website will list the nearest centre and its opening hours."
+    },
+    {
+      "user": "Good to know. Has the refunds team said anything yet? It's been a day since you passed it to them, and I'm trying not to check my phone every hour.",
+      "assistant": "Not yet, but I've flagged your case as urgent because of the time you've already waited. I'll check with them again first thing tomorrow and update you here, even if there's no news. You don't need to chase; I've set myself a reminder, and the case stays with me until the money has been sent."
+    },
+    {
+      "user": "Thanks. I'm also wondering about the Orrin again. What colours does it come in? Our living room is mostly cream and wood, and I don't want anything too dark in the corner.",
+      "assistant": "The Orrin comes in black, warm white, and a brushed bronze finish, all at 115 dollars. Warm white would sit nicely with cream walls, and the bronze picks up wood tones well. All three have a linen shade in natural. It takes a standard E26 bulb, and a warm white LED of around 800 lumens is plenty for reading. The bulb isn't included, so you'd need one of your own."
+    },
+    {
+      "user": "I'll probably go with warm white. Are there any discount codes at the moment? After all this, I'd like to pay a bit less if I can.",
+      "assistant": "There's no code running right now, but given how long you've waited, I've added a 10% discount to your account for your next order. It applies automatically at checkout, so the Orrin would cost you 103 dollars and 50 cents. You don't need to rush; you can wait until your refund has arrived before you order, and the discount will still apply."
+    },
+    {
+      "user": "That's kind of you, thanks. How long does delivery take for a floor lamp, if I order it next week? I'd like it in before my son's birthday, if possible.",
+      "assistant": "Usually a few working days, and you'll get an email with tracking when it leaves the warehouse. On the morning of delivery, the courier texts a one-hour window to the mobile on your account, with a link to choose a safe place or another day. Assembly takes about ten minutes: the stem screws into the base, and the shade clips on. It should easily arrive before the birthday if you order next week."
+    },
+    {
+      "user": "Okay. It's been a couple of days now. Any news from the refunds team?",
+      "assistant": "Yes, they replied this morning. They found the problem: the warehouse check was recorded, but a system error that week stopped some records from reaching the people who send the money, and yours was one of them. They've fixed the record and are processing your refund today. I'll confirm here the moment it's done. I'm sorry; this should never have needed chasing."
+    },
+    {
+      "user": "Please do. I'll keep an eye on my banking app. Thank you for staying on top of it.",
+      "assistant": "It's done: the refund has been issued. You'll get back 79 dollars, the full price of the Vela floor lamp, to the original payment method. Once issued, refunds take 3 to 5 working days to appear, though the exact timing depends on your bank. The confirmation email, with the reference your bank would need, is in your inbox now."
+    },
+    {
+      "user": "That's a relief, thank you. I'll order the Orrin at the weekend, then. Will the discount still be there? I don't want to lose it by waiting a few days.",
+      "assistant": "Yes, the 10% discount is on your account and will apply automatically when you check out. Nothing else is needed from you. If you'd like, I can also add a note to the new order for the courier, for example about a safe place or a neighbour who could take it in if you're out. The note would be passed to the courier with the delivery details."
+    },
+    {
+      "user": "No, I'll be home at the weekend. Thanks for getting to the bottom of this; I was starting to think the lamp had vanished somewhere between my house and your warehouse.",
+      "assistant": "You're welcome, and thank you for being so patient. I'm sorry it took this long; the warehouse team has been told what went wrong, so it shouldn't happen again. I hope your son has a lovely birthday. Enjoy the new lamp when it arrives, and if anything else comes up, just reply here and we'll pick it up from there."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-90385",
+      "accepted": [
+        "FW-90385",
+        "90385"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "FW-90358",
+          "accepted": [
+            "FW-90358",
+            "90358"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "not refunded",
+      "accepted": [
+        "not refunded",
+        "no refund",
+        "haven't had my refund",
+        "haven't received my refund",
+        "missing refund",
+        "refund is missing",
+        "refund hasn't arrived",
+        "refund never arrived"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "refund issued",
+      "accepted": [
+        "refund issued",
+        "refund has been issued",
+        "refund went through",
+        "refund has gone through"
+      ],
+      "change": "update",
+      "stale": [
+        {
+          "value": "escalated",
+          "accepted": [
+            "refunds team",
+            "escalated"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "collected",
+      "field": "other",
+      "value": "28 October",
+      "accepted": [
+        "28 october",
+        "october 28",
+        "oct 28",
+        "28th"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "tracking",
+      "field": "other",
+      "value": "RTN-5521",
+      "accepted": [
+        "RTN-5521",
+        "5521"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "amount",
+      "field": "other",
+      "value": "79 dollars",
+      "accepted": [
+        "79 dollars",
+        "79 dollar",
+        "79"
+      ],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "Which order number was the lamp on?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What did I contact you about in the first place?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "What's the latest on my case?"
+    },
+    {
+      "id": "p4",
+      "fact": "collected",
+      "question": "On what date did the courier pick up the lamp from my house?"
+    },
+    {
+      "id": "p5",
+      "fact": "tracking",
+      "question": "What was the return tracking number on the courier's slip?"
+    },
+    {
+      "id": "p6",
+      "fact": "amount",
+      "question": "How much money is coming back to me?"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "id": "c01",
+  "split": "dev",
+  "customer": "Dana Okafor",
+  "turns": [
+    {
+      "user": "Hi, I ordered the Halden ceramic table lamp in sage green and it arrived this morning with a crack running right up the base. The box looked fine from the outside, so I think it was packed badly. My order number is FW-20417. I've kept everything, including the inner packing, in case you need it. Can you help?",
+      "assistant": "I'm sorry the lamp arrived cracked; that's not how it should reach you. I've looked up FW-20417, but that order is under a different name and address, so I don't think it's yours. Could you check your order confirmation email? The number is in the subject line and starts with FW-. Once I have the right order, I can go through the options for a damaged item."
+    },
+    {
+      "user": "Oh, sorry, I swapped two digits. It's FW-20471. The confirmation email is from 3 November, if that helps.",
+      "assistant": "Thanks, FW-20471 is the one: a Halden table lamp in sage green, delivered today to your address. For a damaged item we can either refund you or send a replacement, and either way we collect the broken one. Before I set that up, I need a photo of the crack and one of the packaging, so that our claim with the courier goes through. You can attach them to a reply here."
+    },
+    {
+      "user": "I'll take them now, while the light is good. I'd rather have a replacement than a refund; the lamp is for the reading corner and I really like it. Will the new one come from the same warehouse? I don't want another one packed the same way; there was only a thin sheet of paper around the base.",
+      "assistant": "A replacement it is. It will come from the same warehouse, but I'll add a note to the order asking the packers to put extra padding around the base, since that's where the crack is, and to use a double-walled box. Please send the photos when you can; a phone photo is fine, as long as the crack is visible. While you do, could you tell me the zip code the lamp was delivered to? I need it to book the courier collection."
+    },
+    {
+      "user": "Photos attached: one of the crack, and one of the box and the inner packing. The zip code is 60614. The crack goes from the switch down to the bottom edge, so I don't think it's safe to plug in. I haven't tried, just to be sure.",
+      "assistant": "Thanks, the photos are clear, and I've added them to the case. Please don't plug the lamp in: a cracked ceramic base can expose the wiring. The claim with the courier is filed, so we need nothing more from you for it. Next I'll book the collection of the broken lamp, and then the new one can go out. Is there anything about delivery I should know before I book it?"
+    },
+    {
+      "user": "Yes, actually. I'm away for a week soon, visiting my sister, so I don't want anything arriving while the house is empty; parcels left on the step around here tend to disappear. Also, does the collection need the original box? I've already flattened it for recycling.",
+      "assistant": "The box isn't a problem: the courier brings a padded bag for the collection, so you only need to have the lamp ready, wrapped in something soft if you can, such as a towel or bubble wrap. Please leave the shade off and keep the plug tucked in so it doesn't catch. As for being away, tell me the dates and I'll make sure nothing is scheduled while the house is empty."
+    },
+    {
+      "user": "Okay, I'll find some bubble wrap. And how does the collection work? Do I need to print something? Our printer has been out of ink for months, so I'd rather not.",
+      "assistant": "I've just emailed you a return label. You don't need a printer: show the QR code in the email to the courier when they arrive, and they'll print the label themselves. The collection is free for damaged items, and you don't need to be the one who hands it over; anyone at the address can. Once the courier scans the parcel, the warehouse can release the new lamp."
+    },
+    {
+      "user": "Great, I've got the email with the QR code. I'm away from 12 November and back home on 20 November, so anything from 20 November onwards is fine.",
+      "assistant": "Thanks, I've noted that you're away from 12 November and back home on 20 November, so nothing will be delivered while you're away. The courier can still collect before you leave if a slot comes up; if not, the collection waits until you're back. Either way, I'll ask the warehouse to hold the new lamp until you're home, so it can't end up on the step."
+    },
+    {
+      "user": "Perfect. While I have you, is there a discount for the trouble? This is the second time something from you has arrived broken, and I'm starting to worry about ordering anything fragile.",
+      "assistant": "I'm sorry this has happened twice; that's not the experience we want anyone to have. I can't see an earlier order on this account, but I've added a 15% discount code to it for your next order: FERN15. It doesn't expire, and it applies to everything except gift cards. You can use it once, on an order of any size."
+    },
+    {
+      "user": "Thank you, that's kind. Now that I think about it, the earlier one was a vase from a stall at the market, so maybe that wasn't you. Sorry!",
+      "assistant": "No need to apologise, and you're welcome to keep the code. Is there anything else about the new lamp you'd like me to check, such as the bulb? The lamp ships without one; it takes a standard E26 bulb up to 40 watts. A warm white LED of around 450 lumens suits a reading lamp, and it keeps the shade cool."
+    },
+    {
+      "user": "While we're at it, how should I clean it? The old one had a bit of dust in the glaze lines already, and I wasn't sure what was safe to use. I have a spray cleaner for the kitchen, but I don't want to ruin the finish.",
+      "assistant": "Unplug it first, then wipe the base with a soft, dry cloth. For marks, a cloth that is only slightly damp with plain water is fine, but don't use sprays or anything abrasive, because they can dull the glaze. The linen shade can be cleaned with a lint roller or the brush attachment of a vacuum on a low setting. Don't put the shade in water; the frame can rust."
+    },
+    {
+      "user": "One more thing about the new lamp: can I change the colour of the replacement? I've been looking at the reading corner, and I think slate blue would go better with the chair than sage green.",
+      "assistant": "Of course. The Halden lamp in slate blue is the same price, so there's nothing extra to pay. I've changed the replacement to slate blue. The broken sage green lamp still goes back with the courier, as planned."
+    },
+    {
+      "user": "Thanks, that's done then. How long does it take to arrive once the old one is collected? I'm trying to work out whether it'll be here for a friend's visit.",
+      "assistant": "Usually two to three working days. The warehouse releases it on the day the courier scans the collected lamp, and you'll get an email with tracking as soon as it leaves. If the scan happens late in the afternoon, the release can slip to the next morning, so allow an extra day. Weekends and public holidays don't count as working days."
+    },
+    {
+      "user": "Okay. One more question, unrelated: do you sell matching lampshades? The one that came with it is a bit plain, and I'd like something with more texture for the reading corner.",
+      "assistant": "The Halden comes with a linen drum shade, and we also sell a pleated shade in oatmeal or charcoal that fits the same base. They're 24 dollars each. Both are 35 centimetres across, the same as the linen shade. I can't add one to this order, because it's a no-charge replacement, but you could order one separately and use your discount code."
+    },
+    {
+      "user": "Will the courier let me know before they come with the new one? I work from home, but I'm often on calls and don't always hear the doorbell.",
+      "assistant": "Yes. On the morning of delivery, the courier sends a text with a one-hour window to the mobile number on your account, the one ending 0388. You can also use the link in that text to choose a safe place or another day, if the window doesn't suit you. If you'd like the text to go to a different number, you can change it under Account settings."
+    },
+    {
+      "user": "Good. And can I get an invoice for the lamp? I'm putting part of it down as a home office expense, and my accountant wants a proper invoice rather than the order email.",
+      "assistant": "You can download the invoice yourself: sign in, go to Orders, open the lamp order, and choose Download invoice. It shows the price, the tax, and our company details. The replacement goes out at no charge, so it won't produce a second invoice; the original one covers it."
+    },
+    {
+      "user": "Thanks. By the way, the courier picked up the old lamp this morning; my partner handed it over.",
+      "assistant": "Yes, I can see the collection scan from this morning, thank you both. The broken lamp is heading back to the warehouse, where it will be checked and recycled, and the courier claim will close by itself. The warehouse can release the new lamp now. I'll keep an eye on it and let you know when it leaves."
+    },
+    {
+      "user": "Out of interest, is it normal for a crack like that to happen, or was this one just unlucky?",
+      "assistant": "It's not common. The Halden base is stoneware, which is strong in use but can crack from a sharp knock in transit, especially if it moves around inside the box. That's why I've asked for the extra padding and the double-walled box. We also pass every damage report to the warehouse, so they can see if a packing station has a pattern. Your report, with pictures of the inner packing, is exactly the kind of evidence that helps."
+    },
+    {
+      "user": "Has it gone out yet? I'd like to know before I go out this afternoon, so I can tell my partner whether to expect anything.",
+      "assistant": "Good news: the replacement has just shipped. The tracking number is TRK-88213. The warehouse has set the delivery for after you're home, as we agreed, and the tracking page will show the exact day."
+    },
+    {
+      "user": "Brilliant. If I'm out when it comes, can they leave it with my neighbour at number 14? She's home most days, and she's taken parcels in for us before.",
+      "assistant": "Yes. I've added a delivery note asking the courier to leave the parcel with your neighbour at number 14 if nobody answers. They'll put a card through your door saying where it is."
+    },
+    {
+      "user": "Thanks for sorting all this out so quickly. I was dreading a long back and forth.",
+      "assistant": "You're welcome, and thank you for being so patient with all of this. The new lamp is on its way, the discount code is on your account, and the delivery note is in place. If anything else comes up, or if the new lamp isn't right when it arrives, just reply here and we'll pick it up from there."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-20471",
+      "accepted": [
+        "FW-20471",
+        "20471"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "FW-20417",
+          "accepted": [
+            "FW-20417",
+            "20417"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "damaged",
+      "accepted": [
+        "damaged",
+        "cracked",
+        "crack",
+        "broken"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "replacement sent",
+      "accepted": [
+        "shipped",
+        "on its way",
+        "dispatched"
+      ],
+      "change": "update",
+      "stale": [
+        {
+          "value": "return label sent",
+          "accepted": [
+            "return label"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colour",
+      "field": "other",
+      "value": "slate blue",
+      "accepted": [
+        "slate blue"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "sage green",
+          "accepted": [
+            "sage green"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "field": "other",
+      "value": "20 November",
+      "accepted": [
+        "20 november",
+        "november 20",
+        "nov 20",
+        "20th"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "neighbour",
+      "field": "other",
+      "value": "number 14",
+      "accepted": [
+        "14"
+      ],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "Sorry, which order number did we end up using for this?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "I'm telling my partner about this. What did I say was wrong with the lamp when it arrived?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "Where do things stand with my case right now?"
+    },
+    {
+      "id": "p4",
+      "fact": "colour",
+      "question": "What colour is the lamp you're sending me?"
+    },
+    {
+      "id": "p5",
+      "fact": "home",
+      "question": "From what date did I say I'd be back home?"
+    },
+    {
+      "id": "p6",
+      "fact": "neighbour",
+      "question": "Which house number did I say the parcel can go to?"
+    }
+  ]
+}

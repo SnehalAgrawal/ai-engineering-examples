@@ -1,0 +1,210 @@
+{
+  "id": "c07",
+  "split": "test",
+  "customer": "Oliver Grant",
+  "turns": [
+    {
+      "user": "Hi, my set of four Moss bath towels arrived today, and they look stained to me. There's a bluish tinge all over them, as if they'd been washed with something that ran. They're discoloured, so I'd say they're damaged. I haven't used or washed them; I only took them out of the bag to put them away. My order number is FW-80126.",
+      "assistant": "I'm sorry the towels don't look right; that's disappointing with a new order. I've found FW-80126: four Moss bath towels, delivered this morning. Could you send me a photo of one of the towels laid flat, in daylight if possible? Then I can see what the marks look like and work out what's happened, whether it's a dye problem or something that happened in transit."
+    },
+    {
+      "user": "I'll take one in a minute. Also, I have a loyalty card with you, number LY-4471. Will I still get the points for this order if the towels have to go back?",
+      "assistant": "Thanks, I've linked LY-4471 to the order, so the points are on your account. If we exchange the towels, the points stay where they are, because the order itself doesn't change. They'd only come off if you sent the towels back for a refund instead, and even then you'd keep the points from any other orders. Send the photo whenever you're ready, and I'll take it from there."
+    },
+    {
+      "user": "Photo attached. You can see how the colour changes from one corner to the other. Is it a dye fault, do you think? I've never seen towels look like this straight out of the packet.",
+      "assistant": "Thanks for the photo. Looking closely, the colour seems even across the towel; the shading looks like light from the window rather than a mark. It's quite a strong blue, though. Could you check the sewn-in label on the edge of one of the towels? It shows the product name and the colour, which will tell us exactly which towels you've got. It's usually on the short edge, near the hanging loop."
+    },
+    {
+      "user": "I'll go and find it. While I'm at it, do I need to wash towels before using them? The last ones I bought were scratchy until I'd washed them a few times.",
+      "assistant": "Yes, wash them once before use. Moss towels are cotton, and the first wash removes the finish from the mill and opens up the loops, so they get softer and more absorbent. Wash at 40 degrees with a little less detergent than usual, and skip the fabric softener, as it coats the fibres and makes them less absorbent. Tumble drying on low keeps them fluffy, and a good shake before hanging them helps if you dry them on a line."
+    },
+    {
+      "user": "Found the label: it says 'Moss bath towel, lake blue'. So there's nothing wrong with them at all. That's just their colour! I ordered grey. You've sent me the wrong colour. I feel a bit silly now for calling it a stain.",
+      "assistant": "That explains it, and I'm sorry for the mix-up. Your order was for the Moss bath towels in grey, so we've sent you the wrong item: the same towels in lake blue. Nothing else is wrong with them. I can send you the grey set and arrange for the blue ones to come back, at no cost to you. Would you like me to do that?"
+    },
+    {
+      "user": "Yes, please, the grey ones go with the bathroom tiles. Do I need to send the blue ones back first, or can you just send the grey ones straight away?",
+      "assistant": "The grey set is released from the warehouse as soon as the courier scans the blue towels when they collect them, so the two are linked. The good news is that grey is in stock, and I've reserved a set for you. Once it leaves, it arrives in 2 to 3 working days, and you'll get an email with tracking. The exchange is free, so there's nothing to pay, and you don't need to do anything with the grey set until it reaches you."
+    },
+    {
+      "user": "Okay. Are the grey ones exactly the same quality? The blue ones feel really thick, and that's partly why I chose them over the cheaper ones.",
+      "assistant": "Yes, exactly the same. All Moss towels are 600 grams per square metre combed cotton, whatever the colour, so the grey ones will feel just as thick. Only the dye differs. They're also the same size: 70 by 140 centimetres for the bath towels. If anything, darker colours can feel a touch firmer at first, but that goes after the first wash."
+    },
+    {
+      "user": "The thing is, I've got guests arriving on 12 December, and I wanted the new towels out for them. Will they be here in time? I'd rather not put out the old ones; they're properly worn out.",
+      "assistant": "They should be, with room to spare. Once the blue towels are collected, the grey set leaves the warehouse and takes 2 to 3 working days, so as long as the collection happens in the next week or so, they'll arrive well before 12 December. I've added a note to your order with that date, so the warehouse team knows it matters if anything slips."
+    },
+    {
+      "user": "Thank you. How do I send the blue ones back? I'd rather not have to print anything; I don't even own a printer.",
+      "assistant": "You won't need one. I've just emailed you a return label with a QR code. A courier collects the towels from your home, free of charge, and prints the label when they arrive; you just show them the code. They bring a padded bag, so you don't need the original packaging. Please keep the towels unwashed and folded, with the labels still in, so they can go back into stock for someone else."
+    },
+    {
+      "user": "Got the email, thanks. Do you sell bath mats to match? The bathroom could do with a new one, and it'd be nice if it was the same grey. The one we have now is thin and slides around on the floor.",
+      "assistant": "We do: the Moss bath mat comes in the same grey, at 22 dollars. It's made of the same cotton, with a heavier loop pile and a non-slip backing, so it stays put on tiles. It's machine washable at 40 degrees, like the towels. It's in stock, so it could go out with a normal order whenever you like."
+    },
+    {
+      "user": "Good to know. Can the collection be on a Saturday? I work long hours during the week, and I'm hardly ever home before eight.",
+      "assistant": "Yes, Saturday collections are available in your area. I've booked the collection for this Saturday, and the courier will let you know the time on the day. If you can't be in after all, anyone at your address can hand the towels over, as long as they have the QR code from the email on their phone or on a piece of paper. The towels just need to be in a bag or a box, ready to hand over."
+    },
+    {
+      "user": "Perfect. Will there be an invoice with the grey set? I keep receipts for everything in a folder, and the first box didn't have one.",
+      "assistant": "You can download the invoice at any time: sign in, go to Orders, open the towel order, and choose Download invoice. It shows the price, the tax, and our company details. The exchange is free, so the grey set won't produce a second invoice; the original one covers it. You can print it or save it for your folder. Your earlier orders are listed there too, so you can get their invoices the same way."
+    },
+    {
+      "user": "Thanks, found it. Now, for the grey set itself, the same problem applies: I'm never home on a weekday. Is there a way around that? Last time a parcel went back to the depot and I had to collect it.",
+      "assistant": "A couple of options. On the morning of delivery, the courier texts a one-hour window to the mobile number on your account, with a link to choose a safe place, such as a porch or a shed, or another day. Or I can send the grey set to a different address, such as your workplace, if someone there can take it in. Which would work best for you?"
+    },
+    {
+      "user": "Work is easiest. It's Unit 7, Harbour Yard, Pellow Street. There's a reception desk that takes parcels all day, so someone's always there, even when I'm out on site.",
+      "assistant": "Perfect. I've changed the delivery address for the grey towels to Unit 7, Harbour Yard, Pellow Street, and added a note that reception will take the parcel. Your home address stays on your account for future orders; this change is only for this delivery. You'll still get the text on the morning it arrives, so you'll know when to expect it."
+    },
+    {
+      "user": "Thanks. Do towel colours fade much? My old towels went patchy after a year or so, and I'd like these to last.",
+      "assistant": "Some fading over the years is normal for cotton, but you can slow it down. Wash the towels with similar colours, at 40 degrees rather than hotter, and keep bleach and whitening detergents away from them. Drying them in strong sunlight fades them faster, so dry them indoors or in the shade when you can. Patchiness usually comes from skincare products, such as those with benzoyl peroxide, which bleach cotton. Rinse face washes off your hands before reaching for a towel, and the colour will hold up much longer."
+    },
+    {
+      "user": "Interesting, I'll keep that in mind. The courier came for the blue towels this morning; I handed them over at the door. Is everything moving now?",
+      "assistant": "Yes, thank you. I can see the collection scan from this morning on FW-80126, so the warehouse has released the grey set reserved for you. It's being picked and packed now, with the delivery note for your work's reception attached. The blue towels will go back into stock once the warehouse has checked them. You don't need to keep anything from the collection; the scan is our record."
+    },
+    {
+      "user": "Great. If I order the bath mat now, could it go in the same parcel as the grey towels? It would save the courier a trip.",
+      "assistant": "I'm afraid not: the grey set is already being packed, and an exchange can't have new items added to it. You can still order the mat separately, though, and you'll get the loyalty points for it. If you'd like it delivered to your work as well, enter that address at checkout; otherwise it goes to your home address as usual, and the courier text lets you pick a safe place for it."
+    },
+    {
+      "user": "I'll order it tonight. Since the towels were a mix-up on your side, is there anything you can do about all the back and forth?",
+      "assistant": "Of course. I'm sorry the wrong colour cost you the extra steps and a Saturday morning. I've added a 10 dollar voucher to your account. It applies automatically at checkout, so if you order the bath mat tonight, it would cost you 12 dollars. If you'd rather keep the voucher for something else, you can remove it at checkout and it stays on your account for another order."
+    },
+    {
+      "user": "That's nice, thanks. Has the grey set actually left the warehouse yet? I'd like to tell reception to expect it.",
+      "assistant": "Yes, it shipped this afternoon. The tracking email is on its way to you, and the tracking number is TRK-40719. It should reach your work's reception in 2 to 3 working days, well before your guests arrive. You'll get a text that morning with a one-hour window, and I'll keep an eye on the tracking until it's delivered."
+    },
+    {
+      "user": "Brilliant. Thanks for clearing this up, and sorry for the confusion at the start about what was wrong with them.",
+      "assistant": "No need to apologise; in that light, anyone could have thought the same. Your grey towels are with the courier, the voucher is ready for the bath mat tonight, and the exchange is complete on our side. I hope your guests enjoy them, and that the bath mat sorts out the slipping too. If anything else comes up, just reply here and we'll pick it up from there."
+    }
+  ],
+  "facts": [
+    {
+      "id": "order",
+      "field": "order_id",
+      "value": "FW-80126",
+      "accepted": [
+        "FW-80126",
+        "80126"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "issue",
+      "field": "issue",
+      "value": "wrong item",
+      "accepted": [
+        "wrong item",
+        "wrong colour",
+        "wrong color",
+        "wrong towels"
+      ],
+      "change": "correction",
+      "stale": [
+        {
+          "value": "damaged",
+          "accepted": [
+            "damaged",
+            "stained",
+            "discoloured",
+            "discolored",
+            "dye fault"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "field": "status",
+      "value": "replacement sent",
+      "accepted": [
+        "shipped",
+        "on its way",
+        "dispatched"
+      ],
+      "change": "update",
+      "stale": [
+        {
+          "value": "return label sent",
+          "accepted": [
+            "return label"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loyalty",
+      "field": "other",
+      "value": "LY-4471",
+      "accepted": [
+        "LY-4471",
+        "4471"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "guests",
+      "field": "other",
+      "value": "12 December",
+      "accepted": [
+        "12 december",
+        "december 12",
+        "dec 12",
+        "12th"
+      ],
+      "change": null,
+      "stale": []
+    },
+    {
+      "id": "work",
+      "field": "other",
+      "value": "Unit 7",
+      "accepted": [
+        "unit 7",
+        "harbour yard"
+      ],
+      "change": null,
+      "stale": []
+    }
+  ],
+  "probes": [
+    {
+      "id": "p1",
+      "fact": "order",
+      "question": "What's the order number for these towels?"
+    },
+    {
+      "id": "p2",
+      "fact": "issue",
+      "question": "What was wrong with the towels I received?"
+    },
+    {
+      "id": "p3",
+      "fact": "status",
+      "question": "What's happening with my case at the moment?"
+    },
+    {
+      "id": "p4",
+      "fact": "loyalty",
+      "question": "What's my loyalty card number again?"
+    },
+    {
+      "id": "p5",
+      "fact": "guests",
+      "question": "When did I say my guests are arriving?"
+    },
+    {
+      "id": "p6",
+      "fact": "work",
+      "question": "Where did I ask you to deliver the grey set?"
+    }
+  ]
+}
