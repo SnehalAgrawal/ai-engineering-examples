@@ -1,0 +1,13 @@
+From: Isabel Moreno <isabel.moreno@solaria-energy.example>
+Subject: Enforcing SSO
+
+Hi,
+
+Our SSO test connection succeeded, and we're ready to enforce it. Two questions before we flip the switch:
+
+- Some of our 120 members have never signed in through SSO. Will they be locked out immediately?
+- We work with a few external agencies who are guests on client projects. Do they need accounts in our Entra ID?
+
+Thanks,
+Isabel Moreno
+IT Lead, Solaria Energy

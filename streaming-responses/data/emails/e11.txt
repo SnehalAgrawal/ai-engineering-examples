@@ -1,0 +1,9 @@
+From: Oliver Grant <oliver@tidewatermedia.example>
+Subject: Billing date question
+
+Hey,
+
+We first paid for our monthly plan on 31 January. What happens in February, which doesn't have a 31st? Do we get charged on 1 March, or skip a month?
+
+Cheers,
+Oliver

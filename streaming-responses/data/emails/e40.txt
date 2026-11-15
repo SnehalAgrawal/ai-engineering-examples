@@ -1,0 +1,12 @@
+From: Ben Carter <ben@foxglove-events.example>
+Subject: Export link, SMS codes, offline
+
+Hi,
+
+Three things:
+
+1. I received an export download link a while ago but didn't get round to using it. How long does that link stay valid?
+2. One of our members says their SMS sign-in code no longer works. Has something changed?
+3. Does the mobile app work offline at events with no signal?
+
+Ben

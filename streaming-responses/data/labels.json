@@ -1,0 +1,2821 @@
+{
+ "emails": {
+  "e01": {
+   "identifiers": [
+    "Basic",
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e01q1",
+     "asks": "What will upgrading from monthly Basic to Pro on the 16th of a 30-day month cost, and what is the next charge?",
+     "match": [
+      "upgrad",
+      "charge",
+      "cost",
+      "pay"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e01q1f1",
+       "fact": "The upgrade costs $7.50",
+       "check": "mechanical",
+       "any_of": [
+        "$7.50",
+        "7.50"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "Half the period is left, so the upgrade costs half the difference between the two prices: (25 - 10) / 2 = $7.50."
+        }
+       ]
+      },
+      {
+       "id": "e01q1f2",
+       "fact": "The next regular charge is $25",
+       "check": "mechanical",
+       "any_of": [
+        "$25"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "On the 1st of the next month, it is charged $25."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e02": {
+   "identifiers": [
+    "SSO-103"
+   ],
+   "questions": [
+    {
+     "id": "e02q1",
+     "asks": "What does SSO-103 mean and how is it fixed?",
+     "match": [
+      "sso-103",
+      "sign in",
+      "sign-in",
+      "error"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e02q1f1",
+       "fact": "SSO-103 means the email address doesn't match any member; invite the person",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "| SSO-103 | The email address doesn't match any member | Invite the person, or check the NameID format (step 3) |"
+        }
+       ]
+      },
+      {
+       "id": "e02q1f2",
+       "fact": "Check the NameID format",
+       "check": "mechanical",
+       "any_of": [
+        "NameID"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "| SSO-103 | The email address doesn't match any member | Invite the person, or check the NameID format (step 3) |"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e03": {
+   "identifiers": [
+    "429",
+    "Basic"
+   ],
+   "questions": [
+    {
+     "id": "e03q1",
+     "asks": "What is the Basic rate limit, and how should a client handle 429?",
+     "match": [
+      "429",
+      "limit",
+      "rate"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e03q1f1",
+       "fact": "Basic allows 100 requests per minute per key",
+       "check": "mechanical",
+       "any_of": [
+        "100"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "| Basic | 100 |"
+        }
+       ]
+      },
+      {
+       "id": "e03q1f2",
+       "fact": "Wait for the time in the Retry-After header",
+       "check": "mechanical",
+       "any_of": [
+        "Retry-After"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "A request over the limit receives 429 Too Many Requests with a Retry-After header, which gives the number of seconds to wait."
+        }
+       ]
+      },
+      {
+       "id": "e03q1f3",
+       "fact": "Requests that receive 429 still count toward the limit, so retrying in a loop makes the wait longer",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Requests that receive 429 still count toward the limit, so retrying immediately in a loop makes the wait longer."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e04": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e04q1",
+     "asks": "How quickly are customers notified of a personal data breach?",
+     "match": [
+      "breach"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e04q1f1",
+       "fact": "Within 48 hours",
+       "check": "mechanical",
+       "any_of": [
+        "48 hours",
+        "48-hour"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "If we become aware of a breach of security that affects customer data, we notify the Owner without undue delay, and in any case within 48 hours."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e05": {
+   "identifiers": [
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e05q1",
+     "asks": "Is PayPal accepted, and which payment methods are?",
+     "match": [
+      "paypal",
+      "payment"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e05q1f1",
+       "fact": "PayPal is not accepted",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "PayPal and cryptocurrency are not accepted."
+        }
+       ]
+      },
+      {
+       "id": "e05q1f2",
+       "fact": "Visa is accepted",
+       "check": "mechanical",
+       "any_of": [
+        "Visa"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "We accept Visa, Mastercard, and American Express."
+        }
+       ]
+      },
+      {
+       "id": "e05q1f3",
+       "fact": "Mastercard is accepted",
+       "check": "mechanical",
+       "any_of": [
+        "Mastercard"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "We accept Visa, Mastercard, and American Express."
+        }
+       ]
+      },
+      {
+       "id": "e05q1f4",
+       "fact": "American Express is accepted",
+       "check": "mechanical",
+       "any_of": [
+        "American Express",
+        "Amex"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "We accept Visa, Mastercard, and American Express."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e06": {
+   "identifiers": [
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e06q1",
+     "asks": "How can an Admin become Owner when the Owner left without transferring ownership?",
+     "match": [
+      "owner",
+      "ownership"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e06q1f1",
+       "fact": "Contact support through live chat",
+       "check": "mechanical",
+       "any_of": [
+        "live chat"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "If the Owner has left your company without transferring ownership, contact support through live chat."
+        }
+       ]
+      },
+      {
+       "id": "e06q1f2",
+       "fact": "Written confirmation on company letterhead is required",
+       "check": "mechanical",
+       "any_of": [
+        "letterhead"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "We will ask for written confirmation from someone authorized to act for your company, such as a director, on company letterhead."
+        }
+       ]
+      },
+      {
+       "id": "e06q1f3",
+       "fact": "It usually takes 3 to 5 business days",
+       "check": "mechanical",
+       "any_of": [
+        "3 to 5 business days",
+        "3-5 business days",
+        "three to five business days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Ownership transfers through support usually take 3 to 5 business days."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e07": {
+   "identifiers": [
+    "v2",
+    "400",
+    "cursor_expired"
+   ],
+   "questions": [
+    {
+     "id": "e07q1",
+     "asks": "Why does a saved cursor return cursor_expired, and how should paging resume?",
+     "match": [
+      "cursor"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e07q1f1",
+       "fact": "Cursors expire 24 hours after they are issued",
+       "check": "mechanical",
+       "any_of": [
+        "24 hours",
+        "24-hour"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Cursors expire 24 hours after they are issued; a request with an expired cursor receives 400 with the error code cursor_expired, and you have to start again from the first page."
+        }
+       ]
+      },
+      {
+       "id": "e07q1f2",
+       "fact": "Start again from the first page",
+       "check": "mechanical",
+       "any_of": [
+        "first page"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Cursors expire 24 hours after they are issued; a request with an expired cursor receives 400 with the error code cursor_expired, and you have to start again from the first page."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e08": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e08q1",
+     "asks": "What is the current limit on custom statuses per project?",
+     "match": [
+      "status"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e08q1f1",
+       "fact": "The limit is now 10 per project",
+       "check": "mechanical",
+       "any_of": [
+        "10 per project",
+        "10 custom statuses",
+        "10 statuses",
+        "up to 10",
+        "limit of 10",
+        "to 10",
+        "limit is 10",
+        "limit is now 10"
+       ],
+       "evidence": [
+        {
+         "doc": "release-notes.md",
+         "text": "The limit on custom statuses was raised from 6 to 10 per project."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e09": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e09q1",
+     "asks": "Can an organization's data region be changed to the EU?",
+     "match": [
+      "region",
+      "frankfurt",
+      "move"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e09q1f1",
+       "fact": "The data region can't be changed",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "It is shown under Settings > Organization > General and can't be changed."
+        }
+       ]
+      },
+      {
+       "id": "e09q1f2",
+       "fact": "Create a new organization in the other region, export, and import",
+       "check": "mechanical",
+       "any_of": [
+        "new organization"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "To move to the other region, create a new organization there, export your data from the old one, and import it into the new one."
+        }
+       ]
+      },
+      {
+       "id": "e09q1f3",
+       "fact": "Comments, attachments, and the audit log are not included in an import",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Comments, attachments, and the audit log are not included in an import, so keep the export of the old organization if you need them."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e10": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e10q1",
+     "asks": "Is there a nonprofit or charity discount?",
+     "match": [
+      "discount",
+      "nonprofit",
+      "charit"
+     ],
+     "answerable": false,
+     "facts": []
+    }
+   ]
+  },
+  "e11": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e11q1",
+     "asks": "When is a monthly plan first paid on the 31st charged in shorter months?",
+     "match": [
+      "31",
+      "february",
+      "billing date",
+      "charge"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e11q1f1",
+       "fact": "The charge is made on the last day of that month",
+       "check": "mechanical",
+       "any_of": [
+        "last day"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "If that day doesn't exist in a month, for example the 31st, the charge is made on the last day of that month."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e12": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e12q1",
+     "asks": "What happens to members without two-factor authentication when it is required?",
+     "match": [
+      "two-factor",
+      "2fa",
+      "two factor"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e12q1f1",
+       "fact": "They have 3 days to set it up",
+       "check": "mechanical",
+       "any_of": [
+        "3 days",
+        "three days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Members who haven't set it up are asked to do so at their next sign-in and have 3 days to complete it."
+        }
+       ]
+      },
+      {
+       "id": "e12q1f2",
+       "fact": "After that, they can't open any project until they set it up",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "After that, they can't open any project until they set it up."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e13": {
+   "identifiers": [
+    "task.updated",
+    "X-Signature"
+   ],
+   "questions": [
+    {
+     "id": "e13q1",
+     "asks": "Why does webhook signature verification fail when the parsed and re-serialized body is signed?",
+     "match": [
+      "signature"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e13q1f1",
+       "fact": "Sign the raw request body, exactly as received, before parsing",
+       "check": "mechanical",
+       "any_of": [
+        "raw request body",
+        "raw body"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "1. Read the raw request body, exactly as received, before parsing it as JSON."
+        }
+       ]
+      },
+      {
+       "id": "e13q1f2",
+       "fact": "The signed string starts with the X-Timestamp value",
+       "check": "mechanical",
+       "any_of": [
+        "X-Timestamp"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "2. Join the X-Timestamp value, a period, and the raw body into one string."
+        }
+       ]
+      },
+      {
+       "id": "e13q1f3",
+       "fact": "The timestamp and body are joined with a period",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "2. Join the X-Timestamp value, a period, and the raw body into one string."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e14": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e14q1",
+     "asks": "How often are backups made and how long are they kept?",
+     "match": [
+      "backup",
+      "back up"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e14q1f1",
+       "fact": "Backups are made every 6 hours",
+       "check": "mechanical",
+       "any_of": [
+        "6 hours",
+        "six hours"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "They are made every 6 hours."
+        }
+       ]
+      },
+      {
+       "id": "e14q1f2",
+       "fact": "Each backup is kept for 35 days",
+       "check": "mechanical",
+       "any_of": [
+        "35 days"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Each backup is kept for 35 days and then deleted."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e15": {
+   "identifiers": [
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e15q1",
+     "asks": "What happens when the trial ends without choosing a plan?",
+     "match": [
+      "do nothing",
+      "trial ends",
+      "trial ending",
+      "end of the trial",
+      "workspace"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e15q1f1",
+       "fact": "The organization moves to the Basic plan",
+       "check": "mechanical",
+       "any_of": [
+        "Basic"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "If you do nothing, the organization moves to the Basic plan."
+        }
+       ]
+      },
+      {
+       "id": "e15q1f2",
+       "fact": "Projects beyond the third become read-only",
+       "check": "mechanical",
+       "any_of": [
+        "read-only",
+        "read only"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "No data is deleted, but projects beyond the third become read-only until you upgrade or archive them, and Pro settings such as single sign-on and the IP allowlist are switched off."
+        }
+       ]
+      },
+      {
+       "id": "e15q1f3",
+       "fact": "Single sign-on is switched off; no data is deleted",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "No data is deleted, but projects beyond the third become read-only until you upgrade or archive them, and Pro settings such as single sign-on and the IP allowlist are switched off."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e15q2",
+     "asks": "Can 1.5 GB files be uploaded after the trial?",
+     "match": [
+      "upload",
+      "1.5 gb",
+      "file size",
+      "video"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e15q2f1",
+       "fact": "The Basic plan's maximum file size is 100 MB",
+       "check": "mechanical",
+       "any_of": [
+        "100 MB"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "| Maximum file size | 100 MB | 2 GB |"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e16": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e16q1",
+     "asks": "Will a failed card payment be retried, and when?",
+     "match": [
+      "retry",
+      "retried",
+      "try again",
+      "try the payment",
+      "again"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e16q1f1",
+       "fact": "First retry 1 day after",
+       "check": "mechanical",
+       "any_of": [
+        "1 day",
+        "one day"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "| First retry | 1 day after the failed payment |"
+        }
+       ]
+      },
+      {
+       "id": "e16q1f2",
+       "fact": "Second retry 3 days after",
+       "check": "mechanical",
+       "any_of": [
+        "3 days",
+        "three days"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "| Second retry | 3 days after the failed payment |"
+        }
+       ]
+      },
+      {
+       "id": "e16q1f3",
+       "fact": "Third retry 7 days after",
+       "check": "mechanical",
+       "any_of": [
+        "7 days",
+        "seven days"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "| Third retry | 7 days after the failed payment |"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e16q2",
+     "asks": "What happens if the payment keeps failing, and will API writes stop?",
+     "match": [
+      "keep",
+      "continue",
+      "integration",
+      "api"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e16q2f1",
+       "fact": "The organization becomes read-only",
+       "check": "mechanical",
+       "any_of": [
+        "read-only",
+        "read only"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "If the third retry also fails, the organization becomes read-only until the payment method is updated."
+        }
+       ]
+      },
+      {
+       "id": "e16q2f2",
+       "fact": "The API accepts only read requests",
+       "check": "mechanical",
+       "any_of": [
+        "read requests"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "While an organization is read-only, members can sign in and view everything, but nobody can create or edit anything, and the API accepts only read requests."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e17": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e17q1",
+     "asks": "Are members who never signed in through SSO locked out when SSO is enforced?",
+     "match": [
+      "grace",
+      "locked out",
+      "lock",
+      "never signed in",
+      "haven't signed in"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e17q1f1",
+       "fact": "They get a grace period of 7 days",
+       "check": "mechanical",
+       "any_of": [
+        "7 days",
+        "seven days",
+        "7-day"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "8. If you enforce SSO, members who haven't signed in through SSO yet get a grace period of 7 days, during which they can still use their password."
+        }
+       ]
+      },
+      {
+       "id": "e17q1f2",
+       "fact": "After the grace period, password sign-in is turned off for them",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "After the grace period, password sign-in is turned off for them."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e17q2",
+     "asks": "Do guests need accounts in the identity provider?",
+     "match": [
+      "guest",
+      "agenc"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e17q2f1",
+       "fact": "Guests are not affected by SSO",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Guests are not affected by SSO."
+        }
+       ]
+      },
+      {
+       "id": "e17q2f2",
+       "fact": "Guests keep signing in with a password",
+       "check": "mechanical",
+       "any_of": [
+        "password"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "They keep signing in with a password, because they belong to other organizations."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e18": {
+   "identifiers": [
+    "task.completed"
+   ],
+   "questions": [
+    {
+     "id": "e18q1",
+     "asks": "Are webhook events lost while the endpoint is down for 3 hours?",
+     "match": [
+      "lose",
+      "lost",
+      "down",
+      "outage",
+      "retr",
+      "miss"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e18q1f1",
+       "fact": "Failed deliveries are retried up to 5 times",
+       "check": "mechanical",
+       "any_of": [
+        "up to 5",
+        "5 times",
+        "five times",
+        "5 retries"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "A failed delivery is retried up to 5 times:"
+        }
+       ]
+      },
+      {
+       "id": "e18q1f2",
+       "fact": "Retries continue up to 24 hours after the first attempt (the 6-hour retry falls after the outage)",
+       "check": "mechanical",
+       "any_of": [
+        "6 hours",
+        "24 hours"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "| 4 | 6 hours |"
+        },
+        {
+         "doc": "api-reference.md",
+         "text": "| 5 | 24 hours |"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e18q2",
+     "asks": "Can an organization have 25 webhooks?",
+     "match": [
+      "25",
+      "how many webhooks",
+      "number of webhooks",
+      "limit",
+      "maximum"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e18q2f1",
+       "fact": "Each organization can have up to 20 webhooks",
+       "check": "mechanical",
+       "any_of": [
+        "up to 20",
+        "20 webhooks",
+        "limit of 20",
+        "maximum of 20",
+        "limit is 20"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Configure them under Settings > Developer > Webhooks; each organization can have up to 20 webhooks."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e19": {
+   "identifiers": [
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e19q1",
+     "asks": "Can an annual plan bought ten days ago be refunded?",
+     "match": [
+      "refund"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e19q1f1",
+       "fact": "Refunds can be requested within 30 days of purchase",
+       "check": "mechanical",
+       "any_of": [
+        "30 days"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "You can request a refund within 30 days of purchase, through live chat."
+        }
+       ]
+      },
+      {
+       "id": "e19q1f2",
+       "fact": "Request it through live chat",
+       "check": "mechanical",
+       "any_of": [
+        "live chat"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "You can request a refund within 30 days of purchase, through live chat."
+        }
+       ]
+      },
+      {
+       "id": "e19q1f3",
+       "fact": "A refunded annual plan is cancelled and the organization moves to Basic",
+       "check": "mechanical",
+       "any_of": [
+        "Basic"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "A refunded annual plan is cancelled when the refund is approved, and the organization moves to the Basic plan."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e19q2",
+     "asks": "Can billing be switched from annual to monthly now?",
+     "match": [
+      "switch",
+      "change to monthly",
+      "difference"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e19q2f1",
+       "fact": "Switching from annual to monthly takes effect when the annual period ends",
+       "check": "mechanical",
+       "any_of": [
+        "annual period ends",
+        "end of the annual period",
+        "end of your annual period",
+        "end of the current annual period"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "When you switch from annual to monthly, the change takes effect when the annual period ends."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e20": {
+   "identifiers": [
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e20q1",
+     "asks": "When does the SCIM token expire, and what happens then?",
+     "match": [
+      "token",
+      "expire"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e20q1f1",
+       "fact": "SCIM tokens are valid for one year",
+       "check": "mechanical",
+       "any_of": [
+        "one year",
+        "1 year",
+        "12 months"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "SCIM tokens are valid for one year."
+        }
+       ]
+      },
+      {
+       "id": "e20q1f2",
+       "fact": "The Owner and Admins are emailed 14 days before expiry",
+       "check": "mechanical",
+       "any_of": [
+        "14 days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "The Owner and Admins are emailed 14 days before a token expires; generate a new token and update it in the identity provider before then."
+        }
+       ]
+      },
+      {
+       "id": "e20q1f3",
+       "fact": "When it expires, provisioning stops but existing members are not affected",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "When a token expires, provisioning stops, but existing members are not affected."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e20q2",
+     "asks": "Can identity provider groups be mapped to projects?",
+     "match": [
+      "group"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e20q2f1",
+       "fact": "Groups from the identity provider are not synchronized",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Groups from the identity provider are not synchronized."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e21": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e21q1",
+     "asks": "How long does deleting an organization take, including backups, and when is confirmation sent?",
+     "match": [
+      "deletion",
+      "confirm",
+      "backup"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e21q1f1",
+       "fact": "Customer data is deleted from the app within 24 hours",
+       "check": "mechanical",
+       "any_of": [
+        "24 hours"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "When the Owner deletes the organization, all customer data is deleted from the app within 24 hours."
+        }
+       ]
+      },
+      {
+       "id": "e21q1f2",
+       "fact": "Copies remain in backups for up to 35 days",
+       "check": "mechanical",
+       "any_of": [
+        "35 days"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Data deleted from the app therefore remains in backups for up to 35 days after the deletion."
+        }
+       ]
+      },
+      {
+       "id": "e21q1f3",
+       "fact": "Confirmation within 10 business days, not before backups have expired",
+       "check": "mechanical",
+       "any_of": [
+        "10 business days",
+        "ten business days"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "We send the confirmation within 10 business days of the request, and not before the backups have expired."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e21q2",
+     "asks": "Are invoices kept after the organization is deleted?",
+     "match": [
+      "invoice"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e21q2f1",
+       "fact": "Invoices and payment records are kept for 10 years",
+       "check": "mechanical",
+       "any_of": [
+        "10 years",
+        "ten years"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Invoices and payment records are kept for 10 years, because tax law requires it."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e22": {
+   "identifiers": [
+    "v1"
+   ],
+   "questions": [
+    {
+     "id": "e22q1",
+     "asks": "Does a page size of 500 fail?",
+     "match": [
+      "500",
+      "page size",
+      "limit"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e22q1f1",
+       "fact": "A larger value is treated as 200",
+       "check": "mechanical",
+       "any_of": [
+        "200"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "A larger value is treated as 200, not rejected."
+        }
+       ]
+      },
+      {
+       "id": "e22q1f2",
+       "fact": "The request is not rejected",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "A larger value is treated as 200, not rejected."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e22q2",
+     "asks": "When does API version 1 stop working?",
+     "match": [
+      "v1",
+      "version 1",
+      "stop working",
+      "sunset"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e22q2f1",
+       "fact": "Version 1 stops working on 2027-03-31",
+       "check": "mechanical",
+       "any_of": [
+        "2027-03-31",
+        "31 March 2027",
+        "March 31, 2027"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Version 1 was deprecated on 2026-06-01 and will stop working on 2027-03-31."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e23": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e23q1",
+     "asks": "How can six months of audit log events be exported?",
+     "match": [
+      "export",
+      "six months",
+      "range"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e23q1f1",
+       "fact": "One export can cover at most 90 days",
+       "check": "mechanical",
+       "any_of": [
+        "90 days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "One export can cover at most 90 days; for a longer period, export it in parts."
+        }
+       ]
+      },
+      {
+       "id": "e23q1f2",
+       "fact": "Export a longer period in parts",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "One export can cover at most 90 days; for a longer period, export it in parts."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e23q2",
+     "asks": "Can audit log entries be deleted?",
+     "match": [
+      "delet",
+      "tidy"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e23q2f1",
+       "fact": "Audit log entries can't be edited or deleted, not even by the Owner",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Audit log entries can't be edited or deleted, not even by the Owner."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e24": {
+   "identifiers": [
+    "Pro",
+    "Basic"
+   ],
+   "questions": [
+    {
+     "id": "e24q1",
+     "asks": "What must be done before downgrading to Basic, and when does it take effect?",
+     "match": [
+      "downgrad",
+      "basic"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e24q1f1",
+       "fact": "No more than 5 members may remain, including pending invitations",
+       "check": "mechanical",
+       "any_of": [
+        "no more than 5",
+        "5 members",
+        "five members",
+        "limit of 5"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "2. Remove or suspend members until no more than 5 remain, including pending invitations."
+        }
+       ]
+      },
+      {
+       "id": "e24q1f2",
+       "fact": "The downgrade takes effect at the start of the next billing period",
+       "check": "mechanical",
+       "any_of": [
+        "next billing period"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "Downgrades take effect at the start of the next billing period, so you keep Pro features until then."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e24q2",
+     "asks": "Is there a discount for paying three years upfront?",
+     "match": [
+      "three years",
+      "3 years",
+      "discount",
+      "upfront"
+     ],
+     "answerable": false,
+     "facts": []
+    }
+   ]
+  },
+  "e25": {
+   "identifiers": [
+    "409",
+    "idempotency_mismatch",
+    "Idempotency-Key"
+   ],
+   "questions": [
+    {
+     "id": "e25q1",
+     "asks": "What causes 409 idempotency_mismatch when keys are derived from task titles?",
+     "match": [
+      "idempotency",
+      "409"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e25q1f1",
+       "fact": "The same key was reused with a different body",
+       "check": "mechanical",
+       "any_of": [
+        "different body",
+        "different request body",
+        "different bodies"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Reusing a key with a different body receives 409 with the code idempotency_mismatch."
+        }
+       ]
+      },
+      {
+       "id": "e25q1f2",
+       "fact": "Use a unique value, such as a UUID",
+       "check": "mechanical",
+       "any_of": [
+        "UUID",
+        "unique"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "To retry safely, send an Idempotency-Key header with a unique value, such as a UUID, on every POST request."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e25q2",
+     "asks": "How quickly does API key revocation take effect?",
+     "match": [
+      "revok",
+      "revocation",
+      "leak"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e25q2f1",
+       "fact": "Within one minute",
+       "check": "mechanical",
+       "any_of": [
+        "one minute",
+        "1 minute",
+        "a minute"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "If a key may have been exposed, revoke it immediately; revocation takes effect within one minute."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e26": {
+   "identifiers": [
+    "403"
+   ],
+   "questions": [
+    {
+     "id": "e26q1",
+     "asks": "Why does the CI pipeline get 403 after the IP allowlist was turned on?",
+     "match": [
+      "403",
+      "ci pipeline",
+      "pipeline"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e26q1f1",
+       "fact": "Requests from addresses outside the allowlist are refused; add the CI addresses",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "| 403 | forbidden | The key's member isn't allowed to do this, or the request came from outside the IP allowlist |"
+        },
+        {
+         "doc": "admin-guide.md",
+         "text": "Requests from other addresses are refused with an error that names the allowlist."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e26q2",
+     "asks": "Does the IP allowlist affect webhook deliveries?",
+     "match": [
+      "webhook"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e26q2f1",
+       "fact": "Webhook deliveries are not affected",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Webhook deliveries are not affected, because they go from our servers to yours."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e27": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e27q1",
+     "asks": "What uptime is guaranteed in the SLA?",
+     "match": [
+      "uptime",
+      "sla"
+     ],
+     "answerable": false,
+     "facts": []
+    },
+    {
+     "id": "e27q2",
+     "asks": "How is data encrypted in transit and at rest?",
+     "match": [
+      "encrypt"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e27q2f1",
+       "fact": "TLS 1.2 or later in transit",
+       "check": "mechanical",
+       "any_of": [
+        "TLS 1.2"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Data is encrypted in transit with TLS 1.2 or later, and at rest with AES-256."
+        }
+       ]
+      },
+      {
+       "id": "e27q2f2",
+       "fact": "AES-256 at rest",
+       "check": "mechanical",
+       "any_of": [
+        "AES-256"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Data is encrypted in transit with TLS 1.2 or later, and at rest with AES-256."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e28": {
+   "identifiers": [
+    "Basic"
+   ],
+   "questions": [
+    {
+     "id": "e28q1",
+     "asks": "Suspend or remove a member on long leave, and does suspending free a seat?",
+     "match": [
+      "suspend or remove",
+      "remove",
+      "seat",
+      "replacement"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e28q1f1",
+       "fact": "Suspending keeps their role, project memberships, and assignments",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "A suspended member can't sign in, and their API keys stop working, but they keep their role, their project memberships, and their task assignments."
+        }
+       ]
+      },
+      {
+       "id": "e28q1f2",
+       "fact": "Suspended members still count toward the member limit",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Suspended members still count toward the member limit."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e28q2",
+     "asks": "Does a suspended member's API key keep working?",
+     "match": [
+      "api key",
+      "key",
+      "import"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e28q2f1",
+       "fact": "Their API keys stop working",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "A suspended member can't sign in, and their API keys stop working, but they keep their role, their project memberships, and their task assignments."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e29": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e29q1",
+     "asks": "Can an invoice be corrected after a VAT number was added?",
+     "match": [
+      "vat",
+      "correct"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e29q1f1",
+       "fact": "Past invoices can't be edited",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "Past invoices can't be edited, but billing@example.com can reissue an invoice from the last 90 days with corrected details."
+        }
+       ]
+      },
+      {
+       "id": "e29q1f2",
+       "fact": "billing@example.com can reissue it",
+       "check": "mechanical",
+       "any_of": [
+        "billing@example.com"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "Past invoices can't be edited, but billing@example.com can reissue an invoice from the last 90 days with corrected details."
+        }
+       ]
+      },
+      {
+       "id": "e29q1f3",
+       "fact": "Only invoices from the last 90 days",
+       "check": "mechanical",
+       "any_of": [
+        "90 days"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "Past invoices can't be edited, but billing@example.com can reissue an invoice from the last 90 days with corrected details."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e29q2",
+     "asks": "Can invoices also be sent to the finance team?",
+     "match": [
+      "finance",
+      "billing contact",
+      "send",
+      "sent",
+      "copies"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e29q2f1",
+       "fact": "Add a billing contact",
+       "check": "mechanical",
+       "any_of": [
+        "billing contact"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "To send invoices to someone else as well, such as your finance team, add their address as a billing contact under Settings > Billing > Invoice details."
+        }
+       ]
+      },
+      {
+       "id": "e29q2f2",
+       "fact": "Up to 3 billing contacts",
+       "check": "mechanical",
+       "any_of": [
+        "up to 3",
+        "3 billing contacts",
+        "three billing contacts"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "You can add up to 3 billing contacts."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e30": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e30q1",
+     "asks": "Do old links keep working after the web address changes?",
+     "match": [
+      "web address",
+      "link",
+      "url",
+      "address"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e30q1f1",
+       "fact": "Old links keep working for 90 days",
+       "check": "mechanical",
+       "any_of": [
+        "90 days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Old links keep working for 90 days after a change and then stop redirecting, so update bookmarks and integrations that use the old address."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e30q2",
+     "asks": "Is the app available in Italian?",
+     "match": [
+      "italian",
+      "language"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e30q2f1",
+       "fact": "Italian is not available; the languages are English, German, French, and Spanish",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "The available languages are English, German, French, and Spanish."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e31": {
+   "identifiers": [
+    "SSO-101"
+   ],
+   "questions": [
+    {
+     "id": "e31q1",
+     "asks": "How is SSO-101 fixed?",
+     "match": [
+      "fix",
+      "sso-101",
+      "right now"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e31q1f1",
+       "fact": "Add the identity provider's current certificate",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "| SSO-101 | The response wasn't signed with an active certificate | Add the identity provider's current certificate (section 4.4) |"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e31q2",
+     "asks": "How can certificate rotation be done without downtime?",
+     "match": [
+      "downtime",
+      "next time",
+      "avoid"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e31q2f1",
+       "fact": "Up to two certificates can be active at the same time",
+       "check": "mechanical",
+       "any_of": [
+        "two certificates",
+        "2 certificates",
+        "second certificate",
+        "second signing certificate"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Up to two certificates can be active at the same time, so you can add the new one, switch the identity provider over, and then remove the old one, without any downtime."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e31q3",
+     "asks": "Is there a warning before a certificate expires?",
+     "match": [
+      "warn",
+      "notif",
+      "expir"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e31q3f1",
+       "fact": "An email 30 days before",
+       "check": "mechanical",
+       "any_of": [
+        "30 days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "The Owner and Admins receive an email 30 days and again 7 days before an active certificate expires."
+        }
+       ]
+      },
+      {
+       "id": "e31q3f2",
+       "fact": "And again 7 days before",
+       "check": "mechanical",
+       "any_of": [
+        "7 days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "The Owner and Admins receive an email 30 days and again 7 days before an active certificate expires."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e32": {
+   "identifiers": [
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e32q1",
+     "asks": "What is the annual Pro price?",
+     "match": [
+      "price",
+      "cost",
+      "how much"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e32q1f1",
+       "fact": "$250 a year",
+       "check": "mechanical",
+       "any_of": [
+        "$250"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "| Annual price | $100 | $250 |"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e32q2",
+     "asks": "Can an Admin change the plan?",
+     "match": [
+      "admin",
+      "who can",
+      "make the change",
+      "someone else"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e32q2f1",
+       "fact": "Only the Owner can change the plan",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "Only the Owner can change the plan, the billing frequency, or the payment method."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e32q3",
+     "asks": "Can an annual plan be paid by bank transfer?",
+     "match": [
+      "bank transfer",
+      "transfer"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e32q3f1",
+       "fact": "Ask through live chat",
+       "check": "mechanical",
+       "any_of": [
+        "live chat"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "Ask for this through live chat before your first annual payment."
+        }
+       ]
+      },
+      {
+       "id": "e32q3f2",
+       "fact": "A bank transfer invoice is due within 30 days",
+       "check": "mechanical",
+       "any_of": [
+        "30 days"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "A bank transfer invoice is due within 30 days of its date;"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e33": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e33q1",
+     "asks": "How long can the team keep working in the app after cancelling?",
+     "match": [
+      "keep working",
+      "continue",
+      "work in",
+      "use the app",
+      "access"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e33q1f1",
+       "fact": "Until the end of the current billing period",
+       "check": "mechanical",
+       "any_of": [
+        "end of the current billing period",
+        "end of your current billing period",
+        "end of the billing period"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "The plan stays active until the end of the current billing period, and then the organization becomes read-only."
+        }
+       ]
+      },
+      {
+       "id": "e33q1f2",
+       "fact": "Then the organization becomes read-only",
+       "check": "mechanical",
+       "any_of": [
+        "read-only",
+        "read only"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "The plan stays active until the end of the current billing period, and then the organization becomes read-only."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e33q2",
+     "asks": "How long is data kept after the plan ends?",
+     "match": [
+      "data",
+      "retain",
+      "retention"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e33q2f1",
+       "fact": "Data is kept for 90 days",
+       "check": "mechanical",
+       "any_of": [
+        "90 days"
+       ],
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "After the plan ends, your data is kept for 90 days."
+        }
+       ]
+      },
+      {
+       "id": "e33q2f2",
+       "fact": "After that it is permanently deleted",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "billing-guide.md",
+         "text": "After 90 days, all projects, tasks, and files are permanently deleted."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e33q3",
+     "asks": "Can projects be exported in a format Jira imports directly?",
+     "match": [
+      "jira",
+      "format"
+     ],
+     "answerable": false,
+     "facts": []
+    }
+   ]
+  },
+  "e34": {
+   "identifiers": [
+    "Pro"
+   ],
+   "questions": [
+    {
+     "id": "e34q1",
+     "asks": "What is the Pro API rate limit?",
+     "match": [
+      "limit now",
+      "rate limit",
+      "what is the limit",
+      "api limit",
+      "1,000",
+      "1000"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e34q1f1",
+       "fact": "1,000 requests per minute per key",
+       "check": "mechanical",
+       "any_of": [
+        "1000"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "| Pro | 1,000 |"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e34q2",
+     "asks": "Can several keys be used to get around the limit?",
+     "match": [
+      "several keys",
+      "multiple keys",
+      "more keys",
+      "spread"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e34q2f1",
+       "fact": "That is against the terms of service",
+       "check": "mechanical",
+       "any_of": [
+        "terms of service"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Creating more keys to get around the limit is against the terms of service."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e34q3",
+     "asks": "How many API keys can one member have?",
+     "match": [
+      "how many keys",
+      "one member",
+      "per member",
+      "each member"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e34q3f1",
+       "fact": "Up to 10 active keys",
+       "check": "mechanical",
+       "any_of": [
+        "up to 10",
+        "10 active keys",
+        "10 keys"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Each member can have up to 10 active keys."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e35": {
+   "identifiers": [
+    "Basic"
+   ],
+   "questions": [
+    {
+     "id": "e35q1",
+     "asks": "Why can't I send another invitation on Basic when only 3 people have joined?",
+     "match": [
+      "can't send",
+      "cannot send",
+      "unable to send",
+      "send another",
+      "can't invite",
+      "cannot invite",
+      "limit"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e35q1f1",
+       "fact": "Pending invitations count toward the member limit",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "On the Basic plan, pending invitations count toward the limit of 5 members, so a sixth invitation can't be sent while five members and invitations exist."
+        }
+       ]
+      },
+      {
+       "id": "e35q1f2",
+       "fact": "The limit is 5 members",
+       "check": "mechanical",
+       "any_of": [
+        "limit of 5",
+        "5 members",
+        "five members",
+        "up to 5"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "On the Basic plan, pending invitations count toward the limit of 5 members, so a sixth invitation can't be sent while five members and invitations exist."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e35q2",
+     "asks": "How long do invitations stay valid?",
+     "match": [
+      "valid",
+      "expire",
+      "how long"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e35q2f1",
+       "fact": "Invitations expire after 7 days",
+       "check": "mechanical",
+       "any_of": [
+        "7 days",
+        "seven days"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Invitations expire after 7 days and can be resent from the same page."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e35q3",
+     "asks": "Can people with the company email domain join without an invitation?",
+     "match": [
+      "without",
+      "domain",
+      "company email"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e35q3f1",
+       "fact": "Turn on Allowed email domains",
+       "check": "mechanical",
+       "any_of": [
+        "Allowed email domains"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "To let people join without an invitation, turn on Allowed email domains under Settings > Members > Joining."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e36": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e36q1",
+     "asks": "When can support staff access customer data?",
+     "match": [
+      "access",
+      "conditions"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e36q1f1",
+       "fact": "Only to resolve a support request, with permission from the Owner or an Admin",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Our staff can access customer data only to resolve a support request, and only with permission from the Owner or an Admin of the organization."
+        }
+       ]
+      },
+      {
+       "id": "e36q1f2",
+       "fact": "Permission lasts 7 days or until the request is closed",
+       "check": "mechanical",
+       "any_of": [
+        "7 days",
+        "seven days"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Permission is given in the support conversation and lasts for 7 days or until the request is closed, whichever comes first."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e36q2",
+     "asks": "How long are support chat transcripts kept?",
+     "match": [
+      "transcript",
+      "chat"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e36q2f1",
+       "fact": "2 years after the conversation ends",
+       "check": "mechanical",
+       "any_of": [
+        "2 years",
+        "two years"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Live chat conversations and support emails are kept for 2 years after the conversation ends, so that we can refer to earlier requests."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e36q3",
+     "asks": "Can the customer carry out an on-site audit?",
+     "match": [
+      "on-site",
+      "audit",
+      "data centre",
+      "data center"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e36q3f1",
+       "fact": "On-site audits are not allowed",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Customers can't carry out their own on-site audits; the audit report is provided instead."
+        }
+       ]
+      },
+      {
+       "id": "e36q3f2",
+       "fact": "The audit report is provided instead",
+       "check": "mechanical",
+       "any_of": [
+        "audit report"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "Customers can't carry out their own on-site audits; the audit report is provided instead."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e37": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e37q1",
+     "asks": "Can the session length be shortened, and does that sign people out immediately?",
+     "match": [
+      "shorten",
+      "session",
+      "stay signed in",
+      "signed in for"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e37q1f1",
+       "fact": "Admins can set it from 1 to 90 days",
+       "check": "mechanical",
+       "any_of": [
+        "1 to 90",
+        "1-90",
+        "between 1 and 90",
+        "1 and 90"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "Admins can change this to anywhere from 1 to 90 days under Settings > Security > Sessions."
+        }
+       ]
+      },
+      {
+       "id": "e37q1f2",
+       "fact": "It applies at each member's next sign-in, without signing anyone out",
+       "check": "mechanical",
+       "any_of": [
+        "next sign-in",
+        "next sign in"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "A shorter session length applies at each member's next sign-in; it doesn't sign anyone out immediately."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e37q2",
+     "asks": "Can everyone be signed out right now after a stolen laptop?",
+     "match": [
+      "stolen",
+      "laptop",
+      "right now",
+      "sign out all"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e37q2f1",
+       "fact": "Use Sign out all members",
+       "check": "mechanical",
+       "any_of": [
+        "Sign out all members"
+       ],
+       "evidence": [
+        {
+         "doc": "admin-guide.md",
+         "text": "To sign everyone out now, for example after a suspected breach, use Sign out all members on the same page."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e37q3",
+     "asks": "Will a HIPAA business associate agreement be signed?",
+     "match": [
+      "hipaa",
+      "business associate",
+      "baa"
+     ],
+     "answerable": false,
+     "facts": []
+    }
+   ]
+  },
+  "e38": {
+   "identifiers": [
+    "comment.created"
+   ],
+   "questions": [
+    {
+     "id": "e38q1",
+     "asks": "Do mentions in API comments notify people?",
+     "match": [
+      "mention",
+      "notif"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e38q1f1",
+       "fact": "Mentions in comments created through the API don't send notifications (not a bug)",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Mentions in comments created through the API don't send notifications."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e38q2",
+     "asks": "Can a deleted project be restored through the API?",
+     "match": [
+      "restore",
+      "recover",
+      "deleted"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e38q2f1",
+       "fact": "The API can't restore it",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Deleting a project moves it to Trash, where it can be restored in the app for 30 days; the API can't restore it."
+        }
+       ]
+      },
+      {
+       "id": "e38q2f2",
+       "fact": "It can be restored in the app for 30 days",
+       "check": "mechanical",
+       "any_of": [
+        "30 days"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "Deleting a project moves it to Trash, where it can be restored in the app for 30 days; the API can't restore it."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e38q3",
+     "asks": "What is the maximum task title length?",
+     "match": [
+      "title",
+      "length"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e38q3f1",
+       "fact": "500 characters",
+       "check": "mechanical",
+       "any_of": [
+        "500 characters"
+       ],
+       "evidence": [
+        {
+         "doc": "api-reference.md",
+         "text": "| title | string | Required, 1 to 500 characters |"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e39": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e39q1",
+     "asks": "Is notice given before adding a subprocessor, and can the customer object?",
+     "match": [
+      "subprocessor"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e39q1f1",
+       "fact": "At least 30 days' notice",
+       "check": "mechanical",
+       "any_of": [
+        "30 days"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "We notify the Owner by email at least 30 days before we add or replace a subprocessor."
+        }
+       ]
+      },
+      {
+       "id": "e39q1f2",
+       "fact": "The customer can object within 14 days",
+       "check": "mechanical",
+       "any_of": [
+        "14 days"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "The customer can object within 14 days of the notice, giving reasons."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e39q2",
+     "asks": "Is customer data used to train AI models?",
+     "match": [
+      "train",
+      "ai model"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e39q2f1",
+       "fact": "Customer data is not used to train machine learning models",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "We don't use customer data to train machine learning models, and we don't sell any data."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e39q3",
+     "asks": "What happens when an individual asks the provider directly to delete their data?",
+     "match": [
+      "contact",
+      "directly",
+      "client"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e39q3f1",
+       "fact": "The request is forwarded to the customer within 5 business days",
+       "check": "mechanical",
+       "any_of": [
+        "5 business days",
+        "five business days"
+       ],
+       "evidence": [
+        {
+         "doc": "data-processing-policy.md",
+         "text": "If a person asks us directly to access, correct, or delete their personal data in customer data, we forward the request to the customer within 5 business days and don't respond to it ourselves."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "e40": {
+   "identifiers": [],
+   "questions": [
+    {
+     "id": "e40q1",
+     "asks": "How long is an export download link valid?",
+     "match": [
+      "export",
+      "download link",
+      "link"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e40q1f1",
+       "fact": "7 days",
+       "check": "mechanical",
+       "any_of": [
+        "7 days",
+        "seven days"
+       ],
+       "evidence": [
+        {
+         "doc": "release-notes.md",
+         "text": "Exports are now emailed to the Owner as a download link, valid for 7 days, instead of as an attachment."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e40q2",
+     "asks": "Why do SMS sign-in codes no longer work?",
+     "match": [
+      "sms",
+      "code",
+      "text message"
+     ],
+     "answerable": true,
+     "facts": [
+      {
+       "id": "e40q2f1",
+       "fact": "SMS codes for two-factor authentication are no longer accepted",
+       "check": "human",
+       "evidence": [
+        {
+         "doc": "release-notes.md",
+         "text": "SMS codes for two-factor authentication are no longer accepted."
+        }
+       ]
+      },
+      {
+       "id": "e40q2f2",
+       "fact": "Use an authenticator app",
+       "check": "mechanical",
+       "any_of": [
+        "authenticator app",
+        "authenticator apps"
+       ],
+       "evidence": [
+        {
+         "doc": "release-notes.md",
+         "text": "Members who still used SMS codes were asked to switch to an authenticator app by 2026-01-31; after that date, they were asked to set up an authenticator app at their next sign-in."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e40q3",
+     "asks": "Does the mobile app work offline?",
+     "match": [
+      "offline",
+      "signal"
+     ],
+     "answerable": false,
+     "facts": []
+    }
+   ]
+  }
+ }
+}

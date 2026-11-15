@@ -1,0 +1,12 @@
+From: Yuki Tanaka <yuki@paperlantern.example>
+Subject: Trial ending soon
+
+Hi,
+
+Our 14-day trial ends next Tuesday, and we haven't decided yet whether to pay for Pro. What happens to our workspace if we do nothing? We have 5 active projects and SSO turned on.
+
+Also, our video team uploads files of around 1.5 GB. Would they still be able to upload those after the trial?
+
+Thanks,
+Yuki
+Paper Lantern Animation

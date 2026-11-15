@@ -1,0 +1,10 @@
+From: Felix Wagner <felix@northstar-robotics.example>
+Subject: Renaming and languages
+
+Hi,
+
+We rebranded from Northstar Robotics to Polaris Robotics and want to change our web address from app.example.com/northstar to app.example.com/polaris. Will old links in our wiki break?
+
+Also, half our team is in Milan. Is the app available in Italian?
+
+Felix

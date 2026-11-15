@@ -1,0 +1,11 @@
+From: Pablo Ruiz <pablo@cartografia.example>
+Subject: API pagination and v1
+
+Hi,
+
+Two quick API questions:
+1) We request limit=500 to reduce the number of calls. Will that fail?
+2) We still have one old service on API v1. When does it stop working?
+
+Gracias,
+Pablo

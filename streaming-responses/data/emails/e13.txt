@@ -1,0 +1,10 @@
+From: Nadia Rahman <nadia@pinecrest-labs.example>
+Subject: Webhook signatures never match
+
+Hi,
+
+We're receiving task.updated webhooks fine, but our signature check fails every time. We parse the JSON body, serialize it again, compute the signature of that string with our webhook secret, and compare the result with X-Signature. What are we doing wrong?
+
+Thanks,
+Nadia
+Pinecrest Labs

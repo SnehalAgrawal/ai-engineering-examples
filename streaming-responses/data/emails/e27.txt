@@ -1,0 +1,9 @@
+From: Priya Nair <priya.nair@coralreef-fin.example>
+Subject: SLA and encryption
+
+Hi,
+
+We're evaluating you for our finance team. What uptime do you guarantee in your SLA? And how is our data encrypted, both in transit and at rest?
+
+Regards,
+Priya Nair

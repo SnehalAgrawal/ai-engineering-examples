@@ -1,0 +1,9 @@
+From: Li Wei <li.wei@harborcraft.example>
+Subject: More statuses per project?
+
+Hi team,
+
+A while back we hit a limit of 6 custom statuses on our production board. Is that still the limit? We'd like to add a "Waiting on client" and a "QA" column.
+
+Thanks!
+Li

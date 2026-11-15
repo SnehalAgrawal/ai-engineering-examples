@@ -1,0 +1,9 @@
+From: Jonas Becker <jonas@kleinwerk.example>
+Subject: Pay with PayPal?
+
+Hallo,
+
+Our company card is being replaced, and finance asked whether we can pay for our Pro subscription with PayPal instead. Is that possible? If not, which payment options do we have?
+
+Danke,
+Jonas

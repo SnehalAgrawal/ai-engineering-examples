@@ -1,0 +1,13 @@
+From: Ingrid Johansen <ingrid@bergenfisk.example>
+Subject: URGENT: nobody can sign in (SSO-101)
+
+Hi,
+
+Since 08:00 today every sign-in through SSO fails with SSO-101. Our identity team rotated the IdP signing certificate last night.
+
+1. How do we fix this right now?
+2. How do we avoid downtime the next time the certificate changes?
+3. Is there any warning before a certificate expires?
+
+Ingrid Johansen
+Bergen Fisk AS

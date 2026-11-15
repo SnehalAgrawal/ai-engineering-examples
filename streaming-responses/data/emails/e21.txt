@@ -1,0 +1,11 @@
+From: Eva Lindqvist <eva.lindqvist@arcticbloom.example>
+Subject: Deleting our organization
+
+Hi,
+
+We're closing down the project our organization was used for, and our DPO wants written confirmation that all our data has been deleted once we delete the organization. How long will deletion take, including backups, and when can we get the confirmation?
+
+Our DPO also asked whether you will keep any of our invoices afterwards.
+
+Regards,
+Eva

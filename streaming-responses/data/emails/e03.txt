@@ -1,0 +1,9 @@
+From: Dev Patel <dev@quillstack.example>
+Subject: Getting 429s from the API
+
+Hi,
+
+Our nightly sync script started failing with 429 Too Many Requests. When that happens it retries straight away in a loop, up to 20 times. We're on the Basic plan and use a single API key. What's the limit, and what should the script do instead?
+
+Thanks,
+Dev

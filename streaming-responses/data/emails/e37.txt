@@ -1,0 +1,11 @@
+From: Marcus Reid <marcus@clearwater-clinic.example>
+Subject: Session security settings
+
+Hi,
+
+1. Our members stay signed in for weeks. Can we shorten that, and will it log everyone out immediately?
+2. One of our laptops was stolen yesterday. Is there a way to sign everyone out right now?
+3. Will you sign a HIPAA business associate agreement with us?
+
+Marcus Reid
+Clearwater Clinic

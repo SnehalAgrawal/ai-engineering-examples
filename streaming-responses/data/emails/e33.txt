@@ -1,0 +1,9 @@
+From: Noah Williams <noah@summitpeak.example>
+Subject: Cancelling our subscription
+
+Hi,
+
+We've decided to move to another tool. If I cancel today, how long can the team keep working in the app? How long will you keep our data after that? And can you export our projects in a format Jira can import directly?
+
+Thanks for everything,
+Noah

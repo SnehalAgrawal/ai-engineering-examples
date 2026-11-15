@@ -1,0 +1,14 @@
+From: Olga Petrenko <olga.petrenko@danube-insure.example>
+Subject: Questions from our information security review
+
+Dear team,
+
+As part of our annual vendor review, please answer the following:
+
+a) Under what conditions can your support staff access our data?
+b) How long do you keep our support chat transcripts?
+c) May we carry out an on-site audit of your data centre?
+
+Kind regards,
+Olga Petrenko
+Information Security, Danube Insurance

@@ -1,0 +1,11 @@
+From: Elif Yilmaz <elif@tulipware.example>
+Subject: API throughput on Pro
+
+Hi,
+
+We upgraded to Pro mostly for the higher API limit.
+1. What is the limit now?
+2. Could we create several keys and spread requests across them to go faster?
+3. How many keys can one member have?
+
+Elif

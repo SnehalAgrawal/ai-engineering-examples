@@ -1,0 +1,9 @@
+From: Laura Bianchi <laura.bianchi@verdemare.example>
+Subject: VAT on invoice and copies for finance
+
+Buongiorno,
+
+Our last invoice included Italian VAT, but we are a VAT-registered business and only added our VAT number after paying. Can you correct that invoice? And can invoices be sent automatically to our finance team as well as to the Owner?
+
+Grazie,
+Laura

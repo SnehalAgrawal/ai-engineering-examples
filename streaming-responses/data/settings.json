@@ -1,0 +1,141 @@
+{
+  "_comment": "Every setting and measurement definition of the streaming experiments, written before any run. Nothing here is tuned on the results: the inputs come from Article #18 and are used as they are, and each setting is fixed in advance.",
+
+  "inputs": {
+    "source": "production-ai-patterns/01-reliable-llm-pipeline/data, frozen in commit 08bf05c (Article #18); copied unchanged",
+    "documents": "data/documents/: the five support documents (SHA-256 in data/README.md)",
+    "emails": "data/emails/e01.txt to e40.txt: all 40 customer emails. There is no development/test split: no prompt or setting is chosen from these runs.",
+    "questions": "the labelled questions ('asks') in data/labels.json, used as retrieval queries, so the only model call per email is the draft. Labels are used for nothing else.",
+    "order": "emails in id order, e01 to e40"
+  },
+
+  "retrieval": {
+    "chunking": {"name": "structure-headings", "kind": "structure", "max_tokens": 512, "headings": true},
+    "embedding": {"model": "nomic-embed-text", "document_prefix": "search_document: ", "query_prefix": "search_query: ", "batch_size": 32},
+    "bm25": {"k1": 1.2, "b": 0.75, "analyzer": "words"},
+    "rrf_k": 60,
+    "budget_per_question": 1000,
+    "budget_per_email": 3000,
+    "rule": "as in Article #18: questions in order, each fills its budget from its own RRF ranking, skipping chunks already chosen and chunks that don't fit; Llama 3.2 tokens. The excerpts for each email are computed once and reused by every experiment."
+  },
+
+  "model": {
+    "name": "llama3.2:3b",
+    "endpoint": "Ollama /api/chat",
+    "options": {"temperature": 0, "seed": 1, "num_ctx": 8192, "num_predict": 700},
+    "prompt": "data/prompts.json: Article #18's drafting prompt (v3), asking for the email text as plain text instead of JSON. JSON can't be shown to a reader before it is complete, which defeats streaming.",
+    "warm_up": "before each block of requests: unload the chat model, then send one unmeasured request (the prompt 'Reply with the word ready.', at most 5 tokens) so that loading the model is not counted"
+  },
+
+  "path": {
+    "description": "client ──► [proxy] ──► app server ──► Ollama. Each language runs its own app server, proxy, and client, all on 127.0.0.1; the proxy is used only in experiment 2.",
+    "ports": {"python": {"app": 8710, "proxy": 8711}, "javascript": {"app": 8720, "proxy": 8721}},
+    "streaming_response": "server-sent events (Content-Type: text/event-stream). For each chunk from Ollama with non-empty content: 'event: text' with data {\"text\": ..., \"sent_at\": ...}. At the end: 'event: done' with data holding Ollama's statistics. Policies in experiment 4 add 'withheld', 'passed', and 'retracted' events. Each event is written and flushed as soon as it is ready.",
+    "non_streaming_response": "one application/json body {\"text\": ..., stats} written after Ollama's non-streaming response (stream: false) completes",
+    "http": "HTTP/1.1 from the client; the app server and the proxy close the connection at the end of each response",
+    "client_parsing": "the client reads the response as raw bytes in whatever blocks arrive. It decodes them incrementally as UTF-8, so a character split across two reads is decoded once complete, and frames events on the blank line that ends each SSE event, so one read may hold part of an event or several events. A text event counts as received when its terminating blank line arrives."
+  },
+
+  "measurement": {
+    "clock": "every event is recorded as an absolute wall-clock Unix timestamp in milliseconds (Python time.time_ns, JavaScript performance.timeOrigin + performance.now), by whichever process sees it, on the same machine. Every interval below is computed afterwards from these absolute timestamps; no process subtracts from its own private start time.",
+    "origin": "t_start: the client's Unix timestamp just before it sends the request. Every '_s' field is seconds after t_start.",
+    "client": {
+      "t_start": "Unix timestamp just before the request is sent",
+      "first_text_s": "seconds after t_start until the client receives the first text whose content has a non-whitespace character (for a non-streaming response: when the complete body has arrived)",
+      "last_text_s": "seconds after t_start until the client receives the last text",
+      "done_s": "seconds after t_start until the response is complete (the connection closes)",
+      "visible_text": "the text the client ends up showing, after any 'withheld' or 'retracted' event (see experiment 4 for what the client does with each)"
+    },
+    "app_server": {
+      "t_received": "Unix timestamp when the app server has read the request",
+      "t_model_first": "Unix timestamp when the app server receives Ollama's first non-empty chunk",
+      "t_model_done": "Unix timestamp when the app server receives Ollama's last chunk (done: true)",
+      "how_reported": "the app server sends these timestamps to the client in the 'done' event (or the JSON body), and the client stores them with its own",
+      "app_received_s": "t_received - t_start",
+      "model_first_token_s": "t_model_first - t_start",
+      "model_done_s": "t_model_done - t_start",
+      "ollama": "prompt_eval_count, eval_count, prompt_eval_duration, eval_duration, load_duration, as reported by Ollama"
+    },
+    "derived": {
+      "intervals": "three intervals that add up to first_text_s: request start to the app server receiving the request (app_received_s); the app server receiving the request to its first model token (model_first_token_s - app_received_s); and the first model token to the client's first visible text (post_model_delay_s)",
+      "post_model_delay_s": "first_text_s - model_first_token_s: the observed delay after the model's first token, not network latency. It includes the app server's handling, SSE framing, any proxy buffering, and the client's parsing.",
+      "generated_sha256": "SHA-256 of the raw, complete text Ollama generated, recorded by the app server before any policy acts on it. It is used to check that every mode and policy produced the same reply for an email, including replies that were withheld or retracted.",
+      "visible_text": "the client-visible text (defined above), stored separately from the generated text"
+    },
+    "timings_note": "Timings vary from run to run and between Python and JavaScript; counts, outcomes, and texts are compared across languages, timings are not."
+  },
+
+  "experiments": {
+    "1_what_the_user_waits_for": {
+      "emails": "all 40",
+      "modes": ["non-streaming", "streaming"],
+      "path": "client ──► app server ──► Ollama (no proxy)",
+      "report": "per mode: median, minimum, and maximum of first_text_s and done_s; per email, how much sooner the first words appear with streaming; and post_model_delay_s for the streaming mode"
+    },
+
+    "2_where_streams_get_stuck": {
+      "emails": "e01 to e20",
+      "path": "client ──► proxy ──► app server (streaming) ──► Ollama",
+      "proxy_modes": {
+        "pass-through": "forwards each block it reads from the app server to the client immediately",
+        "buffer-all": "reads the whole response from the app server, then writes it to the client in one write",
+        "buffer-4096": "collects bytes and writes a block to the client each time it holds 4,096 bytes, plus the remainder when the app server closes (a fixed-size proxy buffer). Every write is counted: the full 4,096-byte writes and the final partial one."
+      },
+      "report": "per mode: first_text_s and done_s at the client, model_first_token_s at the app server, and post_model_delay_s; for every mode, how many writes the proxy made to the client"
+    },
+
+    "3_when_the_user_leaves": {
+      "emails": "e01 to e10",
+      "client": "reads the streaming response until it has received 20 text events, then closes the connection",
+      "app_modes": {
+        "ignore": "the app server keeps reading Ollama's stream to the end; writes that fail because the client has gone are caught and ignored",
+        "cancel": "at the first write that fails, the app server closes its connection to Ollama and stops reading"
+      },
+      "measures": {
+        "detected_after_s": "seconds from the client closing until the app server's first failed write",
+        "upstream_events_after_disconnect": "text events the app server received from Ollama after the first failed write",
+        "model_side": "Ollama's server log (~/.ollama/logs/server.log): the lines appended between the request's start and the app server's next request, saved for each request. Requests run one at a time, so these lines belong to one task: its id comes from the 'processing task' line, and only lines with that id are used. From them: the prompt tokens ('task.n_tokens' on the 'new prompt' line), the slot's token count at release ('stop processing: n_tokens'), and whether a 'stop: cancel task' line names the task. Estimated tokens generated = release n_tokens - prompt tokens.",
+        "evidence": "the verdict on whether cancelling stops the model is the difference in estimated tokens generated between 'ignore' and 'cancel' for the same emails, with the log lines explaining it. A 'cancel task' line on its own is not treated as proof that the client's disconnect caused it.",
+        "comparison": "eval_count for the same email in experiment 1's streaming run, which ran to completion"
+      },
+      "note": "The app server can only observe what reaches it; the log is the evidence of what the model did. The log format is that of the runner in Ollama 0.40.16 and may differ in other versions; the reading of 'n_tokens' is checked in step 0 of the run plan before the experiment. Whether closing the connection stops generation is measured, not assumed."
+    },
+
+    "4_streaming_and_checks": {
+      "emails": "all 40",
+      "path": "client ──► app server ──► Ollama (streaming from Ollama in every policy)",
+      "check": "Article #18's value check, unchanged in how it finds and compares values: email addresses; codes such as SSO-101; snake_case names; and any word containing digits, taken whole. Each must appear as a whole word, after normalization, in the excerpts or in the customer's email. #18 compared against the excerpts the reply cited; a plain-text reply has no list of sources, so here all retrieved excerpts are used, in all three policies. The validator is the same in every policy; only when it runs differs.",
+      "policies": {
+        "check-whole": "the app server collects the whole reply, checks it, then sends it as one text event if it passes, or a 'withheld' event and no text if it fails",
+        "stream-then-check": "the app server streams every chunk as it arrives; after the last one, it checks the whole reply and sends 'passed' or 'retracted'",
+        "sentence-gate": "the app server holds text until a sentence is complete, checks that sentence, and sends it if it passes. At the first sentence that fails, it sends 'withheld' and no more text; it keeps reading Ollama's stream to the end, so done_s is comparable (cancellation is experiment 3's subject)"
+      },
+      "client_display": "what the client shows, which defines visible_text: on 'withheld' in check-whole, nothing (no text was sent). On 'retracted' in stream-then-check, the client removes the reply it had shown and replaces it with a notice that the reply was withdrawn for review, so visible_text is empty; visible_before_retraction_s measures how long the flagged text was on screen first. On 'withheld' in sentence-gate, the sentences already shown stay, and a notice says the rest of the reply was withheld for review; visible_text is those sentences.",
+      "sentence_boundary": "a sentence ends at '.', '!' or '?' followed by whitespace, or at a newline. Not a boundary: a period directly after a number at the start of a line (a list number such as '1.'). A period inside a word or number ('example.com', '7.50') is not followed by whitespace, so it isn't one either. Whatever is left when the stream ends is the last sentence. 'e.g. ' does end a sentence under this rule; that is accepted, not special-cased.",
+      "measures": {
+        "outcome": "passed, withheld, or retracted",
+        "first_text_s": "as defined above",
+        "chars_shown": "characters of text the client received before any 'withheld' event",
+        "visible_before_retraction_s": "stream-then-check, retracted replies only: seconds from the client receiving the text that contains the first flagged value until the 'retracted' event",
+        "sentences": "sentence-gate: sentences sent, and characters held back when a sentence failed",
+        "agreement": "whether the three policies flag the same emails (sentence-level and whole-reply checks can differ when a value is split differently at a sentence boundary)"
+      },
+      "note": "A sentence that passes is not shown to be correct: the check only asks whether each value in it appears in the excerpts or the email, as in #18."
+    }
+  },
+
+  "run_plan": {
+    "step_0": "before the experiments, once, Python only: a check of the log reading on this Ollama version. Two emails (e01, e02) are each sent once to completion and once cancelled after 20 text events, from a separate script. Checks for the completed requests: 'release n_tokens - prompt tokens' must equal Ollama's eval_count, allowing a difference of at most 1 for a final token counted on one side only. Checks for the cancelled requests: (a) the 'processing task', 'stop: cancel task', and slot-release lines can be matched to the same task id; (b) the slot release has an n_tokens value; (c) n_tokens - prompt tokens lies between the number of text events received before the disconnect and the same email's completed eval_count, inclusive. This checks that the count is interpretable, not whether cancelling stopped the model: a count equal to the completed eval_count is a valid reading, meaning generation ran to the end. If any check fails, experiment 3 reports only what the app server observed and states that the model-side token count is withheld, and why. 4 drafting calls.",
+    "per_language": "experiment 1 (80 drafts), 2 (60), 3 (20), and 4 (120): 280 drafting calls, plus one warm-up per block (10 blocks: 2 + 3 + 2 + 3)",
+    "blocks": "each mode or policy is one block over its emails, in the order listed above; the chat model is unloaded and warmed up before each block, so every block starts the same way and an email's prompt isn't in Ollama's prompt cache from an earlier mode",
+    "languages": "Python first, then JavaScript, one after the other",
+    "after_runs": "unload both models"
+  },
+
+  "outputs": {
+    "requests": "runs/<language>/requests.jsonl: one line per request with experiment, mode, email, the client, app server, and derived fields above, the outcome and event counts, generated_sha256, and the visible text",
+    "texts": "runs/<language>/texts/<generated_sha256>.txt: each distinct generated text once",
+    "ollama_log": "runs/<language>/disconnect-log/<email>-<mode>.txt: the Ollama log lines appended during each experiment-3 request",
+    "report": "printed by report.py / report.js from the saved runs: counts and outcomes identical across languages, timings in a separate section marked as varying"
+  }
+}

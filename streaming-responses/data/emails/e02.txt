@@ -1,0 +1,9 @@
+From: Tomás Herrera <tomas.herrera@lumenlogistics.example>
+Subject: SSO login error for new hire
+
+Hello,
+
+We set up single sign-on last month and it works for almost everyone. Our new hire, Aiyana, gets "SSO-103" when she tries to sign in through Okta. She is assigned to the app in Okta, and her Okta account is aiyana@lumenlogistics.example. What does this error mean and how do we fix it?
+
+Tomás
+IT, Lumen Logistics

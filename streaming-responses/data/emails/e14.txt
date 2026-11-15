@@ -1,0 +1,9 @@
+From: Martin Novak <martin.novak@vltava-it.example>
+Subject: Backup frequency and retention
+
+Dear support,
+
+Our auditors ask how often you back up our data and how long the backups are kept. Can you tell me?
+
+Best regards,
+Martin Novak

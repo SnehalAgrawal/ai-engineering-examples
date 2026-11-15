@@ -1,0 +1,8 @@
+From: Lucas Ferreira <lucas@saltmarsh-games.example>
+Subject: IP allowlist broke our CI
+
+Hi,
+
+Yesterday we turned on the IP allowlist with our office range. Since then our CI pipeline, which runs in the cloud, gets 403 errors from the API. What's going on? And will the allowlist also stop your webhooks from reaching our servers?
+
+Lucas

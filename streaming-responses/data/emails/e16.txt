@@ -1,0 +1,11 @@
+From: Ruth Abebe <ruth@kettlebrook.example>
+Subject: Card payment failed
+
+Hello,
+
+Our company card expired, and yesterday we got an email saying a payment failed (account reference 58213). Will you try the payment again, and when?
+
+And what happens if it keeps failing? We have an integration that creates tasks through the API every hour, and I need to know whether it will stop working.
+
+Ruth Abebe
+Kettlebrook Bakery Co.

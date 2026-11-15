@@ -1,0 +1,14 @@
+From: Johanna Virtanen <johanna.virtanen@aurora-legal.example>
+Subject: GDPR questions
+
+Hello,
+
+Our legal team has three questions about your Data Processing Policy:
+
+1. Will you tell us before adding a new subprocessor, and can we object?
+2. Do you use our data to train AI models?
+3. If one of our clients contacts you directly asking you to delete their personal data, what will you do?
+
+Best regards,
+Johanna Virtanen
+Aurora Legal Oy

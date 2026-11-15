@@ -1,0 +1,10 @@
+From: Kwame Asante <kwame@routewise.example>
+Subject: Webhook downtime and limits
+
+Hi support,
+
+Our webhook endpoint will be down for about 3 hours during a data-centre move this Saturday. Will we lose the task.completed events sent during that window?
+
+Separately, we're planning to split our integrations and would need around 25 webhooks. Is that possible?
+
+Kwame

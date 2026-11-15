@@ -1,0 +1,9 @@
+From: Ahmed Farouk <ahmed.farouk@cedarbridge.example>
+Subject: Making 2FA mandatory
+
+Hello,
+
+After a phishing attempt last week, we want to make two-factor authentication mandatory for all 35 of our members. If we switch it on, what happens to members who haven't set it up yet?
+
+Regards,
+Ahmed

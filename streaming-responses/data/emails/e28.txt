@@ -1,0 +1,10 @@
+From: Aarav Shah <aarav@kitewing.example>
+Subject: Colleague going on leave
+
+Hello,
+
+One of our engineers is going on six months of parental leave. Should we suspend or remove their account? We're on Basic with 5 members, and we'd like a temporary replacement to take the seat.
+
+They also own the API key that our nightly import uses. Will it keep working while they're away?
+
+Aarav

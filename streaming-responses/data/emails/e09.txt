@@ -1,0 +1,9 @@
+From: Camille Laurent <camille@atelier-norde.example>
+Subject: Moving our data to the EU
+
+Bonjour,
+
+When we signed up we picked the United States region, but our new contracts require our data to be stored in the EU. Can you move our organization to Frankfurt? We have about 40 projects with lots of comments and attachments.
+
+Merci,
+Camille Laurent

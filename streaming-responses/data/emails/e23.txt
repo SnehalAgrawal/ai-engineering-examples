@@ -1,0 +1,11 @@
+From: Daniel Cohen <daniel.cohen@ironleaf-security.example>
+Subject: Audit log export for our auditors
+
+Hello,
+
+Our auditors want every audit log event from the last six months as a CSV file. When I try, the export won't cover the whole range. Is there a way around it?
+
+Also, one of our admins asked whether old audit log entries can be deleted to keep things tidy.
+
+Daniel Cohen
+Ironleaf Security

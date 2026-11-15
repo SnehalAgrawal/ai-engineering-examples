@@ -1,0 +1,10 @@
+From: Rafael Costa <rafael@mosaicworks.example>
+Subject: A few API questions
+
+Hi team,
+
+1. Our bot listens for comment.created webhooks and replies through the API, sometimes with @mentions. Nobody gets notified about those mentions. Is that a bug?
+2. A script deleted a project by mistake through the API. Can we restore it through the API?
+3. What's the maximum length of a task title?
+
+Rafael

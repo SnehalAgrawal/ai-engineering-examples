@@ -1,0 +1,10 @@
+From: Mei Lin <mei.lin@bluepeak-analytics.example>
+Subject: 409 idempotency_mismatch and a leaked key
+
+Hi,
+
+1. Our task-creation job sometimes gets 409 idempotency_mismatch. We generate the Idempotency-Key from the task title. What causes this?
+2. Unrelated: a developer accidentally pushed an API key to a public repository. We've revoked it. How quickly does revocation take effect?
+
+Thanks,
+Mei

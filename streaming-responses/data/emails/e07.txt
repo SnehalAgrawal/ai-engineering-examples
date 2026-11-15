@@ -1,0 +1,8 @@
+From: Sanjay Iyer <sanjay@ledgerline.example>
+Subject: cursor_expired during export job
+
+Hello support,
+
+We page through all the tasks in a project with the v2 API. The job pauses overnight when our servers are busy, and the next morning it resumes with the cursor it saved and gets a 400 error with cursor_expired. Why, and how should we resume?
+
+Sanjay

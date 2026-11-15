@@ -1,0 +1,10 @@
+From: Helena Svensson <helena.svensson@nordkap-health.example>
+Subject: Security questionnaire
+
+Good afternoon,
+
+I'm filling in a vendor security questionnaire for our compliance team. One question asks how quickly you would tell us about a personal data breach affecting our data. Could you confirm the timeframe?
+
+Kind regards,
+Helena Svensson
+Compliance Officer

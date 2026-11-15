@@ -1,0 +1,10 @@
+From: Henrik Dahl <henrik.dahl@fjordline-software.example>
+Subject: SCIM token expiry and groups
+
+Hi,
+
+We're on Pro and connected SCIM about eleven months ago, and I just realized I don't know when the token expires or what happens when it does. Will our members lose access?
+
+Also, can we map our identity provider groups to projects?
+
+Henrik
