@@ -10,7 +10,7 @@ Twelve scripted support conversations and the settings for every experiment, fro
 
 | File | SHA-256 |
 |---|---|
-| settings.json | `6019933747edc14729ed5f39e7bf51636053a5d084d830bb2b80c29ed55a8881` |
+| settings.json | `8658f7b5853a8f83dbc0235de896d2dac567c0b0215acfa875660bb1f60c2995` |
 | conversations/c01.json | `335a06a60330f232ef92ced55e323d1390c929b4d9c8cf24aedcbb983f7a61f5` |
 | conversations/c02.json | `00fd36963fce41545b152d56ad199f54c606286c7d941b5ce63dfa9d5ab9ac8a` |
 | conversations/c03.json | `7c0b935f98d3be15953f977d2b5f78bf91ac678c8b13538846726c2b94fe6112` |
@@ -23,6 +23,8 @@ Twelve scripted support conversations and the settings for every experiment, fro
 | conversations/c10.json | `baf763bf392491ebd4868481b28d95c8bc7cb7853f735e7d99638236f5edc0dd` |
 | conversations/c11.json | `4b72db04fcba8e1079f5cb7bf7c5098b56c8a18b26cb060a38b1402bd4836254` |
 | conversations/c12.json | `6f717e4a4622765d3b4692b8f3ff0baf927abac5bd4ca29fc0757e7a9a49677a` |
+
+`settings.json` was amended after step 0, with approval, before any experiment: experiment 1c also records the tokens Ollama actually evaluated (from its server log), and experiment 2 records the answer length and the step 0 finding (see `experiments.1_the_model_is_stateless.c_growth` and `experiments.2_past_the_window`). At the prompt freeze it was clarified (approval pending) with the num_ctx and size check of the summary and extraction calls (`model.summary`, `model.extraction`). The hash above is the amended file's; the original is in commit 2eebbea.
 
 Added later, not part of this freeze:
 - `prompts.json`: the system, summary, and extraction prompts, developed on the dev conversations;
