@@ -1,0 +1,15 @@
+{
+  "name": "conversation-state",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "What an application sends a model in a long conversation: full history, a recent window, a token budget, a running summary, or a structured case record, and what the model can still answer. Companion to Article #20 on snehalagrawal.com.",
+  "scripts": {
+    "check": "node check_data.js",
+    "run": "node run.js",
+    "report": "node report.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
