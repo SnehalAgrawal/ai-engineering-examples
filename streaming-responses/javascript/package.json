@@ -1,0 +1,14 @@
+{
+  "name": "streaming-responses",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Streaming an LLM reply from the model to the user's screen: what the user waits for, where streams get stuck, what happens when the user leaves, and checks on streamed text. Companion to Article #19 on snehalagrawal.com.",
+  "scripts": {
+    "run": "node run.js",
+    "report": "node report.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
