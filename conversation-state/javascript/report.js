@@ -11,6 +11,7 @@ import * as context from "./context.js";
 import { DATA, RUNS, load, mentions, positionClass } from "./common.js";
 
 const GRADES = ["correct", "stale", "both", "other"];
+const FINAL = ["correct", "stale", "both", "not stated", "wrong", "invented"];
 const STRATEGIES = ["1b_full", "3_last_n", "3_token_budget", "3_summary_recent", "3_state_recent"];
 const readJsonl = (path) => readFileSync(path, "utf8").split("\n").filter(Boolean).map((l) => JSON.parse(l));
 
@@ -62,7 +63,11 @@ function main() {
     r.kind = f.field !== "other" ? "in-schema" : "other";
     r.changed = f.change;
     r.hand = labels[`${r.conversation}|${r.probe}|${r.output_sha256}`]?.label ?? null;
+    // The final grade: the hand label where the answer was read, otherwise the mechanical 'correct'.
+    r.final = r.hand || (r.grade === "correct" ? "correct" : null);
   }
+  const finals = (rs) => FINAL.map((g) => `${g} ${rs.filter((r) => r.final === g).length}`).join(", ");
+  const hasLabels = Object.keys(labels).length > 0;
   const by = (block, split = null) => rows.filter((r) => r.block === block && (split === null || r.split === split));
 
   console.log(`Conversation state: ${rows.length} model calls in runs/javascript/${out}; prompts ${prompts.version}; `
@@ -76,7 +81,10 @@ function main() {
   console.log("\n1a/1b. The model is stateless: the same probes with no history and with the full history (num_ctx 8192)");
   for (const split of splits) {
     for (const block of ["1a_no_history", "1b_full"]) {
-      if (by(block, split).length) console.log(`   ${split} ${pad(block, 14)} ${tally(by(block, split))}`);
+      if (by(block, split).length) {
+        console.log(`   ${split} ${pad(block, 14)} ${tally(by(block, split))}`);
+        if (hasLabels) console.log(`      FINAL: ${finals(by(block, split))}`);
+      }
     }
   }
 
@@ -112,7 +120,11 @@ function main() {
     console.log(`   probes whose current value was sent but not seen: ${lost.length}; correct among them ${rate(lost)}`);
     const seen = cut.filter((r) => r.in_context_seen && r.in_context_seen.current);
     console.log(`   probes whose current value was seen: ${seen.length}; correct among them ${rate(seen)}`);
-    for (const split of splits) console.log(`   ${split}: ${tally(by("2_full_small", split))}`);
+    for (const split of splits) {
+      console.log(`   ${split}: ${tally(by("2_full_small", split))}`);
+      if (hasLabels) console.log(`      FINAL: ${finals(by("2_full_small", split))}`);
+    }
+    if (hasLabels) console.log(`   FINAL where the current value was sent but not seen: ${rate(lost, "final")}; where it was seen: ${rate(seen, "final")}`);
     const shifted = two.filter((r) => r.log.context_shifts.length);
     console.log(`   answer length ${spread(two.map((r) => r.eval_count))} tokens; room left after the prompt `
       + `${spread(two.map((r) => 2048 - r.prompt_eval_count))} tokens`);
@@ -135,10 +147,13 @@ function main() {
       const changed = rs.filter((r) => r.changed);
       console.log(`         in-schema ${rate(rs.filter((r) => r.kind === "in-schema"))}; other ${rate(rs.filter((r) => r.kind === "other"))}; `
         + `changed facts ${rate(changed)}, stale answers among them ${changed.filter((r) => r.grade === "stale" || r.grade === "both").length}`);
-      if (Object.keys(labels).length) {
-        const hand = rs.filter((r) => r.hand);
-        console.log(`         hand labels: ${hand.length} answers; ${[...new Set(hand.map((r) => r.hand))].sort()
-          .map((lab) => `${lab} ${hand.filter((r) => r.hand === lab).length}`).join(", ")}`);
+      if (hasLabels) {
+        console.log(`         FINAL (hand label where read): ${finals(rs)}; ungraded ${rs.filter((r) => r.final === null).length}`);
+        console.log(`            by position: ${["early", "middle", "late"].map((p) => `${p} ${rate(rs.filter((r) => r.position === p), "final")}`).join("; ")}`);
+        console.log(`            current value in the context sent: ${rate(rs.filter((r) => r.in_context.current), "final")}; `
+          + `not in it: ${rate(rs.filter((r) => !r.in_context.current), "final")}`);
+        console.log(`            in-schema ${rate(rs.filter((r) => r.kind === "in-schema"), "final")}; other ${rate(rs.filter((r) => r.kind === "other"), "final")}; `
+          + `changed facts ${rate(changed, "final")}, stale or both among them ${changed.filter((r) => r.final === "stale" || r.final === "both").length}`);
       }
     }
   }

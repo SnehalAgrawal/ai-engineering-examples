@@ -1,0 +1,1253 @@
+{
+ "_comment": "Hand labels for runs/python/main (code febfa22, prompts v4-frozen), keyed by conversation|probe|answer SHA-256, read from runs/python/main/hand-label-worklist.md. Labels as defined in python/label.py. Status answers follow the status rubric in settings.json; an answer that says the case is closed or resolved is not correct unless the conversation says so (c06: 'That settles the claim'; c07: 'the exchange is complete on our side'). A value repeated from what the model was sent (a case record or summary) is 'wrong', not 'invented'.",
+ "labels": {
+  "c01|p1|64dddf03ee4dcd8ec9dbdc28a1e6f60d12847305a3e7621436f92f6e33b4dc36": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c01|p2|32f10b3f4c714e9e8d504d2910423f9ef7c267b83f6a08b8bcb55bbef9f11e25": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c01|p3|75ab7ab96f5090d31bd841f0edaa1ba9eb2c943de5fd924394f9e51d5eff9983": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c01|p4|43907f01986b155631ade5687e32ffbd7feef674dcbd7775a10cd9d2116e531a": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c01|p5|8c75f3b8ab36d020fe643ef610131d4dc66126b4e96aaa452b85a4c24f8a75b2": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c01|p6|1e7fd5443076ce9e1ec8a759af14e35923933013bfc8c775ecc4d2d4c13e48ea": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c02|p1|2b7fd076d7ac12e1ce58ce13304e441b23fadcb9849b37e060065ac6b853e96b": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c02|p2|4b8db396646947944e85106765ba13b2a8aabc1e3e058357a781377b6cbb5d6e": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c02|p3|75ab7ab96f5090d31bd841f0edaa1ba9eb2c943de5fd924394f9e51d5eff9983": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c02|p4|177bf5f7a7586180b33f6b8deb4781eed84eec1ba074ceb332319e59efa0ca50": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c02|p5|10900bb76ac6427ca79d9dc03af6b6f0d85e1baabe438a38a85f115e368c1099": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c02|p6|a702ca41829a1869e109870ec290cc64936b721a7ed5118d240908470bb755b5": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c03|p1|c23e2090baaa61188b3ad32ccf0ecc003d28675f152f4dcfc07c5fb47d601ec0": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c03|p2|9dfdbbe8033f7d3674d3a5cecbc152b27a01cc4e4125ccc02577ff8506481a45": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c03|p3|877a22e433e567f0f02660d176b91710e457041ac64ac4bbc7678e5849b572a7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c03|p4|a0a919495e5d0874e168bc11e6d4c2264f59ccb342b64e936977703f6dab8c8d": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c03|p5|8856bf5776d2b0cacc3e6eecd355d3470dba09f1adeae11af0bac3f7fa5239e5": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c03|p6|bf40610ba004402b18b4eb7e327aecefdfceb7012478ba0d296a2a2d85c68b3b": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c04|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c04|p2|9ddc47fc959e45eb70143699db2c95b7ecd15b8a97c2a36660e428ce375db4db": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c04|p3|66676e2fb41409b301ef1e007c45933c008958c4ed06626c00d668c6615eb1c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c04|p4|ee6393008ed9548095ff470cf88704c48145b72f2a71f875a4f01b922f5b93c4": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c04|p5|f740b7b8be5c74dec7c03172ebc34742d3ae2895d17802234fdb8b3cc3afda51": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c04|p6|802321ec7512a03d3083c9c7317762162446b624bb07297f39c96b3efc7af6d9": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c05|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c05|p2|150fc5b150d72b19d0e1cb7c45dccc509a3984322e4aabfa206c79ffca982952": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c05|p3|858ab07b155afb7915df795bcf3bac0cf4678f70ee4d5c3677ea280c6d2b3066": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c05|p4|ba01fa1b8afeb1afe41a66044514bdc376ba1784781072755a3ea47316656b33": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c05|p5|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c05|p6|5d9eac208bdffc324befdeb2284d0cfd423fde318074c948189f8022d02e5d84": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c06|p1|549e4858ec4fc875740f5ee82ea86bb5b7ee89c49b5c1f00b4dfa6228421a8a6": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c06|p2|bda9569363282d93d7ab2f26fcad2dfc986a041dc99b26106b3227d051f7f38e": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c06|p3|267b66552a3b64e85e294e4ba489d6ebcbb3dcfb8394166aa7c7326198e007d3": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c06|p4|9eb9848203e584bcc888797cad8a27d7ee9600280a1b112fba398d39c93ec640": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c06|p5|cf5bf595040e7e4b41b4aa6274ab5159f6e2414f0db3e926619692dae4a03368": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c06|p6|2154ae651ee3cd012ff92222eb1d51b78c1c5c1158efd7c4ec896d7cdea8314e": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c07|p1|fe536b29a0d5510e1b9c2da930c137ae6709758deaeee1418997a18ce246bc62": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c07|p2|ed0c9f2cbef0f3639390ae91a8c107e29c3a82a3b2ac8be6afcdf456f990c470": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c07|p3|c81b8ca5527ea001d2fa1473ee2ac4f95c08498efbe046e38f0d1fe8c570011a": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c07|p4|2d909ac40137f99fe467c26224ae1690c4cae1bc5308751a85f5ed33e6a6dc63": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c07|p5|eb6bf8ca3f179ba65ffaff7e18ade4d86f66664ae91a9bd96de64674dea75e57": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c07|p6|0b1de2444e8e828b0f5dbcde400b74f1233789640235a3ab6685e88021f7503a": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c08|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c08|p2|217d2cd7dd4c850a459cee2e23a157fef48609bc0e9055712be1091c5afa154f": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c08|p3|9f185f78b0ef9145311f92619cfd52328d2a7e71b53935592d135d1f564366a0": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c08|p4|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c08|p5|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c08|p6|21397c1df8ea0e585df0503729b154258ef98d2fe7a31ad1cc0956cd03b5f536": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c09|p1|2b7fd076d7ac12e1ce58ce13304e441b23fadcb9849b37e060065ac6b853e96b": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c09|p2|ad89b42ca9de109714030c9b12e4efb7141ef3d6b689b208c073e739276442f2": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c09|p3|63a065662d678c61c554adc77cfc7db97ad8828953f2cd92cd55412a4f2ee9da": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c09|p4|b3165c4eca20bebd903519fbc604a83a3e2137a9717ba01def6c11e6255f555c": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c09|p5|b47437a639b7a25341592a884a16da45b9d96977bde0ae1631d43c4d5caa5c05": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c09|p6|1590d58b5d3eb0acd5bb5346d951434b70a26c78684082801f15372bbeeccdf7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c10|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c10|p2|df460f626d0cc8f3f018545d064d4d216ef9f8ec000e9a454ff9495a9514535b": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c10|p3|4919f7bff87428a89a03d0afaff7ba665d395ed270fbff74514eb35d970b9cf3": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c10|p4|eaf0b80cd591da1344978248706e6faa271ac379bf0ba75b8384625d3712856f": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c10|p5|ae9bec38cfdf3ab9d22fa10ed38bd837514145ade0a1fca224c7640424500cad": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c10|p6|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c11|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c11|p2|9af0d0a935d6044c3b7894265371b128bdf1fedb6d9bce1354e263eddc56c97a": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c11|p3|858ab07b155afb7915df795bcf3bac0cf4678f70ee4d5c3677ea280c6d2b3066": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c11|p4|709c011e6ff1f4a44a436dbe03c7bd6c58d468126fd6fb6f2798009bd3ea4b36": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c11|p5|f7393b005194e8f9f9861d82b1c12707d0eb323177dafd94d87a185f027d603a": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c11|p6|7895ade07498661b183c7cbaf78ac0071a4f3f5768559761036f8df529bb0835": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c12|p1|c23e2090baaa61188b3ad32ccf0ecc003d28675f152f4dcfc07c5fb47d601ec0": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c12|p2|21a1b714595e9ef4bd8b9fc63ed6511e22d12e617d06091ed75f7554b816ef4b": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c12|p3|87cf800431c33f6dd71a3dc74c2b3ad0f70ed14f9abd6361f704e3ffedb50ac2": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c12|p4|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c12|p5|a529cca8da37a46369cc16606ec54ee9bd010adecda1548810ab5f051b735987": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c12|p6|32d9716175a4937a062b873916ab02b203ee24a66552dcb6b649058a1be8c070": {
+   "label": "not stated",
+   "note": "no history: says it has no information"
+  },
+  "c01|p3|996fcda07c2507f0659be58ed55a6d4be5420e254521e326f4cbcb23645f2fbd": {
+   "label": "invented",
+   "note": "says the case is closed, which the conversation never says; also says the replacement has shipped"
+  },
+  "c02|p2|325c471e3554b8fa6789d21f9fc7fbbb914c9b709084883460c949795441973a": {
+   "label": "correct",
+   "note": "a double instead of the regular king ordered"
+  },
+  "c02|p3|b917171c3ae33c7b4f42a650933ed987a7b7b1877a4290d505403be1d3e9df8e": {
+   "label": "correct",
+   "note": "collection on Thursday, exchange to follow: the return stage"
+  },
+  "c03|p2|71f783f05ef266e1a8966d00ee1e3f5ee7caa0c1baec99c2d5e076d495327d42": {
+   "label": "correct",
+   "note": "duplicate payment"
+  },
+  "c03|p3|9de795dbc6dfe23c49c6d6a43cc9502fb1f86f0b6506de33636d289b5b831ea8": {
+   "label": "correct",
+   "note": "with the payments team"
+  },
+  "c03|p6|f180e02829e464f18e67318688560370b11b0a9cd38f539f5f68055ce6a08980": {
+   "label": "correct",
+   "note": "phone first, then email: history, current value clear"
+  },
+  "c04|p3|469d17f5d392d1375450f16938bf3ce838d9ed34c005ffe0911a79b3b8995e59": {
+   "label": "invented",
+   "note": "says the case is closed and resolved; the refund is right"
+  },
+  "c05|p2|6bcd49ca8efe83138d2d19b7dc67e7e308925245dc915aace79f357a65c251e1": {
+   "label": "correct",
+   "note": "not received yet"
+  },
+  "c05|p3|9356c50638e4e47aeb777b9c4d18326d673d151778ce7cf46dc1b60f38f1e3f0": {
+   "label": "correct",
+   "note": "resolved; the investigation mentioned as history"
+  },
+  "c06|p2|886e77d61098ebf2b6d12dcfe634c09a485aa92e3a0dfe15a3ca79b9d5a9f5b6": {
+   "label": "correct",
+   "note": "the glass broke"
+  },
+  "c06|p3|af4d74d6fbed0304e8ed84694c354c5abf539e3dd42a5273915a86df971d02f0": {
+   "label": "correct",
+   "note": "refund issued; 'claim closed' is supported ('That settles the claim')"
+  },
+  "c06|p6|83c004d4e35efa63e29bd8e6526cc8ea274e05695af92259bc52c76eb97b49c1": {
+   "label": "correct",
+   "note": "black, then changed to brass"
+  },
+  "c07|p2|3979b3e98865a5aa84220caeecd2f8338fecff19f11c873745904112fec78f82": {
+   "label": "correct",
+   "note": "thought stained, turned out the wrong colour"
+  },
+  "c07|p3|c94d72a9b5592c1952ca7d8a2f8301371009d343845f24cadc835a8fa67effc2": {
+   "label": "correct",
+   "note": "grey set shipped; 'closed' is supported ('the exchange is complete on our side'); the bath mat being on its way is invented"
+  },
+  "c08|p2|a2ff5bb6c3e31f7606c657ebaa905f22b12534f5340118afe5b989dccdde478a": {
+   "label": "correct",
+   "note": "still waiting for the refund"
+  },
+  "c08|p3|9190fe0cd52c950b0e690504d55eadf15cd13f77c9447fcc304aac553d4d6e6a": {
+   "label": "correct",
+   "note": "refund sent; adds an unsupported detail about the Orrin order"
+  },
+  "c08|p6|eadc970430d2cde22b89db94c2ea2de05e4b4976a9cda57e51d29d230bce2082": {
+   "label": "wrong",
+   "note": "115 dollars, the Orrin lamp's price"
+  },
+  "c09|p3|0de9ba07ea128ea3673165685ea583dcabf5c78470f1a64049ec8a801e14d5ae": {
+   "label": "not stated",
+   "note": "says it has no case record"
+  },
+  "c09|p6|b57bdbd2c5bbccdeff5326e2e1e2804b785c817cb6721e1213bf27308bab5788": {
+   "label": "stale",
+   "note": "cream, the colour before the change"
+  },
+  "c10|p2|1f84c5349a38b95fd855f4768cd5a4ced3d449dfc54f3e983f04ebf89ec406a1": {
+   "label": "correct",
+   "note": "left at the wrong address"
+  },
+  "c10|p3|4120030c91017b16265b449ec0f372a94bb99ced0ef7ea0bff8fb911f0b92245": {
+   "label": "stale",
+   "note": "presents the claims investigation as current; the replacement 'held at the post office' is not yet true"
+  },
+  "c11|p3|95c144d11994f5e8315c0016fa2edf415a5645e270335fa0f68efc9cc3b85df4": {
+   "label": "correct",
+   "note": "with the payments team"
+  },
+  "c12|p3|bafea46267d6fad88dc1ae38907046a8da525bf6c578366ed3b3a557a289ec31": {
+   "label": "both",
+   "note": "presents the quality team review as current and mentions the batch number without asking the customer for it"
+  },
+  "c02|p4|8b87e279fe58dfcad92b3b229e44cc4867ff9d77624797caa859cf3d5bb00203": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c03|p1|7952425debd305785d212a620ff1e35e9aeddf9aa7933f99bd14ad9cd5e5d69c": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c03|p4|06f2012464bf8610ba8b6f8b00c90343ac1158b7059378a24c0c3cc9c4c7cd45": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c04|p6|a625d18364d49a63803c0b6bda68adb900717fa86717a4ae8cf87d30e1dcee28": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c05|p6|5e3a55005bc7f2ac29e8843bada01efeeaea1f37be8a95369015de08dd5a07a6": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c10|p4|99f6b433b673d9b972d52ef0a24d502591cdfd20ebdb1e1411a634e4aa87037b": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c11|p2|0cf29dc2193eb338284c32fda0b22eace6ab108dc0bf5d26bf984cb5ab4680bd": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c11|p6|2784f8fe047cb0b5b2dcd78390417fe05a1577f8dc1528d4fa7bdffe62aaa2b3": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c12|p4|31952e2946069e17740b64e73085a0ad974f516001849e0e15b98b6cc1e73ebe": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c12|p5|e37129d300f3f6a192c7ad9f00abbbbc488928dd789d74bd342f541d898e2242": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c01|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c01|p3|e59aea7846d5cf60b886f86fa5fc98d30d61c32384cc2e2c0c91392f2ac8274a": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p1|d36a24020cec518151a0cb5d29b62869106c073c13490cda5be84af122a434c7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p3|c775d673723ddc161bb23cf95b814ce9c24bca4bc218e9098864c3eb94fd9ac8": {
+   "label": "invented",
+   "note": "says the case is closed"
+  },
+  "c02|p4|a81d90ff57afab8465a68f3ab529641dafcfb593511053fe617a1cf535ef8cdd": {
+   "label": "not stated",
+   "note": "says no gate code was given (it was dropped by Ollama)"
+  },
+  "c03|p2|381233089ac8c7e51dbfdcd1420efd128208d289fe454b20378bcd2c7c3ad361": {
+   "label": "correct",
+   "note": "double-charged"
+  },
+  "c03|p3|eb76400ffebc5b0be0d379faf7ac24703f89d45ddb5d1e13ce9f9c1a03fa099e": {
+   "label": "correct",
+   "note": "payments team"
+  },
+  "c03|p4|e90810e362bab1b511faac498f952060044824ef8c1d14f4b6a461b6da70d7dd": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c04|p1|717aa4cae92e5b2cf4e4ad0e08ac5fa1f5c013af8143b8095988ca8b56c3f497": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c04|p3|123dcdfddf061cff56ea88848c4f55b64c29fd32b8ace39e28a3e3be137d166b": {
+   "label": "invented",
+   "note": "says the case is closed and the spare glass is on its way"
+  },
+  "c04|p4|6f3d3a0189796102c34f4187d2875f80759e56f9838508830a412e2868ddc40e": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c05|p2|ff7d961ff9d5f24b0d87d5d2a63416fafa7b89c9cb907a1eef7b15c0fb13dc39": {
+   "label": "wrong",
+   "note": "says the rug had gone missing; it was late"
+  },
+  "c05|p3|533c3833eea2ea8d80966f4d800facacf8b6bdf0a80aa098cece3f87d77527eb": {
+   "label": "correct",
+   "note": "resolved"
+  },
+  "c05|p4|46d8ba2f94d14e5a520a67d1e7044259125b3ed9d753ae5dc038b9f4eddd4ea1": {
+   "label": "wrong",
+   "note": "4 to 5 pm, the courier's delivery window from turn 18"
+  },
+  "c05|p5|cbaf52eb359f2b7ba074f25e821d6f51b0f2454a33fab6560f4a142ec7d386ac": {
+   "label": "invented",
+   "note": "'Northline Delivery'"
+  },
+  "c06|p1|cbe9c9e31903a63bc31ec82c3a14ebf7cecd7ad55a7e26eb0aa9d38b497a98c2": {
+   "label": "invented",
+   "note": "'#FWG001234'"
+  },
+  "c06|p3|73b97999dbec8d2036234e34d5f65bc56d6fff3871161c69550f415bc087d800": {
+   "label": "correct",
+   "note": "as item 82"
+  },
+  "c06|p6|414e75e4adca57e1f6dadc6988db38710b383cdf5c681b16787294bfb71576f5": {
+   "label": "stale",
+   "note": "black"
+  },
+  "c07|p2|cf8022ba161907bec1b0a1eb68abf70d11079bc25fbfa8ddaab323884a892797": {
+   "label": "wrong",
+   "note": "describes the old bath mat's problem"
+  },
+  "c07|p3|2eb2a47b2e8f0ccf88e90e44c5ea20e44d07b554285178e25b774b0018bedb25": {
+   "label": "correct",
+   "note": "as item 85"
+  },
+  "c07|p4|cc13a9f52c4bcf6cfc33a71232910ba5f2d4d51d06a5489c6c04c62cb68b4cff": {
+   "label": "invented",
+   "note": "'LW123456'"
+  },
+  "c08|p2|36bac08da95a7baed528639cbb3077f0b2f41bdeeea81cccd9e20d77ad1eff2c": {
+   "label": "correct",
+   "note": "a refund for the returned lamp"
+  },
+  "c08|p3|1fb300484925451c5e0bd82464eb814cd1e54ef895e19a963c57034afef219d4": {
+   "label": "correct",
+   "note": "refund sent"
+  },
+  "c08|p4|5f346dbbd6e26fd6321d83a84d29ee2e4da932d4feca605c3e2c8d71b787b2bd": {
+   "label": "wrong",
+   "note": "31 October, the date the warehouse received the lamp"
+  },
+  "c09|p3|6ba5955de34f53656ac92508e884725b0e2b3e755016bf7c9059b20e2d69e9d5": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c09|p4|0f78ad5222f841c80e2245ce640f1f39aec41a414769cbb7327c106d611fac83": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c09|p6|29cfdfdc87c4bb10c210512493d380fc3c5ef75cfde757db776c43f50a1229e2": {
+   "label": "stale",
+   "note": "cream"
+  },
+  "c10|p1|614bf4321e8635cf90afc971f1d7aca6da0ec64c448dfc5d4b83f4fbee8bafb6": {
+   "label": "wrong",
+   "note": "CLM-3390, the courier claim reference"
+  },
+  "c10|p2|d2a713250a4739732aef6cdb6c7cdf552f0266f705f87ae5b320e2ce0677d56d": {
+   "label": "wrong",
+   "note": "doesn't answer: talks about the side-table order"
+  },
+  "c10|p3|a7e5487669626ab14e96ec688f08b234fafeecb49d3a37806007bc37b1bdb016": {
+   "label": "stale",
+   "note": "as item 92"
+  },
+  "c10|p4|2633023c0e9c0c293a6f5241c593152e7ec84e98b735d658124ac6b3f381feb7": {
+   "label": "wrong",
+   "note": "describes the misdelivery to number 12"
+  },
+  "c11|p1|cb2539e87076014870dd0b6e626ba12f43bb4d1b1581efc99ea809d94ff2094d": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p2|15bfa4b150c8d128cab4f92ab00aa76114a20064d467f6b6befee9c7a3666ab0": {
+   "label": "correct",
+   "note": "double payment"
+  },
+  "c11|p3|e2db1a58e5fcbc586436fc5b4fd9b9f61ab61a0565975d382c786761841f4b1f": {
+   "label": "correct",
+   "note": "payments team"
+  },
+  "c11|p4|d560f13e5ebdd223f30cd802005937e818d9c5dc541c419a8529f4911de0d1f7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p5|0505c61eda6e25973f73f0ec3131f1bc00503484a5b9f061ac5cb800ed9d0d29": {
+   "label": "not stated",
+   "note": "says the amounts aren't accessible, though they were in the context it saw"
+  },
+  "c12|p3|44799287f9a9abe7cb522536fea19e5417f110e4025557c2a2fe3f9692a8eaa5": {
+   "label": "correct",
+   "note": "waiting for the batch number from the customer"
+  },
+  "c12|p4|edfc6521b5aaea4e47f8060c60d9154bbea96e699fa618e572557b93674ed24a": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c01|p2|96376c9473b3e83ee641d987c9771aa5c798232da2de360547ae9fc5feb0ad28": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c01|p6|80f41255a13e0ada08758fd60a6607aa03e74282fb1f5133e98199d1c4689e3d": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c02|p5|71e15e44b448aaab701fcdc4bd7d26ba50aae7362192530fb471dbfe65739016": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c03|p6|40fd64e624d40b4783a7d39bf3fcf2e2bd5de73d8ef75b58281c790551fca08d": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c04|p2|78b89804ba7f1791a0b27bd2e62778fdf73c2033320ceb4d2677b8ad1f883143": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c06|p4|0dc8eec2666365165e32d4b9d35d301b7ce02106c73618b247b69b7da1d59540": {
+   "label": "correct",
+   "note": "correct value, but not in the context the model saw: a guess (60 cm is a common mirror size)"
+  },
+  "c07|p1|f14347e6666fd26693cc638a3c917ede80144abb507dd3bed8c050711ec32e02": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c07|p6|e14220ba5f126df827c44c71c77109a5c2b89bc57592e3b163a582e52be6abd6": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c08|p1|c15403778cd5260c284a3306cd9c0b704afe22e3e9153fb9e5f3b057645702ba": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c10|p6|0535eba208a9eac16788c73c02d710f36fcc3c52cc4460a3c898702d0915fa32": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c01|p1|8ec4e2dc68067d9c5e31b81d945fe53b321d2343d09750e1c27f6ca57498caab": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c01|p2|69d9192f4342e118e458bf14abf2915cc43ce00f794e6c76b9b864f5654ff7de": {
+   "label": "wrong",
+   "note": "dust in the glaze lines, from the cleaning question"
+  },
+  "c01|p3|6de250fde92699d5b6bd9e80459f63ac095e50843e6c3433db17cbf57e9ef866": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c01|p5|4a6d71bdbd9f0685a9319857c9b63dfd01e2f518bbd45d988c04c1d10ad0fb7f": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p1|bae69bc9189e886dd2bd29ca1ecd0f075422c795e0a49a1b37632047fdbe2019": {
+   "label": "not stated",
+   "note": "gives order details but no number"
+  },
+  "c02|p2|6f861b1c857909f173878e1353a719516dcb9db262209550e626ee5a9c83feff": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p3|4cc0f05651f4f2afbaae0b40a231a938e85236d8f1badb0c2d3aefc2575191db": {
+   "label": "correct",
+   "note": "exchange set up, collection on Thursday"
+  },
+  "c02|p4|c658046b9c0075c655d1099b2acfb64c8e8d7f472ce85796ff5fb90d0d391b40": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c03|p2|6c0320cae6dd91bb6484afec3d3ca875f8ea6886fc9c82e164aaa49c386c9a69": {
+   "label": "correct",
+   "note": "duplicate payment"
+  },
+  "c03|p3|40091ed6bcebc9f7ef3d0575df390e5c4c9bfee3d55dd1f2bd2b346a9adb1d03": {
+   "label": "correct",
+   "note": "payments team"
+  },
+  "c03|p4|91cfd3dc7826bcc652f04709fe1dbceaaba1e90266494aa5b1afc9ef6929e773": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c04|p1|c3bc620a3c5b7cac37e25d9568298af1d0653d1e54a79512d9c8df8aa2ba1e16": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c04|p4|0e6e615466e87ce4df3b5c4cf2fedda3f2701dea0c38a6999924bfe1e963f81c": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c05|p2|19b565d065dab9418253b975cba9f611993183b1ef8d437470964898d1ca0c72": {
+   "label": "wrong",
+   "note": "says the rug was missing; it was late"
+  },
+  "c05|p3|e84b8cb216cbc35ad3588e87cc8e1503dae1962730ec06822a5591d94297c177": {
+   "label": "correct",
+   "note": "resolved"
+  },
+  "c06|p1|d336f211fcef121c3209a30bf84f50c3ef147740b173488921dc85c9ff48c2ed": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c06|p3|cb0e2cd44baac6264d0a7b1c6de7bd2f575a26dd1c846df38811a44c3d547bd0": {
+   "label": "correct",
+   "note": "payment sent and claim settled; the courier agreeing to pay is invented"
+  },
+  "c07|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": "the order number was in the context sent (turn 16)"
+  },
+  "c07|p2|a8dd43eb8aa21abc021cab2a013899fcd1ac8465672b0ff268f2195af6e5326c": {
+   "label": "wrong",
+   "note": "'properly worn out' describes the customer's old towels"
+  },
+  "c07|p3|66558d4c42971821095b5acc5661d44edb9f387f6184eca35e06ec5e0d393e79": {
+   "label": "correct",
+   "note": "as item 85"
+  },
+  "c07|p4|c163dea3193fe1317b24def9e76d6ba10cd72bcd2774348cb8b147bfb5ff930d": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c08|p2|dccc41bb508dd052b8b4d12f3e18bcde31143bb8589b8a4f4145fa2fe8509685": {
+   "label": "correct",
+   "note": "waiting for the refund"
+  },
+  "c08|p3|153d627c7bc365151d6d53e6886f97c5ee2e567d93fca2e58350ba37a63302a7": {
+   "label": "correct",
+   "note": "refund issued; 'now in your bank' overstates it"
+  },
+  "c08|p4|21a8d1ba4cfc27b796940a233c6c028a216b8a04f4651623ba59a458b92499b7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c08|p5|a76e3a2fa7cbcd242135a75f31b0f9388571a29a1971059ad21846f7ac1f44d4": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c09|p3|87dddb5c4f018d679c163b400d19424722f608ebb8a66281ab7fbbce057d581a": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c10|p2|8ef7a7fe509906ac2bbc1a2902decf055e21871dcb3338172626cd313ed2a66a": {
+   "label": "wrong",
+   "note": "as item 133"
+  },
+  "c10|p3|507a2f75e67ca9eecdedaa455557058b342baa430560f7a7768a052bd9d73cf7": {
+   "label": "invented",
+   "note": "says the case is resolved and the courier is paying out; the replacement has shipped"
+  },
+  "c10|p4|0c43e776f55fcdbdbba24c00f5a590bca0a3f0eb0367c40725da745164385b37": {
+   "label": "wrong",
+   "note": "the front step at number 12"
+  },
+  "c11|p1|5a02d923a3ae83b21e04d9c176d420a11fe0fee71c6d146e06a10bf38fdb9efb": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p3|0fc3a67afb16cd78a5ce7405d9a649f1233fda8f383cd033d4a163f65f3878e2": {
+   "label": "correct",
+   "note": "payments team"
+  },
+  "c11|p4|28f55b71820acf10c7c3804197840b12acd058cb8b20cc7928c3c26e27d1bcf9": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p5|85d3ede67a3c9747d180fadff65280ed2809df96db684de5ec2f7e5f998bb077": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c12|p1|d6ff29d3903c3f9e0d03e17ed52e66a912ad4331a69aa0832219ccb0d7fe82de": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c12|p3|166ee8edee954b16f0e3ce28298e24f60487e8973db68475a550b91a7e108a7c": {
+   "label": "correct",
+   "note": "waiting for the batch number, which the customer can send"
+  },
+  "c12|p4|d8cdaebeb6f2372b2d953f1021761339fcd2d02a3d3158438e1e26295492a886": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p6|1b974d7f01f62bf582c5e60ec33676a02fa6e05cccf1958ecd5e53bd3fd72917": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c04|p5|d5ac52f30fc57341290b529d4d3af9183db7c0bb2f426e1e34e3568f50114315": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c09|p1|1ccd054db65e8adb9afcf4f9012bf80a5ca4e5befaa18a0340e09f8553d0f15b": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c09|p2|0dd9f8a8c5c9322504df3d01894f76755b50c9b9a55671d482737536932eab33": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c10|p5|12e497d06cc237945a02331f15b3d604d36d0f7700dba98f3a82ddeb31b46ada": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c10|p6|7742a90f3729d046db33b19e8e8e0d3f97646790bb4d5f6b092c3ebfd3bb44e6": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c11|p2|56f3a2df51cc9999451c58f27fa669047fcfa4426285dec7320b286c176e398f": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c12|p2|9ab357fc9b9bbac090d8577752f0d91af24081aac9a28c86a1e06b299ecf9d62": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c12|p5|e20d18dbc40a23f9e62008649cf4c430d597acfc04e91201e368c8f1c3f3a937": {
+   "label": "correct",
+   "note": "after 6 pm; adds an 8 pm limit the conversation doesn't have"
+  },
+  "c01|p3|566637edd8d91dd01b5298f4bd47913060721a54b9f19e73743b525e0f3e8883": {
+   "label": "correct",
+   "note": "replacement shipped, with the tracking number"
+  },
+  "c02|p1|de29d0a00c0059d1ff8483a604158a22c2a168e8fa2bcb3ed7e23d952d2b1402": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p2|b1736e6a851108b586e405726b3963b9240a95f0a5141d35fde768316698e898": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p3|3e03a3fa16313285238884ccfd7f79d13c69eb7f971d6ca26021a47db60789e2": {
+   "label": "correct",
+   "note": "collection on Thursday, exchange to follow; adds pillowcases and a fitted sheet 'all sorted', which is invented"
+  },
+  "c02|p4|ea65adcb2bb618006527ef64a68b1096fc4f599ea6f02cdbc082f0ca2d240c5e": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c03|p3|717b1be7334cca5635cbd0ec326e636970e52216b94fa321f78e4a68ad892364": {
+   "label": "correct",
+   "note": "payments team"
+  },
+  "c04|p1|e04d06a17c09445dd2bbd6f7a6961b837b3a2a64260f2c96982c1461c5375196": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c04|p4|7478632233e3c0d6c43009b88d4ab4d9734b09ac2357fc8180107a70d7079b3e": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c05|p2|4a27ec89816d2d7f3c7a6cca9fcc23352b7716458434b4c6372a140c188e3393": {
+   "label": "wrong",
+   "note": "says the rug was missing; it was late"
+  },
+  "c05|p3|435883ece54292ff6e4361037f5815cca21ab76587179a06752ecda4287d596d": {
+   "label": "correct",
+   "note": "resolved"
+  },
+  "c06|p2|787130779423976f017102a789820cce29d71e82eb3c7dd78ab4b73e55615d3f": {
+   "label": "correct",
+   "note": "the mirror broke; 'dropped' is invented"
+  },
+  "c06|p3|450b5753a3dc523e732836bd7a38fcb5d140225360b8b8819b0bee3af00b3475": {
+   "label": "correct",
+   "note": "as item 82"
+  },
+  "c06|p6|3fc7a16311df30775f54770fcf3dbb164196a10f1dee73b94c9a3690fda8be41": {
+   "label": "correct",
+   "note": "black, then changed to brass"
+  },
+  "c07|p2|a1df6587c9bcdadaa61ab7796fe7855aba1e252ae14e2386ceccf771c3630d32": {
+   "label": "wrong",
+   "note": "the missing invoice in the first box"
+  },
+  "c07|p3|389bb321c989288a78c9da6fef5ab4b50115300105190a53f2ff761960d25932": {
+   "label": "correct",
+   "note": "exchange complete, grey towels on their way to work"
+  },
+  "c08|p2|1a76ae1be7df93b83a92d7c8fc2b2dd2e9f0edd72c0e9b3d263e5bc07e064c88": {
+   "label": "wrong",
+   "note": "says the lamp was missing; the refund was"
+  },
+  "c08|p3|c7b3e8f887256edb2ecedbce062f6df1f9f3a7cda4062f21c5efb4106c34d854": {
+   "label": "correct",
+   "note": "refund issued; 'in your bank account' overstates it"
+  },
+  "c12|p3|bbb1a2deec3e39688fa468d441139fd26dc6fbecc4effb54e3cc5dd5079f5d85": {
+   "label": "correct",
+   "note": "waiting for the batch number from the customer"
+  },
+  "c12|p4|c8cf00634aad82c38acfb87d4fdcc28135202fabbc4f021d69c8f350e3ee5542": {
+   "label": "invented",
+   "note": "'natural finish, honey-coloured'"
+  },
+  "c02|p6|bb5308b06de49294820e1ac24413888adea7d1acf27fc30cc054db329d472b2e": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c04|p2|dfe868297e5bf64b6e0c6a78dbe2e7fefeaceec46211b11bdc7a36187317cfb7": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c05|p5|575688cb0c10eb4f10cb1b1f21925f1d6a7b8b59293f123e5c68e5bdb1661020": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c06|p5|02cb2746fe59dd53a9e19aa594d75964eb79f6d04bd574431beb65708b607307": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c07|p5|239a3f87b753abfa281777e489b86fa403a0ff8eb6c58851594598a73d0a67a7": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c09|p5|862294b3c4ebed8a3a4c42d4abbee61d62ffd30526fc40470e499bdcc3df5203": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c01|p3|7181e9716a9e1977f61187df6a3cd1b1a76216d0c7ce6405bcfa2c4783cfcd6a": {
+   "label": "stale",
+   "note": "presents the collection of the broken lamp as pending; the replacement has shipped"
+  },
+  "c02|p1|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p2|f9ef4634fccd597f153e083daf9f692d27e0d1583b4715228e282a0a9c9f7bec": {
+   "label": "wrong",
+   "note": "'for a regular king but actually for a super king': the size change, not the double that arrived"
+  },
+  "c02|p3|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p5|1a52468c2dde0b2bdeb887e3ae7b0354ae9a8269a130a3b3785539390ac492bf": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c03|p2|bec0a28cb81d69f847b358d48aca156892689f7c21c8cb548b09aba53488dfcb": {
+   "label": "correct",
+   "note": "duplicate charge; the value is in the context as a paraphrase that the accepted forms don't match"
+  },
+  "c03|p3|e982d482a4746feaccf422aece4e01ecaa85348694e7d929509309201a2bbe9c": {
+   "label": "correct",
+   "note": "payments team"
+  },
+  "c03|p5|51ae8faf47bdcda7d53ad681b5b01d8e8ec512b1f9481e4894782e31338a3faf": {
+   "label": "invented",
+   "note": "'\u00a385'"
+  },
+  "c03|p6|a8103a4854145542d49e83efaf255a64552d06c11bec588545ba664a23b62f9a": {
+   "label": "correct",
+   "note": "email instead of calls"
+  },
+  "c04|p3|4338cb6d9f01a579286a3c7905c1ab4e2968d467905b8a0385d4414baea41088": {
+   "label": "invented",
+   "note": "says the case is closed and the glass replaced"
+  },
+  "c05|p3|07643f27243baf1663020691b9e2515767496007aac00ffa28da54f71e01adc0": {
+   "label": "correct",
+   "note": "resolved"
+  },
+  "c05|p4|343119b8a0765ea21b7fa121e1b3380947b6268f87dd233333ae95d0a220fa8f": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c06|p3|0b29bba839e41667d9bed099b43db2e24229a51ba10f705ab7589434191112e5": {
+   "label": "correct",
+   "note": "refund issued, claim settled"
+  },
+  "c07|p2|9f91957342ce59b854b06880b0240344d3a022fbc70b89e0e75413d0f331ba62": {
+   "label": "stale",
+   "note": "bluish tinge, discoloured: the first, mistaken description"
+  },
+  "c07|p3|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c07|p5|c197ba06cc562d63c491d2970ae88d29ff921dd4dd9caf87b97a06760b8d5091": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c07|p6|939fb70b30ddfd34ad054bc311dbdfd88ba4f5e60f5ae4f2e3cc66f7554054a8": {
+   "label": "not stated",
+   "note": "says the customer didn't ask for delivery to work"
+  },
+  "c08|p2|91c60f0335a74e4d5fe79025e14d02ae685869d4fe5b8f32b043fec698b5c616": {
+   "label": "wrong",
+   "note": "names the returned lamp but not the missing refund"
+  },
+  "c08|p3|ad65e2b7fa94413188796b1fe86919c1a1d02d97d52aefb04fdded8b8984688b": {
+   "label": "invented",
+   "note": "says the Orrin lamp has shipped; it hasn't been ordered"
+  },
+  "c09|p2|fe3b921036fd973808b0cc4239896ed4f45950270670ec4d2676a8cf5af344e3": {
+   "label": "correct",
+   "note": "the wrong drop; the value is in the context as a paraphrase that the accepted forms don't match"
+  },
+  "c09|p3|2321b95810861c3df6e8f83655400e374a50bd78a2596c201918cf80de5fd450": {
+   "label": "correct",
+   "note": "awaiting the courier collection: the return stage; the value is in the context as a paraphrase that the accepted forms don't match"
+  },
+  "c09|p5|4655964a85081dbe6e61548cf23eb05df8066a4d18e54bd833e4283df5e8b36b": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c10|p3|95f59a7e2eef902d64e39210f8349fe250fd3d99c69d25e39fd3b57549d77ba6": {
+   "label": "stale",
+   "note": "presents the courier investigation as current"
+  },
+  "c10|p5|3cf40471035a007b78fd898e774aeb5b1f36ba83214b69f3bbc1815e815555ce": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p3|9124cce78576ae39b6699c6bb04a368377e868c486ba6fdc91b15cf93dea81c2": {
+   "label": "invented",
+   "note": "'Refund in Progress', duplicate 'refunded'"
+  },
+  "c12|p3|7d20fc3206a1d2ee8336b53759c5745c89e62553fa6bc237b238b967e3833fe4": {
+   "label": "invented",
+   "note": "says the chair is being collected and a replacement sent"
+  },
+  "c12|p5|d0dad1c7e8ef3acd85dea6f515c21e2a0ad3e6d702da95aca6b39b7b4867ea1f": {
+   "label": "wrong",
+   "note": "answers with the courier's delivery text"
+  },
+  "c12|p6|e9b84d27153be0d229246ceb67bafc2b04f7fb0001c88a5e39f532c8b25c48c7": {
+   "label": "not stated",
+   "note": "gives the occasion, not the date"
+  },
+  "c01|p2|d4f23a1f9b342760d31d50b8d5bd0717efc8f5d5cc35789cb4c4a57cf8fb20e4": {
+   "label": "correct",
+   "note": "crack up the base"
+  },
+  "c02|p6|4b20c3f1242fd372729e98e0551ab91dab22422e8fc9b9729c666e198ca733b3": {
+   "label": "wrong",
+   "note": "says 'super king' is the cover being sent back; the double is"
+  },
+  "c04|p1|a56ed0eeaaddee3572adc540b03d7520cfd6d7d6a062134c42d22e2f89abb9ae": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c04|p2|adffba4877e28ecb5449a340cbb85d3454a3df89dfa288c40e544850a47ee6a1": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c06|p4|7889565269f95fa56aa7e82af8eda27ac19016e04bf3f2b50291264d21962ac8": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c08|p5|775595118e1c25038d34f4a8eb2d15324e4cf903e68948b8604fc9f9a3c15865": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c10|p6|1db74390336bd1cf454e1a49812bc3f2008260c91dd2ca3a712fe3052482627f": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c11|p2|101e005fa6e32f6a62f0750d64bfe18b048e23b5c9a5bfb6ea83c10ba99ab4c0": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c12|p1|7a3f95a31fc0cc05948c7261ce1dc345f4ca9fd7e4b00e7ca0052368986cd0d9": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c01|p3|72c3b5daf2512a86297642879edf566be347fafd2d5f92714bd356c258e460e5": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved'; the replacement has shipped"
+  },
+  "c01|p4|7971201bb21d28002ce01954ddccb0b6ba114cbfa14856f58c893d89c55c10af": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c01|p5|9165221418749f1441ea2e4f69695f47173a36a7b9bf7547139a0609a80ea915": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p3|4b58700a9a3ec361c2b1a1b20386fed1a004434e998c8c5772c1681f9b7a9016": {
+   "label": "correct",
+   "note": "return label sent, collection on Thursday"
+  },
+  "c02|p4|a580baa6d9dcb6264bac69d5a7dc4f5ba042aad9ed82a4b09a6f42581ffb282c": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c02|p5|c2996b43e690dd4c029b59e940b3e343660627c0055581d4cb34dfc7db5ce6d2": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c03|p3|eb24e1de06076498b8348fa01544a6432fcc8950ecbd5ecb9d79da660ac30691": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved'; says the charge was reversed"
+  },
+  "c03|p4|e62b76f286413b86e04c6a7fdb1092ce6e87daf21b69c33977e32c4cbdc8c2ac": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c03|p5|ad886f0be92d11c23acadd51bb6adbab028dc2df03b1fe9ef34499a7dcabdd80": {
+   "label": "invented",
+   "note": "'\u00a325'"
+  },
+  "c04|p3|deaa6c1b29497262feac2fe205be4d84bd20c8bb4bda9d6aee20072b5cb1b8b0": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved'"
+  },
+  "c04|p5|24aa1a1a0d1479d931f8cb2a164dc660d83c83328ca51e76f9df9db58e8cee58": {
+   "label": "invented",
+   "note": "'\u00a315.50 minus \u00a33.50'"
+  },
+  "c05|p1|69a405a39a1fbe69b1f0dffd14ca85fa252fd859756aa548bf28b43ca0d32a23": {
+   "label": "wrong",
+   "note": "FW-06047, the order number the case record invented"
+  },
+  "c05|p2|1677042f37ad07f7223968b78898f33a018beac7c0d955edb67cbe9341690dc2": {
+   "label": "wrong",
+   "note": "'wrong item', from the case record"
+  },
+  "c05|p3|deaee2e5a5eb78a221e42c4bd81f0cbd5a65d1b7bd3a1eb9f37f28a3c4f98f27": {
+   "label": "correct",
+   "note": "resolved; gives the case record's invented order number"
+  },
+  "c05|p5|91185e131a660d01e2f13f4aa3d77eae6a6d43097b19d6e3d6fc43b9f4052b79": {
+   "label": "invented",
+   "note": "'Fernwick Freight'"
+  },
+  "c06|p2|9a7a5e44c31d759263a8258a32d2421758f8cb1fd8009e71560cfaabc9eab96a": {
+   "label": "invented",
+   "note": "a missing decorative plate"
+  },
+  "c06|p3|e55bf5c6cdce96cab53e8c93029188c67fcf94be68cf3a986c622623cc29ba01": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved', without the refund"
+  },
+  "c06|p5|92e6e0f0549f5967ae909a165f2e41afa940c58c5ab1aca3755f8fb227a1565c": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c07|p1|e9c14155221b5f76d9db7d19332e309275c2f5a28e89d52f96a9fd29f56ce82f": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c07|p3|89e1cca79a6f3644a1dd7ee5c7f795a47b17ef33dceefc59823fcbd6b150e48c": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved'"
+  },
+  "c07|p4|7610b1c34e8cd71b9aaa4edae0ca91d0f8eb644314ba1df0cbf1d40d12f60942": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c07|p5|0d1780909ef0362a1f29854bef89ece935352cfc1203ad225e4b6ca399eab690": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c07|p6|bba57c36c0e3094c7b307b6e8155fc34c9df72dc41018c139a0709543c56060d": {
+   "label": "not stated",
+   "note": "says the customer didn't ask for delivery to work"
+  },
+  "c08|p2|87db82e01bb35de320c471b624bec6e7a6823e6b3e7b811f523dce5c086ac866": {
+   "label": "wrong",
+   "note": "'wrong item', from the case record"
+  },
+  "c08|p3|cde2656893646e1424dd6838850b733a9a3c94d1930c20c3eea66afbc26083db": {
+   "label": "wrong",
+   "note": "quotes the case record ('wrong item', 'resolved')"
+  },
+  "c08|p5|a4e04c7c2b043013547e72689ebfd3519f9406e6e2b03a1971874ef57350a3d0": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c09|p2|ff180dc6bb61727d2b68a26c6b97e862412f8d101e732416ee31389078849fa6": {
+   "label": "wrong",
+   "note": "the colour looking yellow, the reason for the colour change"
+  },
+  "c09|p3|bf63200d6a4b5258ead40975711c921fd7bc8f2e38a6152c4aa4f7c58a15f410": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved'"
+  },
+  "c09|p5|a38fcaf25069189522bc9d83fc71eefc474f0121d2d41915bc9d5f1ff73625b6": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c10|p2|96df0d443d8737273a55d1bc7dc067a031246e8e5abe1d6ba7a0170f8b2a50b6": {
+   "label": "correct",
+   "note": "the mix-up with number 12"
+  },
+  "c10|p3|429bd880be93bebfbaab792502de2f7848a03da47f569a7d1f62fff140e420b1": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved'"
+  },
+  "c10|p4|33878c8d286bf96bb066c68f5824c5f2ca5f7d0933caf731ef958267354415c0": {
+   "label": "wrong",
+   "note": "the customer's worry about parcels left outside"
+  },
+  "c10|p5|a7c80fdbc4434703beda686674e341bb5c1fa8311149922a65e7868a20106d33": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p3|5e32474d03345a497ed6972d7673364cf4fb4ba244c966dd3986b1b8c0554817": {
+   "label": "wrong",
+   "note": "repeats the case record's 'resolved'"
+  },
+  "c11|p4|d267986a03b0c9cf354e59571f4ab034471ae3f471cd2b70c18a9b8457093ca1": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p5|fd3ae7cce4dd589dd474d9e40761ddbc6dcc7c6936d640cf0aed15d045ee00c7": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c11|p6|0aee3a1dc18d29fabfdbb8ae82a0ef3c2d9074ab4d3b96455098e5cada46739f": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c12|p3|0522bcafe1931b25ab4a0e956dee6ce505f0718a5e2e57fbb6c973b2c0ce7135": {
+   "label": "correct",
+   "note": "still waiting for the batch number"
+  },
+  "c12|p4|2f069cfa6dad1a05ff4c1248e4d78a14a0ce638291df529d4c5825df8351c3d2": {
+   "label": "not stated",
+   "note": ""
+  },
+  "c12|p5|a9bf03e634de725e3601769bb5e3b3b625c1ce282e79242cf00a9e5ee77cc918": {
+   "label": "invented",
+   "note": "'9 am to 5 pm'"
+  },
+  "c12|p6|0232d3746fda41472c0bfc8b6c70ac0c6b61c90edfd26ef4866807a2b46169fd": {
+   "label": "not stated",
+   "note": "gives the occasion, not the date"
+  },
+  "c02|p1|f6b84049fdb85abd363954bef51254e6a83b3cf210a7017beb423320e68ca40c": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c02|p2|7ef492a15b30e6d68a5b2f4b8840cc94ef5467ef9e300e96adfed6b2db22c8ee": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c02|p6|79989bfbb6ceacec05db607cc712a70476ea754f37084ac7be21f3b9a43beadd": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c03|p6|d4c74b028d362b612a5ca3412371baf4137bf4903acfc78cbf18e710dcad01be": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c04|p2|5f6c6afec8c76080064a7b93eb91f8f33d0e06c721b44fe32b2890da5dafdc7d": {
+   "label": "correct",
+   "note": "one item missing; adds 'wrong item'"
+  },
+  "c09|p6|3cbe60ceb881a625654b057f98547efa0ff65ce2d8c566b4d6a5a7829d185a3d": {
+   "label": "correct",
+   "note": "linen white; garbled about the original colour"
+  },
+  "c10|p1|17af23577a440a5266a76e634476cfb5b747548beb5b34d982cf68d54b5cc027": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c11|p1|2f85859791094bcf5f20c379ab932d37673b40f73d6f5996e3d718364c842b69": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c11|p2|93a4567f1cbb67ccee00ce1817bf60772236c5a9b6cfa220a1e4643fdc34d7e4": {
+   "label": "correct",
+   "note": "sample of correct answers, checked"
+  },
+  "c06|p4|5e1ed921e40ede5fc75a1a78ffb8a52e175c3b36d7b82eda0fff453b3ea253dc": {
+   "label": "correct",
+   "note": "correct value, but not in the context the model saw: a guess (60 cm is a common mirror size)"
+  },
+  "c06|p4|54804099bc7a4a82f012ceca6c05a4bab028c05ed8660961485b782cf08d62ed": {
+   "label": "correct",
+   "note": "correct value, but not in the context the model saw: a guess (60 cm is a common mirror size)"
+  }
+ }
+}

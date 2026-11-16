@@ -36,7 +36,96 @@ These are not changes to the frozen settings:
 
 ## Results
 
-Added after the run.
+Each language ran all 952 model calls once, Python first, then JavaScript, from commit febfa22 with prompts `v4-frozen`. There were no errors, and no other program was connected to Ollama during any request. An earlier Python attempt was stopped from outside after 334 calls; it is kept (`runs/python/main-stopped-at-334`, not committed) and not used.
+
+### Parity
+
+All 952 records match between the languages outside timings: every answer's SHA-256, every token count, what was sent and what the model saw, the ending Ollama kept, every context shift, and every tokens-evaluated figure. All 48 summary updates and all 240 case-record updates match too. The two reports' counts and outcomes match line for line.
+
+### How answers were graded
+
+- **Mechanical grade first.** Each answer is matched against the accepted forms of the fact's current and stale values.
+- **Then 310 answers were read by hand**, as the settings require: every answer not graded correct, every status answer, and 10 sampled correct answers per block. They are labelled in [data/hand_labels.json](data/hand_labels.json). The final grade is the hand label where an answer was read, and otherwise the mechanical "correct".
+- **Labels:**
+  - correct;
+  - stale: gives an earlier value as the current one;
+  - both: gives the current and an earlier value without saying which is current;
+  - not stated: says it doesn't know;
+  - wrong: another value from what the model was sent, including a case record or a summary;
+  - invented: a value found in neither the conversation nor what the model saw.
+- **Status answers:** an answer that says the case is closed or resolved is correct only where the conversation says so.
+- **The sample of mechanically correct answers found one false positive.** One answer said "super king" about the cover being sent back, not the one being sent.
+- **Two limits of the instruments:**
+  - In four conditions where the model never saw it, the answer to c06's "How big across was the mirror?" was still the right value, "60 cm". That was a guess, not memory: a common mirror size.
+  - The check of whether a value was in the context matches accepted forms only. Three summary answers had the value as a paraphrase that the check can't see.
+
+The tables below give the final grades on the 48 test probes (8 conversations × 6). Fact positions are the dataset's classes: early (last mentioned in turns 1 to 5), middle (6 to 15), and late (16 to 20).
+
+### 1. The model is stateless
+
+| Test, 48 probes | Correct | Stale | Both | Not stated | Wrong | Invented |
+|---|---|---|---|---|---|---|
+| No history | 0 | 0 | 0 | 48 | 0 | 0 |
+| Full history (`num_ctx` 8192) | 43 | 2 | 1 | 1 | 1 | 0 |
+
+- **What was sent:** the full-history request grows from 167 to 189 tokens at turn 1 to 2,542 to 2,796 at turn 20. Over 20 turns a conversation sends 28,740 to 30,526 tokens in all, which is 10.6 to 11.4 times its last request. These are counted for all 12 conversations, without model calls.
+- **What was recomputed:** on the 8 test conversations, Ollama's log shows how many tokens it actually evaluated for each request. All 160 requests had a matching log line.
+  - The median is 9% of the request (4% to 91%). At turn 20 it was 112 to 133 of 2,672 to 2,796 tokens; the rest was reused from Ollama's prompt cache.
+  - Ollama's `prompt_eval_count` reports the whole request either way. It equalled the application's count in all 160.
+
+These measure Ollama 0.40.16 on these requests, sent one after another. They aren't a general saving from prompt caching.
+
+### 2. Past the window (`num_ctx` 2048)
+
+- **Sent:** 2,632 to 2,908 tokens, and every request was accepted (HTTP 200) with no error and no warning.
+- **Cut before the answer:** Ollama's `prompt_eval_count` was 1,951 to 2,047. For all 72 requests, exactly one ending of the conversation has that count, starting at turn 5 to 7. So Ollama dropped the earliest turns and kept the system prompt.
+- **Effect on answers:**
+  - For the 16 probes whose value had been sent but not seen, 1 answer was correct, and that one was the "60 cm" guess.
+  - Where the value was seen, 42 of 56 were correct.
+- **Cut during the answer:** the prompt left 1 to 97 tokens of room (median 46.5). In 22 of 72 answers, Ollama's log records a context shift that discarded 1,021 tokens, with `truncated = 1`. This comes from the log line for the request's own task, not from a difference in token counts. 12 of those 22 answers were still correct.
+
+| Test, 48 probes | Correct | Stale | Both | Not stated | Wrong | Invented |
+|---|---|---|---|---|---|---|
+| Full history at `num_ctx` 2048 | 28 | 3 | 0 | 6 | 8 | 3 |
+
+### 3. Strategies (`num_ctx` 2048, prompt limit 1,920)
+
+| Test, 48 probes | Prompt tokens (median) | Correct | Stale | Both | Not stated | Wrong | Invented |
+|---|---|---|---|---|---|---|---|
+| Full history at 8192 (reference) | 2,808 | 43 | 2 | 1 | 1 | 1 | 0 |
+| `last_n`, 13 turns | 1,802 | 28 | 1 | 0 | 12 | 6 | 1 |
+| `token_budget` | 1,894 | 30 | 1 | 0 | 5 | 8 | 4 |
+| Summary + last 4 turns | 919 | 33 | 2 | 0 | 7 | 3 | 3 |
+| Case record + last 4 turns | 662 | 18 | 0 | 0 | 15 | 12 | 3 |
+
+| Correct, by fact position | Early (of 11) | Middle (of 20) | Late (of 17) |
+|---|---|---|---|
+| Full history at 8192 | 11 | 19 | 13 |
+| `last_n` | 1 | 15 | 12 |
+| `token_budget` | 1 | 16 | 13 |
+| Summary + last 4 turns | 9 | 14 | 10 |
+| Case record + last 4 turns | 4 | 4 | 10 |
+
+- **Windows:** `last_n` and `token_budget` kept the last 13 to 15 turns, so facts stated early were gone. No `last_n` request went over the limit (1,731 to 1,888 tokens).
+- **Summaries:** they kept most early facts at about half the tokens, but they were lossy.
+  - 29 of 48 updates reached the 300-token cap and were cut off, including 9 of 12 final summaries.
+  - On test, 27 of 48 facts have their current value in the final summary, 8 of them alongside a stale value. 12 facts reached the input of a summary call but are missing from the final summary.
+- **Case records:** they were the cheapest per answer, and errors in them were repeated as fact.
+  - The final status was "resolved" in 10 of 12 conversations.
+  - On test, the final record had the right order number in 7 of 8; c05's record has one that appears nowhere in the conversation. It had the right issue in 5 of 8, and the right status in 2 of 8.
+  - The record holds only the order number, issue, and status. On the 24 test facts outside it, the answers were not stated 14, correct 6 (from the last 4 turns), wrong 2, invented 2.
+- **Dev (24 probes):** full history 22, `last_n` 13, `token_budget` 16, summary 16, record 13. The full history leads here too, but the summary only ties the token budget, and the record ties `last_n`.
+
+| Maintenance | Summary | Case record |
+|---|---|---|
+| Calls per conversation | 4 | 20 |
+| Input tokens per conversation (median) | 3,609 | 12,591 |
+| Output tokens per conversation (median) | 1,086 | 502 |
+| Time per conversation (median; Python, JavaScript) | 23.9 s, 20.2 s | 10.1 s, 9.7 s |
+
+Timings vary from run to run. One `last_n` request in the Python run took 23.6 s to evaluate its prompt, against at most 2.5 s for the others in the block (2.8 s in JavaScript), with no other program connected; the cause is unknown. It doesn't change the medians.
+
+These results describe one small model on eight test conversations. They don't show that one strategy is better in general.
 
 ## Files
 
@@ -94,4 +183,4 @@ node report.js
 | Model | `llama3.2:3b`, ID `a80c4f17acd5` (Q4_K_M), temperature 0, seed 1 |
 | Windows | `num_ctx` 8192 (full history, growth) and 2048 (past the window, strategies, maintenance); 1,920-token prompt limit |
 | Runtimes | Python 3.12.13 (standard library HTTP client), Node.js 24.16.0 (`node:http`) |
-| Date | added with the results |
+| Date | 2026-11-16 |

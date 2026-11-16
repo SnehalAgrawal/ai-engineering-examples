@@ -17,6 +17,7 @@ import context
 from common import DATA, RUNS, load, mentions, position_class
 
 GRADES = ("correct", "stale", "both", "other")
+FINAL = ("correct", "stale", "both", "not stated", "wrong", "invented")
 STRATEGIES = ("1b_full", "3_last_n", "3_token_budget", "3_summary_recent", "3_state_recent")
 
 
@@ -60,6 +61,9 @@ def main() -> None:
             r["kind"] = "in-schema" if f["field"] != "other" else "other"
             r["changed"] = f["change"]
             r["hand"] = labels.get(f"{r['conversation']}|{r['probe']}|{r.get('output_sha256')}", {}).get("label")
+            # The final grade: the hand label where the answer was read, otherwise the mechanical 'correct'
+            # (every answer not graded correct is read by hand, so it has a label once labelling is complete).
+            r["final"] = r["hand"] or ("correct" if r.get("grade") == "correct" else None)
     by = lambda block, split=None: [r for r in rows if r["block"] == block and (split is None or r["split"] == split)]  # noqa: E731
 
     print(f"Conversation state: {len(rows)} model calls in runs/python/{args.out}; prompts {prompts['version']}; "
@@ -75,6 +79,8 @@ def main() -> None:
         for block in ("1a_no_history", "1b_full"):
             if by(block, split):
                 print(f"   {split} {block:<14} {tally(by(block, split))}")
+                if labels:
+                    print("      FINAL: " + ", ".join(f"{g} {sum(r['final'] == g for r in by(block, split))}" for g in FINAL))
 
     print("\n1c. Growth: tokens sent per turn with the full history")
     sizes = {}
@@ -111,6 +117,10 @@ def main() -> None:
         print(f"   probes whose current value was seen: {len(seen)}; correct among them {rate(seen)}")
         for split in splits:
             print(f"   {split}: {tally(by('2_full_small', split))}")
+            if labels:
+                print("      FINAL: " + ", ".join(f"{g} {sum(r['final'] == g for r in by('2_full_small', split))}" for g in FINAL))
+        if labels:
+            print(f"   FINAL where the current value was sent but not seen: {rate(lost, 'final')}; where it was seen: {rate(seen, 'final')}")
         shifted = [r for r in two if r["log"]["context_shifts"]]
         print(f"   answer length {spread([r['eval_count'] for r in two])} tokens; room left after the prompt "
               f"{spread([2048 - r['prompt_eval_count'] for r in two])} tokens")
@@ -134,9 +144,14 @@ def main() -> None:
             print(f"         in-schema {rate([r for r in rs if r['kind'] == 'in-schema'])}; other {rate([r for r in rs if r['kind'] == 'other'])}; "
                   f"changed facts {rate([r for r in rs if r['changed']])}, stale answers among them {sum(r['grade'] in ('stale', 'both') for r in rs if r['changed'])}")
             if labels:
-                hand = [r for r in rs if r["hand"]]
-                print(f"         hand labels: {len(hand)} answers; " + ", ".join(
-                    f"{lab} {sum(r['hand'] == lab for r in hand)}" for lab in sorted({r['hand'] for r in hand})))
+                print("         FINAL (hand label where read): " + ", ".join(f"{g} {sum(r['final'] == g for r in rs)}" for g in FINAL)
+                      + f"; ungraded {sum(r['final'] is None for r in rs)}")
+                print("            by position: " + "; ".join(f"{p} {rate([r for r in rs if r['position'] == p], 'final')}" for p in ("early", "middle", "late")))
+                print(f"            current value in the context sent: {rate([r for r in rs if r['in_context']['current']], 'final')}; "
+                      f"not in it: {rate([r for r in rs if not r['in_context']['current']], 'final')}")
+                print(f"            in-schema {rate([r for r in rs if r['kind'] == 'in-schema'], 'final')}; other {rate([r for r in rs if r['kind'] == 'other'], 'final')}; "
+                      f"changed facts {rate([r for r in rs if r['changed']], 'final')}, stale or both among them "
+                      f"{sum(r['final'] in ('stale', 'both') for r in rs if r['changed'])}")
 
     for kind, one, block, path in (("summaries", "summary", "summaries", "summaries"), ("case records", "case record", "states", "state")):
         calls = by(block)
