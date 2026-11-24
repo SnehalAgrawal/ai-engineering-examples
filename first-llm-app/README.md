@@ -173,7 +173,7 @@ This is an educational demo, not a production service.
 
 ## Readiness probes (Article #31)
 
-This section accompanies the article **What Changes When an AI Prototype Goes to Production?** (Article #31). Everything above it belongs to Article #11 and is unchanged.
+This section accompanies the article **[What Changes When an AI Prototype Goes to Production?](https://snehalagrawal.com/articles/what-changes-when-an-ai-prototype-goes-to-production/)** (Article #31). Everything above it belongs to Article #11 and is unchanged.
 
 The application above is the second stage of a prototype's life: the model inside a small application that owns the input, the call, the checks, and the reply. `python/readiness.py` asks it questions someone asks before launch, and records which ones it can already answer and which ones it can't.
 
@@ -328,7 +328,7 @@ The other two runs' timings were [1.01, 2.02] and [1.01, 1.02], then [1.01, 2.02
 
 ## Observability (Article #34)
 
-This section accompanies the article **Observability for AI Systems** (Article #34). Nothing above it changes.
+This section accompanies the article **[Observability for AI Systems](https://snehalagrawal.com/articles/observability-for-ai-systems/)** (Article #34). Nothing above it changes.
 
 Probe 7 of the readiness probes ends with a complaint nobody can explain: asked about the Basic plan, the assistant answered with the Pro plan's price, and the log record matches a correct answer's. `python/observe.py` records the same two requests three ways and compares what each record can show:
 
