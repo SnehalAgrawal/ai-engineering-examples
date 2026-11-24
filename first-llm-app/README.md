@@ -39,6 +39,7 @@ Ten realistic inputs of the kind a support assistant receives (`data/cases.json`
 | `python/server.py`, `javascript/server.js` | HTTP service: `POST /ask`, one JSON log line per request in `app.log` |
 | `python/run_cases.py`, `javascript/run_cases.js` | Runs every input through both versions |
 | `python/readiness.py` | Article #31's readiness probes: the Python application against a simulated provider (see [Readiness probes](#readiness-probes-article-31)) |
+| `python/observe.py`, `python/requirements-observe.txt` | Article #34: one wrong answer recorded three ways (the log, spans without content, spans with content), with OpenTelemetry (see [Observability](#observability-article-34)) |
 
 The model call (`chat()`) is 28 lines of code. The naive version adds 3. The application adds 82, and the HTTP server 32 (Python, counting code lines without comments or docstrings).
 
@@ -323,4 +324,134 @@ The other two runs' timings were [1.01, 2.02] and [1.01, 1.02], then [1.01, 2.02
 - **A slow provider.** No probe waits on the 60-second timeout. In `requests`, that timeout applies to each wait for data, not to the whole call (see Article #14).
 - **Answer quality, security, and data handling.** These need evaluation sets, adversarial testing, and a review of where data is stored. Probe 7 shows one wrong answer passing; it measures nothing about how often that happens.
 - **A kill switch and checks before a prompt change.** These come from reading the code, not from a probe. Nothing in the application turns the feature off without a deploy, and nothing runs when `data/prompt.json` changes.
+- **The JavaScript version.**
+
+## Observability (Article #34)
+
+This section accompanies the article **Observability for AI Systems** (Article #34). Nothing above it changes.
+
+Probe 7 of the readiness probes ends with a complaint nobody can explain: asked about the Basic plan, the assistant answered with the Pro plan's price, and the log record matches a correct answer's. `python/observe.py` records the same two requests three ways and compares what each record can show:
+
+1. **The log record** `app.py` already writes.
+2. **OpenTelemetry spans without message content.** This is the default the OpenTelemetry GenAI semantic conventions set for instrumentation.
+3. **The same spans with message content captured** (opt-in).
+
+Then it checks token usage as each layer sees it, runs the article's instrumentation snippet, and, for contrast, records a provider error.
+
+- **The application is used exactly as it is.** The instrumentation is added from outside, and `app.py` and `llm.py` are unchanged:
+  - a root span `support.answer` around `handle()`, carrying the fields of the application's own log record as `app.*` attributes;
+  - a span around the model call, made by wrapping the `chat` function that `app.py` imported, the way client instrumentation libraries wrap a client. Its `gen_ai.*` attribute names come from the GenAI semantic conventions v0.1.0, whose status is **Development**, so the names can still change.
+- **The model is simulated**, with the same stand-in provider as `readiness.py`. Both requests get the same scripted reply, citing the plans article: "The Pro plan costs $25 per month and includes unlimited projects." No model runs, no Ollama is needed, and the spans go to an in-memory exporter, so nothing leaves the machine.
+- **Expectations were written before the first run**, from reading the code. The script exits with status 1 if any step differs from them. `--negative-control` changes two expectations, and the script must then report both and exit 1.
+- **Python only.** The JavaScript version is not instrumented.
+
+### How to run
+
+```bash
+cd python
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements-observe.txt   # requirements.txt plus opentelemetry-api and opentelemetry-sdk 1.45.2
+python observe.py                          # about 6 seconds; exit status 0 if every step behaved as expected
+python observe.py --negative-control       # must report 2 differences and exit 1
+```
+
+### Output
+
+Setup: Python 3.12.13, requests 2.34.2, python-dotenv 1.2.4, opentelemetry-api and opentelemetry-sdk 1.45.2 (opentelemetry-semantic-conventions 0.66b2), macOS 26.6.2 on an Apple M4 Pro; 2026-11-24.
+- **Expectations:** written before the first run (`observe.py` SHA-256 `44f6263d…` at 2026-11-24 11:58:36 UTC). The only change since was the run time in the docstring.
+- **Repeatability:** three runs gave byte-identical output. The script prints no ids or timings.
+- **Negative control:** the run reported both changed expectations and exited 1.
+
+```text
+One complaint, three records: Article #11's Python application (app.py, llm.py), unchanged, against a
+simulated model provider on 127.0.0.1. No model runs; every provider reply is scripted.
+
+[1] The log record app.py writes: can it tell the wrong answer from the right one?
+    status (right, wrong): [200, 200]
+    outcome (right, wrong): ['answered', 'answered']
+    log fields that differ: ['input_chars']
+    question text in the log: False
+    reply text in the log: False
+    as expected
+
+[2] Spans without message content (the conventions' default): can they?
+    spans per request: ['support.answer', 'chat simulated-provider']
+    span attributes that differ: ['support.answer: app.input_chars']
+    span status (right, wrong): [['UNSET', 'UNSET'], ['UNSET', 'UNSET']]
+    question or reply text in any span: False
+    as expected
+
+[3] The same spans with message content captured (opt-in): what do they show?
+    span attributes that differ: ['chat simulated-provider: gen_ai.input.messages', 'support.answer: app.input_chars']
+    output messages identical: True
+    question the customer asked (wrong): How much is the Basic plan?
+    Basic price in the context the model was sent (wrong): True
+    reply states the Basic price ($10) (wrong): False
+    reply states the Pro price ($25) (wrong): True
+    span status (right, wrong): [['UNSET', 'UNSET'], ['UNSET', 'UNSET']]
+    as expected
+
+[4] Token usage, seen from a wrapper around llm.chat: is 0 different from 'not reported'?
+    provider reported token counts: False
+    usage on the chat span, not reported: [0, 0]
+    usage on the chat span, provider reports 0 and 0: [0, 0]
+    chat span attributes identical: True
+    as expected
+
+[5] The article's snippet, with usage read from the provider's response: is the gap visible?
+    not reported: app.usage_missing: True
+    not reported: usage attributes: [None, None]
+    reports 0 and 0: app.usage_missing: None
+    reports 0 and 0: usage attributes: [0, 0]
+    response model recorded: simulated-provider
+    prompt version recorded: support-v1
+    as expected
+
+[6] For contrast, an error the code can see: the provider returns HTTP 500
+    status: 503
+    outcome: model_unavailable
+    chat span status: ERROR
+    chat span has an exception event: True
+    root span status: ERROR
+    app.error on the root span: HTTPError
+    as expected
+
+The spans for the wrong, with content (ids and timings left out):
+  span support.answer  (status UNSET)
+        app.input_chars = 27
+        app.model = simulated-provider
+        app.outcome = answered
+        app.output_tokens = 0
+        app.prompt_tokens = 0
+        app.prompt_version = support-v1
+        app.status = 200
+    span chat simulated-provider  (status UNSET)
+          gen_ai.input.messages = [{'role': 'system', 'content': 'You are the support assistant for our product. Answer the cu... (1,575 characters)'}, {'role': 'user', 'content': 'How much is the Basic plan?'}]
+          gen_ai.operation.name = chat
+          gen_ai.output.messages = [{"role": "assistant", "parts": [{"type": "text", "content": "{\"answered\": true, \"answer\": \"The Pro plan costs $25 per month and includes unlimited projects.\", \"source_ids\": [\"plans\"]}"}]}]
+          gen_ai.provider.name = ollama
+          gen_ai.request.max_tokens = 300
+          gen_ai.request.model = simulated-provider
+          gen_ai.response.finish_reasons = ('stop',)
+          gen_ai.usage.input_tokens = 0
+          gen_ai.usage.output_tokens = 0
+
+6 of 6 steps behaved as expected.
+```
+
+### What the records show
+
+- **The log can't tell the two requests apart.** As in probe 7, the records differ only in `input_chars`, apart from `request_id` and `latency_ms`, and neither keeps the question or the reply.
+- **Spans without content can't either.** Each request produced the same two spans. The only attribute that differed was `app.input_chars`, and every span had status `UNSET`, not an error. Tracing on its own added structure (which step ran, the model's parameters) but no evidence about this answer.
+- **Spans with content localise the failure, and still don't flag it.** With content captured, the model call's input messages differ: the customer asked about the Basic plan. The context the model was sent contained "The Basic plan costs $10 per month", and the reply gave the Pro price. So the right fact was in front of the model, and the failure is in the generation, not in missing context. Every span still ended without an error status. The trace shows where the answer went wrong; it takes the complaint, or an evaluation, to say that it was wrong.
+- **A wrapper above `llm.chat` can't tell 0 tokens from "not reported".** The simulated provider reports no token counts. `llm.chat` turns them into 0 before the wrapper sees them, so the span records 0 and 0. A provider that reports 0 and 0 produced identical span attributes.
+- **Read usage where the provider's response is read.** The article's snippet, with a minimal client that keeps "missing" apart from 0, recorded `app.usage_missing` when the provider reported nothing, and 0 and 0 when it reported zeros. It also recorded the model name the provider returned, which `llm.chat` doesn't pass on.
+- **An error the code can see is marked as one.** When the provider returns HTTP 500, the model-call span has status `ERROR` and an `exception` event, and the root span, which `observe.py` marks for any application status of 500 or above, has `ERROR`, `app.outcome = model_unavailable` and `app.error = HTTPError`. The wrong answer had none of these.
+
+### What this cannot establish
+
+- **Real model behaviour, or how often it happens.** Every provider reply is scripted. The wrong answer was written for the test; the run shows what each record contains, not how often a model answers with the wrong plan.
+- **Anything about a tracing backend.** Spans stay in memory. Sending them somewhere, sampling, what happens when the backend is down, and what tracing costs per request were measured for one tool in [Langfuse: Tracing and Evaluating an LLM Application](https://snehalagrawal.com/articles/langfuse-tracing-and-evaluating-an-llm-application/) (demo: `ai-tooling-examples/02-langfuse-tracing`).
+- **That content capture is a good default.** It made this complaint explainable, and it also copies every customer's question and the whole prompt into the telemetry. Whether to capture content, redact it, or store it elsewhere behind a reference is a data-handling decision; the article discusses it.
+- **Context propagation across services.** Everything runs in one process, so no trace context crosses a network boundary.
 - **The JavaScript version.**

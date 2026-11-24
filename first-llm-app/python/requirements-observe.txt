@@ -1,0 +1,5 @@
+# For observe.py (Article #34) only. The application itself needs just requirements.txt.
+# OpenTelemetry pinned to the versions the results in the README were recorded with.
+-r requirements.txt
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2
