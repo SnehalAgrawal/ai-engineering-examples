@@ -341,6 +341,11 @@ Then it checks token usage as each layer sees it, runs the article's instrumenta
 - **The application is used exactly as it is.** The instrumentation is added from outside, and `app.py` and `llm.py` are unchanged:
   - a root span `support.answer` around `handle()`, carrying the fields of the application's own log record as `app.*` attributes;
   - a span around the model call, made by wrapping the `chat` function that `app.py` imported, the way client instrumentation libraries wrap a client. Its `gen_ai.*` attribute names come from the GenAI semantic conventions v0.1.0, whose status is **Development**, so the names can still change.
+- **The instrumentation is deliberately narrow.** The model-call wrapper fits this application's `llm.chat` contract; it is not general-purpose Ollama instrumentation. Four details follow from that:
+  - `gen_ai.provider.name` is set to `ollama` because that is the integration `llm.py` is configured for. The conventions say this attribute "SHOULD be set based on the instrumentation's best knowledge and may differ from the actual upstream provider". Here the backend is the simulated stand-in, not Ollama, and no Ollama inference runs.
+  - It records the model requested, not the model returned, because `llm.chat` doesn't pass the returned name on.
+  - On the error path it sets the span status and records the exception event, but not `error.type`, which v0.1.0 lists as "Conditionally Required" when an operation ends in an error.
+  - The snippet's minimal client (`ollama_client`) reads the response without checking the HTTP status first. Only the success path is exercised.
 - **The model is simulated**, with the same stand-in provider as `readiness.py`. Both requests get the same scripted reply, citing the plans article: "The Pro plan costs $25 per month and includes unlimited projects." No model runs, no Ollama is needed, and the spans go to an in-memory exporter, so nothing leaves the machine.
 - **Expectations were written before the first run**, from reading the code. The script exits with status 1 if any step differs from them. `--negative-control` changes two expectations, and the script must then report both and exit 1.
 - **Python only.** The JavaScript version is not instrumented.
@@ -452,6 +457,6 @@ The spans for the wrong, with content (ids and timings left out):
 
 - **Real model behaviour, or how often it happens.** Every provider reply is scripted. The wrong answer was written for the test; the run shows what each record contains, not how often a model answers with the wrong plan.
 - **Anything about a tracing backend.** Spans stay in memory. Sending them somewhere, sampling, what happens when the backend is down, and what tracing costs per request were measured for one tool in [Langfuse: Tracing and Evaluating an LLM Application](https://snehalagrawal.com/articles/langfuse-tracing-and-evaluating-an-llm-application/) (demo: `ai-tooling-examples/02-langfuse-tracing`).
-- **That content capture is a good default.** It made this complaint explainable, and it also copies every customer's question and the whole prompt into the telemetry. Whether to capture content, redact it, or store it elsewhere behind a reference is a data-handling decision; the article discusses it.
+- **That content capture is a good default.** It made this complaint explainable, and it also copies every customer's question and the whole prompt into the telemetry. The script even prints the captured messages, which is fine for scripted test data and is not something to do with real traffic. Whether to capture content, redact it, or store it elsewhere behind a reference is a data-handling decision; the article discusses it.
 - **Context propagation across services.** Everything runs in one process, so no trace context crosses a network boundary.
 - **The JavaScript version.**
